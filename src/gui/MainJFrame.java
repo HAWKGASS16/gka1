@@ -78,7 +78,7 @@ public class MainJFrame {
 				// graph.getNode("B").addAttribute("ui.clicked", "marked");
 				graph.setAutoCreate(true);
 
-				Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
+				Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_GUI_THREAD);
 				viewer.enableAutoLayout();
 				View view = viewer.addDefaultView(false);/**/ // false indicates
 																// "no JFrame".
