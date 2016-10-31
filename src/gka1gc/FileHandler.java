@@ -1,5 +1,6 @@
 package gka1gc;
 
+import java.io.File;
 import java.util.Collection;
 import org.graphstream.graph.Edge;
 
@@ -14,6 +15,8 @@ public class FileHandler {
 	 */
 	public FileHandler(String pfadQuelle) {
 
+//		pfadQuelle.replace("\\", "\\\\");
+		
 		if(!pfadQuelle.endsWith(".gka")){
 			raiseError("Die angegebene Datei muss eine .gka Datei sein!");
 		}
@@ -22,6 +25,9 @@ public class FileHandler {
 		
 		
 		
+	}
+	public FileHandler(File file) {
+		fileparser = new FileParser(file);
 	}
 	/**
 	 * Liefert einen FileParser zurück

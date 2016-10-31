@@ -44,6 +44,10 @@ public class FileParser {
 		setPath(path);
 	}
 
+	public FileParser(File file) {
+		setPath(file.getAbsolutePath());
+	}
+
 	public void setPath(String path) {
 		if (path.equals("")) {
 			raiseException("Empty strings are not allowed");
