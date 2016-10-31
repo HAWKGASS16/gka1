@@ -42,8 +42,8 @@ public class MainGKATest {
 	static Graph graph01;
 	static Graph graph03;
 	static String EdgeAttributeWeight;
-	static ArrayList<org.graphstream.graph.Edge> testEdgeList;
-	static ArrayList<org.graphstream.graph.Edge> mainEdgeList;
+	static ArrayList<org.graphstream.graph.Edge> testEdgeList = new ArrayList<org.graphstream.graph.Edge>();
+	static ArrayList<org.graphstream.graph.Edge> mainEdgeList= new ArrayList<org.graphstream.graph.Edge>();
 	static HashSet<gka1gc.Edge> edgeSet;
 
 	@Before
@@ -56,9 +56,13 @@ public class MainGKATest {
 		node04 = graph01.addNode("f");
 		node05 = graph01.addNode("i");
 
-		edge03 = graph01.addEdge("lf", node03, node04, true);
-		edge02 = graph01.addEdge("bl", node02, node03, true);
-		edge01 = graph01.addEdge("ab", node01, node02, true);
+		graph01.addEdge("ef", node03, node04, true);
+		graph01.addEdge("be", node02, node03, true);
+		graph01.addEdge("ab", node01, node02, true);
+		
+		edge03 = graph01.getEdge("ef");
+		edge02 = graph01.getEdge("be"); 
+		edge01 =  graph01.getEdge("ab");
 
 
 	}
@@ -77,6 +81,9 @@ public class MainGKATest {
 		testEdgeList.add(edge02);
 		testEdgeList.add(edge01);
 
+		System.out.println(testEdgeList);
+		System.out.println(main01.getShortestWay());
+		
 		assertEquals(testEdgeList, main01.getShortestWay());
 		assertTrue(main01.btsSuche(start01, ende01));
 		assertFalse(main01.btsSuche(start02, ende02));

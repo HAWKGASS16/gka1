@@ -23,6 +23,10 @@ public class FileHandler {
 		
 		
 	}
+	/**
+	 * Liefert einen FileParser zurück
+	 * @return fileparser
+	 */
 	public FileParser getFileParser(){
 		return fileparser;
 	}

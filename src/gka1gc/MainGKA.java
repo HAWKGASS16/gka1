@@ -816,6 +816,11 @@ public class MainGKA {
 		return minimumEdge;
 	}
 
+	/**
+	 * Liefert den zuletzt gefundenen kürzesten Weg zurück. Als vorbedingung gilt, das ein Suchalgorithmus (BFS oder Dijkstra)
+	 * vorher alle relevanten Knoten markiert hat. Ansonsten wird eine leere liste zurückgegeben
+	 * @return eine Liste mit den Kanten (Edges) des kürzesten weges.
+	 */
 	public ArrayList<Edge> getShortestWay() {
 		return shortestWayDijkstra;
 

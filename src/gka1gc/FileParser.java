@@ -71,11 +71,17 @@ public class FileParser {
 		return !weighted;
 	}
 
+	
+	/**
+	 * Liest die im Konstruktor übergebene Datei ein und extrahiert alle Knoten und Kanten.
+	 * Anschließend sind die Knoten über getNodes() und die Kanten über getEdges() zu erreichen
+	 */
 	public void parsefile() {
 
 		
 
 		try {
+			//der Reader um die Datei zeilenweise einzulesen
 			BufferedReader bf = new BufferedReader(new FileReader(new File(path)));
 			for (String line; (line = bf.readLine()) != null;) {
 				
@@ -93,6 +99,8 @@ public class FileParser {
 				
 //				System.out.println("--------------------------------");
 				
+//				für den Fall das in 1 Zeile nach dem Semikolon noch etwas steht.
+//				was wird dann ignoriert
 				splitSemikolon = line.split(";");
 				
 				if(!(splitSemikolon[0].contains("->")||splitSemikolon[0].contains("--"))){
@@ -154,8 +162,7 @@ public class FileParser {
 				// anschliessend beide nodes erstellen und dann zu den sets hinzufügen
 
 			}
-//			System.out.println(nodes.toString());
-//			System.out.println(edges.toString());
+
 			log("es gibt "+fehlerhafteEdges.size()+" fehlerhafte kanten");
 
 		} catch (FileNotFoundException e) {
@@ -168,9 +175,18 @@ public class FileParser {
 
 	}
 	
+	/**
+	 * Liefert ein HashSet von Knoten zurück. Zuvor muss natürlich erst eine Datei geparst werden. Wenn nicht ist der/die/das HashSet leer 
+	 * @return ein HashSet mit Knoten gefüllt - oder eine leere Liste
+	 */
 	public HashSet<String> getNodes(){
 		return nodes;
 	}
+	
+	/**
+	 * Liefert ein HashSet von Kanten zurück, die - wenn zuvor geparst wurde - mit ausgelesenen Kanten
+	 * @return wenn vorher geparst enthält es die ausgelesenen Kanten.
+	 */
 	public HashSet<Edge> getEdges(){
 		return edges;
 	}
