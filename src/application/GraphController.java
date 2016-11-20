@@ -3,8 +3,12 @@ package application;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.URL;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.ResourceBundle;
+import java.util.Set;
 
+import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.implementations.MultiGraph;
 
@@ -57,6 +61,8 @@ public class GraphController implements Initializable {
 		graph = new MultiGraph("test");
 		graph.display();
 		graph.addAttribute("ui.stylesheet", stylesheet);
+		
+		fileHandler = new FileHandler();
 
 		// der listener für den button
 		enter.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
@@ -186,6 +192,7 @@ public class GraphController implements Initializable {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Speichern unter...");
 		
+		
 				
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("GKA Datein (*.gka)", "*.gka");
         fc.getExtensionFilters().add(extFilter);
@@ -194,8 +201,20 @@ public class GraphController implements Initializable {
 		
 		if(file!=null){
 			
-			System.out.println("edgeset size: "+graph.getEdgeSet().size());
-			fileHandler.saveGraph(graph.getEdgeSet(), file);
+			Set temp = new HashSet();
+			
+			Iterator iterator = graph.getEdgeIterator();
+			
+			while (iterator.hasNext()) {
+				Edge object = (Edge) iterator.next();
+				temp.add(object);
+				
+			}
+			
+			
+			System.out.println("edgeset size: "+temp.size());
+			System.out.println("filepath: "+file.getAbsolutePath());
+			fileHandler.saveGraph(temp, file);
 			
 		}
 		

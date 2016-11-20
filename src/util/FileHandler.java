@@ -8,7 +8,7 @@ import org.graphstream.graph.Graph;
 public class FileHandler {
 
 	FileParser fileparser;
-	FileSaver filesaver;
+	FileSaver filesaver = new FileSaver();
 	
 	/**
 	 * Ein handler, der das Auslesen von .gka Datein verwaltet und der die graphen auch speichert 
@@ -28,6 +28,13 @@ public class FileHandler {
 		
 		
 	}
+	
+	public FileHandler(){
+		
+		
+		
+	}
+	
 	public FileHandler(File file) {
 		fileparser = new FileParser(file);
 	}
