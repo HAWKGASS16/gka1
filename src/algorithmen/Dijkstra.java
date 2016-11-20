@@ -98,8 +98,20 @@ public class Dijkstra {
 		
 		
 		
+		
+		
 		Node start = graph.getNode(startKnoten);
 		Node ende = graph.getNode(endKnoten);
+		
+		if(start==null){
+			return false;
+		}
+		if(ende == null){
+			return false;
+		}	
+			
+		
+		
 		start.setAttribute(GraphController.NodeAttributdistance, 0.0);
 		LinkedList<Node> queue = new LinkedList<Node>();
 		
