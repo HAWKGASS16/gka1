@@ -52,12 +52,12 @@ public class FileHandler {
 	 * Speichert die übergebenen Kanten in einer Datei als neuen Graph
 	 * @param edgeCollection die Kanten die als Graph gespeichert werden sollen
 	 */
-	public void saveGraph(Collection<Edge> edgeCollection, File file){
-		if(edgeCollection==null){
+	public void saveGraph(Graph graph, File file){
+		if(graph==null){
 			raiseError("Die übergebene Liste darf nicht null sein!");
 		}
 		
-		filesaver.saveToFile(edgeCollection, file);
+		filesaver.saveToFile(graph, file);
 	}
 	public static void loadFile(Graph graph, String Pfad){
 		

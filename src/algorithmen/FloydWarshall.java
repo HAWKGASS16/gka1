@@ -108,7 +108,7 @@ public class FloydWarshall {
 
 				if (i == j) {
 					distanzMatrix[i][j] = 0.0;
-					transitMatrix[i][j] = 0;
+					transitMatrix[i][j] = i;
 				} else {
 					distanzMatrix[i][j] = Double.POSITIVE_INFINITY;
 					transitMatrix[i][j]= -1;
@@ -118,12 +118,12 @@ public class FloydWarshall {
 
 		}
 
-		// zugriffsZaehler.read("initialize()", 1);
+		 zugriffsZaehler.read("initialize()", 1);
 		Iterator edgeIterator = graph.getEdgeIterator();
 
 		while (edgeIterator.hasNext()) {
 			Edge object = (Edge) edgeIterator.next();
-			// zugriffsZaehler.read("initialize()", 1);
+			 zugriffsZaehler.read("initialize()", 1);
 
 			Node node1 = object.getSourceNode();
 

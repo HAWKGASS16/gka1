@@ -245,7 +245,7 @@ public class GraphController implements Initializable {
 			
 //			System.out.println("edgeset size: "+temp.size());
 //			System.out.println("filepath: "+file.getAbsolutePath());
-			fileHandler.saveGraph(temp, file);
+			fileHandler.saveGraph(graph, file);
 			
 		}
 		

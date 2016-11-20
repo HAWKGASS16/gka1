@@ -157,10 +157,14 @@ public class FileParser {
 					graph.getNode(node2).addAttribute("ui.label", node2);
 				}
 				
+				boolean tempdirected = true;
 				
-				if(direction.contains("--")){directed=false;}
+				if(direction.contains("--")){
+					directed=false;
+					tempdirected=false;
+				}
 				
-				graph.addEdge(node1+node2, node1, node2);
+				graph.addEdge(node1+node2, node1, node2, tempdirected);
 				org.graphstream.graph.Edge graphstreamEdge = graph.getEdge(node1+node2);
 				
 				

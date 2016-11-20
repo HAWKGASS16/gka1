@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import org.graphstream.graph.Edge;
+import org.graphstream.graph.Graph;
+import org.graphstream.graph.Node;
 
 import application.GraphController;
 
@@ -31,8 +33,10 @@ public class FileSaver {
 		
 	}
 
-	public void saveToFile(Collection edgeListe, File file) {
+	public void saveToFile(Graph graph, File file) {
 
+		
+		Collection edgeListe = graph.getEdgeSet();
 		
 		StringBuilder output = new StringBuilder();
 		ArrayList<String> outputString = new ArrayList<String>();
@@ -74,7 +78,17 @@ public class FileSaver {
 			
 			
 		}
-
+		
+		
+		Iterator nodeIterator = graph.getNodeIterator();
+		
+		while (nodeIterator.hasNext()) {
+			Node object = (Node) nodeIterator.next();
+			
+			outputString.add(object.getId());
+			
+			
+		}
 		
 		saveToDisk(outputString, file);
 		
