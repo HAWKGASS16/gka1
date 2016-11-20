@@ -66,7 +66,10 @@ public class BIG {
 				
 				Double gewicht = (randomWeight.nextDouble()*maxKantenGewicht)+5;
 				
+				gewicht= (double) ((Math.round(gewicht*100))/100);
+				
 				edge.setAttribute(GraphController.EdgeAttributeWeight, gewicht);
+				edge.setAttribute("ui.label", gewicht);
 				
 				edges++;
 				

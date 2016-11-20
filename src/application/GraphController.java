@@ -44,6 +44,9 @@ public class GraphController implements Initializable {
 	@FXML
 	private MenuItem miSpeichern = new MenuItem();
 	
+	@FXML
+	private MenuItem miNeu = new MenuItem();
+	
 
 	private Graph graph;
 
@@ -104,13 +107,21 @@ public class GraphController implements Initializable {
 			}
 		});
 		
+		miNeu.setOnAction(new EventHandler<ActionEvent>() {
+			
+			public void handle(ActionEvent event) {
+				graphNeu();
+				log("System> neuer Graph");
+			}
+		});
+		
 
 	}
 
 	private void addNode(String name) {
 
 		if (graph.getNode(name) == null && name != "") {
-			log("s> füge Knoten " + name + " hinzu");
+			log("system> füge Knoten " + name + " hinzu");
 			graph.addNode(name);
 			graph.getNode(name).addAttribute("ui.label", name);
 		}
@@ -166,6 +177,8 @@ public class GraphController implements Initializable {
 				BIG big = new BIG(graph, Integer.parseInt(temp[1]), Integer.parseInt(temp[2]));
 				big.generate();
 				
+			}else if(eingabe.startsWith("empty")){
+				graphNeu();
 			}
 
 		}
@@ -227,6 +240,12 @@ public class GraphController implements Initializable {
 			
 		}
 		
+		
+	}
+	private void graphNeu(){
+		
+		graph.clear();
+		graph.addAttribute("ui.stylesheet", stylesheet);
 		
 	}
 
