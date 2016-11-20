@@ -6,12 +6,15 @@ import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 
+import application.GraphController;
+
 public class BIG {
 
 	private Graph graph;
 	private Integer anzahlNodes;
 	private Integer anzahlEdges;
 	private boolean big=false;
+	private Double maxKantenGewicht = 300.0;
 	
 	
 	public BIG(Graph graph, Integer nodes, Integer edges) {
@@ -38,7 +41,7 @@ public class BIG {
 		}
 		
 		
-		Random rand = new Random();
+		Random randomWeight = new Random();
 		int edges=0;
 		
 		
@@ -50,14 +53,20 @@ public class BIG {
 			
 			if(edge==null){
 				
-				Double richtung =Math.random();
+//				Double richtung =Math.random();
 				
-				if(richtung < 0.5){
+//				if(richtung < 0.5){
 					graph.addEdge(node1.getId()+node2.getId(), node1, node2,true);
-				}else{
-					graph.addEdge(node1.getId()+node2.getId(), node1, node2);
-				}
+//				}else{
+//					graph.addEdge(node2.getId()+node1.getId(), node2, node1,true);
+//				}
+
+
+				edge = graph.getEdge(node1.getId()+node2.getId());
 				
+				Double gewicht = (randomWeight.nextDouble()*maxKantenGewicht)+5;
+				
+				edge.setAttribute(GraphController.EdgeAttributeWeight, gewicht);
 				
 				edges++;
 				
