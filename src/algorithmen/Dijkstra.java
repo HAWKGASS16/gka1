@@ -378,5 +378,18 @@ public class Dijkstra {
 
 		return minimumEdge;
 	}
+	public Double getKosten(String start, String ziel){
+		
+		Node node2 = graph.getNode(ziel);
+		
+		if(node2==null){
+			return null;
+		}
+		
+		Double kosten = node2.getAttribute(GraphController.NodeAttributdistance);
+		
+		return kosten;
+		
+	}
 	
 }

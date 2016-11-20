@@ -188,6 +188,15 @@ public class GraphController implements Initializable {
 			}
 			else if(eingabe.startsWith("empty")){
 				graphNeu();
+			}else if(eingabe.startsWith("dualtest ")){
+				
+				String[] temp = eingabe.split(" ");
+				FloydWarshall fw = new FloydWarshall(graph, temp[1], temp[2]);
+				fw.suche();
+				
+				Dijkstra dijkstra = new Dijkstra(graph, temp[1], temp[2]);
+				dijkstra.suche();
+				
 			}
 
 		}
