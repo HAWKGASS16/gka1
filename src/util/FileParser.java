@@ -1,4 +1,4 @@
-package gka1gc;
+package util;
 
 
 import java.io.BufferedReader;
@@ -13,10 +13,15 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.graphstream.graph.Graph;
+
+import application.GraphController;
+
 
 
 
 public class FileParser {
+	Graph graph;
 	HashSet<String> nodes = new HashSet<>();
 	HashSet<Edge> edges = new HashSet<>();
 	HashSet<Edge> fehlerhafteEdges = new HashSet<>();
@@ -40,7 +45,8 @@ public class FileParser {
 //		fp.parsefile();
 //	}
 
-	public FileParser(String path) {
+	public FileParser(Graph graphen, String path) {
+		graph=graphen;
 		setPath(path);
 	}
 
@@ -140,11 +146,23 @@ public class FileParser {
 //				System.out.println("name: "+name);
 				
 				
+				if(graph.getNode(node1)==null){
+					graph.addNode(node1);
+					graph.getNode(node1).addAttribute("ui.label", node1);
+				}
 				
-				nodes.add(node1);
-				nodes.add(node2);
+				
+				if(graph.getNode(node2)==null){
+					graph.addNode(node2);
+					graph.getNode(node2).addAttribute("ui.label", node2);
+				}
+				
 				
 				if(direction.contains("--")){directed=false;}
+				
+				graph.addEdge(node1+node2, node1, node2);
+				org.graphstream.graph.Edge graphstreamEdge = graph.getEdge(node1+node2);
+				
 				
 				
 				Edge edge =new Edge(name, node1, node2, weight, directed);
@@ -153,10 +171,11 @@ public class FileParser {
 				//wenn die kante im gewichteteten graphen auch ein gewicht hat, wird sie zu den 
 				//"heilen" kanten hinzugefügt
 				if(weighted&&weight!=null){
+					graphstreamEdge.addAttribute(GraphController.EdgeAttributeWeight, weight);
+					graphstreamEdge.addAttribute("ui.label", weight);
 					
-					edges.add(edge);
 				}else if(!weighted){
-					edges.add(edge);
+					
 				}
 				else{
 					fehlerhafteEdges.add(edge);
@@ -167,7 +186,7 @@ public class FileParser {
 
 			}
 
-			log("es gibt "+fehlerhafteEdges.size()+" fehlerhafte kanten");
+//			log("es gibt "+fehlerhafteEdges.size()+" fehlerhafte kanten");
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

@@ -1,4 +1,4 @@
-package gka1gc;
+package util;
 
 
 public class Edge {

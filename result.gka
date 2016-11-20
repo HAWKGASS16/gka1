@@ -1,117 +1,120 @@
-e -> b ;
+Paderborn -- Hamburg ;
 
 
-c -> a ;
+Bremen -- Hamburg ;
 
 
-a -> k ;
+Bremen -- Bremerhaven ;
 
 
-k -> d ;
+Norderstedt -- Bremerhaven ;
 
 
-g -> e ;
+Norderstedt -- Husum ;
 
 
-d -> a ;
+Kiel -- Husum ;
 
 
-a -> b ;
+Lüneburg -- Lübeck ;
 
 
-i -> a ;
+Lüneburg -- Soltau ;
 
 
-g -> d ;
+Hameln -- Soltau ;
 
 
-e -> f ;
+Hameln -- Paderborn ;
 
 
-k -> c ;
+Hameln -- Detmold ;
 
 
-d -> e ;
+Münster -- Bremen ;
 
 
-b -> j ;
+Münster -- Minden ;
 
 
-k -> g ;
+Minden -- Hannover ;
 
 
-c -> d ;
+Hannover -- Oldenburg ;
 
 
-h -> b ;
+Oldenburg -- Cuxhaven ;
 
 
-l -> f ;
+Cuxhaven -- Hannover ;
 
 
-g -> g ;
+Cuxhaven -- Bremen ;
 
 
-j -> a ;
+Bremerhaven -- Rotenburg ;
 
 
-b -> k ;
+Rotenburg -- Soltau ;
 
 
-c -> l ;
+Minden -- Rotenburg ;
 
 
-b -> e ;
+Rotenburg -- Uelzen ;
 
 
-i -> i ;
+Lüneburg -- Buxtehude ;
 
 
-j -> b ;
+Uelzen -- Hameln ;
 
 
-e -> c ;
+Hameln -- Walsrode ;
 
 
-f -> g ;
+Walsrode -- Hamburg ;
 
 
-i -> c ;
+Walsrode -- Minden ;
 
 
-b -> d ;
+Münster -- Walsrode ;
 
 
-b -> l ;
+Lüneburg -- Münster ;
 
 
-l -> a ;
+Münster -- Paderborn ;
 
 
-d -> k ;
+Lüneburg -- Hamburg ;
 
 
-a -> c ;
+Kiel -- Uelzen ;
 
 
-g -> b ;
+Oldenburg -- Celle ;
 
 
-l -> h ;
+Celle -- Hannover ;
 
 
-j -> c ;
+Celle -- Soltau ;
 
 
-j -> k ;
+Cuxhaven -- Soltau ;
 
 
-e -> e ;
+Soltau -- Buxtehude ;
 
 
-f -> c ;
+Buxtehude -- Hamburg ;
 
 
-h -> c ;
+Buxtehude -- Minden ;
+
+
+Buxtehude -- Walsrode ;
 
 
