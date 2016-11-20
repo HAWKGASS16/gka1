@@ -195,8 +195,14 @@ public class GraphController implements Initializable {
 				FloydWarshall fw = new FloydWarshall(graph, temp[1], temp[2]);
 				fw.suche();
 				
+				Double kostenFW = fw.getKosten(temp[1], temp[2]);
+				log("system> Kosten für FloydWarshall von "+temp[1]+" nach "+temp[2]+"\nbetragen: "+kostenFW);
+				
 				Dijkstra dijkstra = new Dijkstra(graph, temp[1], temp[2]);
 				dijkstra.suche();
+				
+				Double kostenDijkstra = dijkstra.getKosten(temp[1], temp[2]);
+				log("system> Kosten für Dijkstra von "+temp[1]+" nach "+temp[2]+"\nbetragen: "+kostenDijkstra);
 				
 			}
 
