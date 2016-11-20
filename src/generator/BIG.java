@@ -31,6 +31,8 @@ public class BIG {
 		for(int i=0; i<=anzahlNodes;i++){
 			
 			graph.addNode("Node"+i);
+			Node temp = graph.getNode("Node"+i);
+			temp.addAttribute("ui.label", "Node"+i);
 			
 			
 		}
@@ -48,7 +50,15 @@ public class BIG {
 			
 			if(edge==null){
 				
-				graph.addEdge(node1.getId()+node2.getId(), node1, node2);
+				Double richtung =Math.random();
+				
+				if(richtung < 0.5){
+					graph.addEdge(node1.getId()+node2.getId(), node1, node2,true);
+				}else{
+					graph.addEdge(node1.getId()+node2.getId(), node1, node2);
+				}
+				
+				
 				edges++;
 				
 			}
@@ -57,7 +67,7 @@ public class BIG {
 			
 		}
 		
-		
+//		graph.addEdge("Node1Node"+anzahlNodes, "Node1", "Node"+anzahlNodes);
 		
 		
 	}
@@ -66,7 +76,7 @@ public class BIG {
 		
 		Random rand = new Random();
 		
-		Integer zufall=rand.nextInt(anzahlNodes)+1;
+		Integer zufall=rand.nextInt(anzahlNodes+1);
 		
 		Node node = graph.getNode("Node"+zufall);
 		
