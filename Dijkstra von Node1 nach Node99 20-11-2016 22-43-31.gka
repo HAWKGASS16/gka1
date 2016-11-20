@@ -1,0 +1,56 @@
+20.11.2016 22.43.31
+
+Dijkstra von Node1 nach Node99
+
+
+
+
+Knotenanzahl: 101
+
+Kantenanzahl: 2501
+
+
+
+
+Lesende Zugriffe:
+
+initialisierung:	2502
+
+Dijkstra:	5104
+
+getMinimumNode():	4887
+
+distanzUpdate():	12505
+
+getShortestWay():	22847
+
+getMinimumEdge():	7954
+
+Gesamt:			55799
+
+
+
+
+Schreibende Zugriffe:
+
+initialisierung:	2602
+
+Dijkstra:	202
+
+getMinimumNode():	101
+
+distanzUpdate():	2501
+
+getShortestWay():	0
+
+getMinimumEdge():	0
+
+Gesamt:			5406
+
+
+
+
+Alle Zugriffe:		61205
+
+Ende des Vorgangs
+

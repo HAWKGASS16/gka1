@@ -1,0 +1,56 @@
+20.11.2016 22.31.13
+
+Dijkstra von Node5 nach v1
+
+
+
+
+Knotenanzahl: 12
+
+Kantenanzahl: 13
+
+
+
+
+Lesende Zugriffe:
+
+initialisierung:	14
+
+Dijkstra:	37
+
+getMinimumNode():	29
+
+distanzUpdate():	65
+
+getShortestWay():	130
+
+getMinimumEdge():	60
+
+Gesamt:			335
+
+
+
+
+Schreibende Zugriffe:
+
+initialisierung:	25
+
+Dijkstra:	20
+
+getMinimumNode():	10
+
+distanzUpdate():	13
+
+getShortestWay():	0
+
+getMinimumEdge():	0
+
+Gesamt:			68
+
+
+
+
+Alle Zugriffe:		403
+
+Ende des Vorgangs
+

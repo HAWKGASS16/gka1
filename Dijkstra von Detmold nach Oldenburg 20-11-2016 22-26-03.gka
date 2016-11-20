@@ -1,0 +1,56 @@
+20.11.2016 22.26.03
+
+Dijkstra von Detmold nach Oldenburg
+
+
+
+
+Knotenanzahl: 22
+
+Kantenanzahl: 40
+
+
+
+
+Lesende Zugriffe:
+
+initialisierung:	41
+
+Dijkstra:	103
+
+getMinimumNode():	154
+
+distanzUpdate():	320
+
+getShortestWay():	495
+
+getMinimumEdge():	495
+
+Gesamt:			1608
+
+
+
+
+Schreibende Zugriffe:
+
+initialisierung:	62
+
+Dijkstra:	44
+
+getMinimumNode():	22
+
+distanzUpdate():	80
+
+getShortestWay():	0
+
+getMinimumEdge():	0
+
+Gesamt:			208
+
+
+
+
+Alle Zugriffe:		1816
+
+Ende des Vorgangs
+

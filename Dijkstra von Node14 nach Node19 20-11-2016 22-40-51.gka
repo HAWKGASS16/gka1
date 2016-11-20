@@ -1,0 +1,56 @@
+20.11.2016 22.40.51
+
+Dijkstra von Node14 nach Node19
+
+
+
+
+Knotenanzahl: 21
+
+Kantenanzahl: 51
+
+
+
+
+Lesende Zugriffe:
+
+initialisierung:	52
+
+Dijkstra:	113
+
+getMinimumNode():	101
+
+distanzUpdate():	228
+
+getShortestWay():	456
+
+getMinimumEdge():	190
+
+Gesamt:			1140
+
+
+
+
+Schreibende Zugriffe:
+
+initialisierung:	72
+
+Dijkstra:	38
+
+getMinimumNode():	19
+
+distanzUpdate():	42
+
+getShortestWay():	0
+
+getMinimumEdge():	0
+
+Gesamt:			171
+
+
+
+
+Alle Zugriffe:		1311
+
+Ende des Vorgangs
+

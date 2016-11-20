@@ -19,7 +19,7 @@ public class MeasureObject {
 	private ArrayList<String> typ;
 	private ArrayList<Integer[]> typWerte;
 	private ArrayList<String> sonstiges;
-	private boolean writeToDisk = false;
+	private boolean writeToDisk = true;
 
 	public MeasureObject() {
 		// TODO Auto-generated constructor stub

@@ -48,7 +48,11 @@ public class FloydWarshall {
 
 	}
 
-	public void suche() {
+	public boolean suche() {
+		
+		if(startKnoten.equals(endKnoten)){
+			return true;
+		}
 
 		zugriffsZaehler.startMeasure("FloydWarschall von " + startKnoten + " nach " + endKnoten);
 		zugriffsZaehler.log("Knotenanzahl: " + graph.getNodeCount());
@@ -82,7 +86,7 @@ public class FloydWarshall {
 						
 					}
 					if(distanzMatrix[i][i]<0){
-						return;
+						return false;
 					}
 
 				}
@@ -92,6 +96,17 @@ public class FloydWarshall {
 		}
 		showDistanzmatrix();
 		showTransitMatrix();
+		
+		Integer indexStart = getIndex(startKnoten);
+		Integer indexEnde = getIndex(endKnoten);
+		
+		if(distanzMatrix[indexStart][indexEnde]!=Double.POSITIVE_INFINITY){
+			return false;
+		}else{
+			return true;
+		}
+		
+		
 
 	}
 
@@ -182,6 +197,9 @@ public class FloydWarshall {
 			System.out.print("\n");
 		}
 
+	}
+	private void shortestWay(){
+		
 	}
 
 }
