@@ -88,7 +88,7 @@ public class FileParser {
 	 */
 	public void parsefile() {
 
-		
+		graph.addAttribute(GraphController.GraphAttributeDirected, false);
 
 		try {
 			//der Reader um die Datei zeilenweise einzulesen
@@ -121,6 +121,9 @@ public class FileParser {
 
 				if (splitSemikolon[0].contains("->")) {
 					undirected = false;
+					
+					graph.addAttribute(GraphController.GraphAttributeDirected, true);
+					
 				}
 				if (splitSemikolon[0].contains(":")) {
 					weighted = true;

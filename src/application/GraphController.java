@@ -54,6 +54,7 @@ public class GraphController implements Initializable {
 	public static final String EdgeAttributeWeight = "Gewicht";
 	public static final String NodeAttributVisited = "visited";
 	public static final String NodeAttributdistance = "Distanz";
+	public static final String GraphAttributeDirected = "Gerichtet";
 	private FileHandler fileHandler;
 	protected static String stylesheet = "node {fill-color: black; size: 15px, 15px; stroke-mode: plain; stroke-color: blue;} node.marked{ fill-color: red;}node.start{fill-color: green;} node.shortest{ fill-color:green; }edge { fill-color: grey;} edge.shortest{fill-color: green; stroke-width:2px;}";
 

@@ -169,6 +169,13 @@ public class FloydWarshall {
 
 				distanzMatrix[indexNode1][indexNode2] = gewicht;
 				transitMatrix[indexNode1][indexNode2]= indexNode1;
+				
+				boolean directedGraph = (boolean)graph.getAttribute(GraphController.GraphAttributeDirected);
+				if(!directedGraph){
+					distanzMatrix[indexNode2][indexNode1] = gewicht;
+					transitMatrix[indexNode2][indexNode1]= indexNode1;
+				}
+				
 			}
 
 		}

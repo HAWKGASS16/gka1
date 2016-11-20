@@ -85,6 +85,8 @@ public class Dijkstra {
 	
 	public boolean suche(){
 		
+		
+		
 		if(!bts){
 			
 			zugriffsZaehler.startMeasure("Dijkstra von " + startKnoten + " nach " + endKnoten);
@@ -174,18 +176,19 @@ public class Dijkstra {
 			// denn wenn der zuletzt gefundene Knoten der Zielknoten ist,
 			// ist das schon der kürzeste weg da immer der aktuell kürzeste weg
 			// untersucht wird.
-			if (false && tempNode == ende) {
+			if (tempNode == ende) {
 				erfolgreich = true;
-				break;
+//				break;
 			}//---------------------------------------------------------------------------den codeblock nochmal verbesser, da ist der fehler
 			if (tempNode == ende) {
 				erfolgreich = true;
+				getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten));
 			}
 //			getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten));
 			
-			if(getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten))==null){
-				return false;
-			}
+//			if(getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten))==null){
+//				return false;
+//			}
 
 		}
 
@@ -205,6 +208,7 @@ public class Dijkstra {
 
 	private void distanzUpdate(Node knoten, Edge kante) {
 		zugriffsZaehler.read("distanzUpdate()", 1);
+		
 
 		// die Variable "nachbar" wird mit dem übergebenen knoten initialisiert
 		// einfach nur damit sie initialisiert ist^^
