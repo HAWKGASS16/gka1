@@ -14,6 +14,7 @@ import org.graphstream.graph.implementations.MultiGraph;
 
 import algorithmen.Dijkstra;
 import algorithmen.FloydWarshall;
+import generator.BIG;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -154,8 +155,16 @@ public class GraphController implements Initializable {
 				String[] temp = eingabe.split(" ");
 				
 				FloydWarshall fw = new FloydWarshall(graph, temp[1], temp[2]);
+				fw.suche();
 				
 				
+				
+			}else if(eingabe.startsWith("generate ")){
+				
+				String[] temp = eingabe.split(" ");
+				
+				BIG big = new BIG(graph, Integer.parseInt(temp[1]), Integer.parseInt(temp[2]));
+				big.generate();
 				
 			}
 
@@ -212,8 +221,8 @@ public class GraphController implements Initializable {
 			}
 			
 			
-			System.out.println("edgeset size: "+temp.size());
-			System.out.println("filepath: "+file.getAbsolutePath());
+//			System.out.println("edgeset size: "+temp.size());
+//			System.out.println("filepath: "+file.getAbsolutePath());
 			fileHandler.saveGraph(temp, file);
 			
 		}
