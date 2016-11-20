@@ -86,6 +86,7 @@ public class BIG {
 			Node node2 = getRandomNode(node1);
 			graph.addNode("v1");
 			Node node3 = graph.getNode("v1");
+			node3.addAttribute("ui.label", "v1");
 			
 			graph.addEdge("kurz1", node1, node2, true);
 			Edge edge = graph.getEdge("kurz1");

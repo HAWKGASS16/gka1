@@ -72,11 +72,6 @@ public class FloydWarshall {
 		
 		initialize();
 		
-		
-
-		
-		
-		
 		showDistanzmatrix();
 		showTransitMatrix();
 
@@ -119,10 +114,14 @@ public class FloydWarshall {
 		
 		zugriffsZaehler.stopMeasure();
 		
+//		System.out.println("paderborn - hamburg kosten: "+getKosten("Paderborn","Hamburg"));
+		
+		
 		if(distanzMatrix[indexStart][indexEnde]!=Double.POSITIVE_INFINITY){
-			return false;
-		}else{
+//			System.out.println(startKnoten+" nach "+endKnoten+"ist erreichbar");
 			return true;
+		}else{
+			return false;
 		}
 		
 		
@@ -157,7 +156,7 @@ public class FloydWarshall {
 
 		while (edgeIterator.hasNext()) {
 			Edge object = (Edge) edgeIterator.next();
-			 zugriffsZaehler.read("initialize()", 1);
+			 zugriffsZaehler.read("initialize()", 4);
 
 			Node node1 = object.getSourceNode();
 
@@ -195,9 +194,9 @@ public class FloydWarshall {
 		System.out.println("-----------------------------------------------");
 		System.out.println("Distanzmatrix:");
 		for (int i = 0; i < distanzMatrix.length; i++) {
-			System.out.print(matrixIndizes[i] + ": ");
+			System.out.print(matrixIndizes[i] + ":\t");
 			for (int j = 0; j < distanzMatrix.length; j++) {
-				System.out.print(distanzMatrix[i][j] + " ");
+				System.out.print(distanzMatrix[i][j] + "\t ");
 			}
 			System.out.print("\n");
 		}
@@ -218,6 +217,19 @@ public class FloydWarshall {
 
 	}
 	private void shortestWay(){
+		
+	}
+	public Double getKosten(String start, String ende){
+		
+		Node node1 = graph.getNode(start);
+		Node node2 = graph.getNode(ende);
+		if(node1==null||node2==null){
+			
+			return null;
+			
+		}
+		Double kosten = distanzMatrix[getIndex(node1.getId())][getIndex(node2.getId())];
+		return kosten;
 		
 	}
 
