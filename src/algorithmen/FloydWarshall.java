@@ -53,12 +53,28 @@ public class FloydWarshall {
 		if(startKnoten.equals(endKnoten)){
 			return true;
 		}
+		
+		
 
 		zugriffsZaehler.startMeasure("FloydWarschall von " + startKnoten + " nach " + endKnoten);
 		zugriffsZaehler.log("Knotenanzahl: " + graph.getNodeCount());
 		zugriffsZaehler.log("Kantenanzahl: " + graph.getEdgeCount());
 
+
+		Node node1 = graph.getNode(startKnoten);
+		Node node2 = graph.getNode(endKnoten);
+		
+		zugriffsZaehler.read("suche()", 2);
+		
+		if(node1 == null || node2 == null){
+			return false;
+		}
+		
 		initialize();
+		
+		
+
+		
 		
 		
 		showDistanzmatrix();
@@ -86,6 +102,7 @@ public class FloydWarshall {
 						
 					}
 					if(distanzMatrix[i][i]<0){
+						zugriffsZaehler.stopMeasure();
 						return false;
 					}
 
@@ -100,6 +117,8 @@ public class FloydWarshall {
 		Integer indexStart = getIndex(startKnoten);
 		Integer indexEnde = getIndex(endKnoten);
 		
+		zugriffsZaehler.stopMeasure();
+		
 		if(distanzMatrix[indexStart][indexEnde]!=Double.POSITIVE_INFINITY){
 			return false;
 		}else{
@@ -112,7 +131,7 @@ public class FloydWarshall {
 
 	// ------------------------------------------------------------------------------------
 	/**
-	 * Initialisiert die Suche - also setzt alle distanzen aud default un so
+	 * Initialisiert die Suche - also setzt alle distanzen aud default
 	 */
 	private void initialize() {
 
