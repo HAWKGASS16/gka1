@@ -80,6 +80,25 @@ public class BIG {
 		}
 		
 //		graph.addEdge("Node1Node"+anzahlNodes, "Node1", "Node"+anzahlNodes);
+		if(big){
+			
+			Node node1 = getRandomNode();
+			Node node2 = getRandomNode(node1);
+			graph.addNode("v1");
+			Node node3 = graph.getNode("v1");
+			
+			graph.addEdge("kurz1", node1, node2, true);
+			Edge edge = graph.getEdge("kurz1");
+			edge.setAttribute(GraphController.EdgeAttributeWeight, 2.0);
+			
+			graph.addEdge("kurz2", node2, node3, true);
+			edge = graph.getEdge("kurz2");
+			edge.setAttribute(GraphController.EdgeAttributeWeight, 5.0);
+			
+			
+			
+			
+		}
 		
 		
 	}

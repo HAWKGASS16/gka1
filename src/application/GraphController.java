@@ -177,7 +177,16 @@ public class GraphController implements Initializable {
 				BIG big = new BIG(graph, Integer.parseInt(temp[1]), Integer.parseInt(temp[2]));
 				big.generate();
 				
-			}else if(eingabe.startsWith("empty")){
+			}else if(eingabe.startsWith("generateBIG ")){
+				
+				String[] temp = eingabe.split(" ");
+				
+				BIG big = new BIG(graph, Integer.parseInt(temp[1]), Integer.parseInt(temp[2]));
+				big.setBIG(true);
+				big.generate();
+				
+			}
+			else if(eingabe.startsWith("empty")){
 				graphNeu();
 			}
 

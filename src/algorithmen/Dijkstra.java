@@ -169,7 +169,11 @@ public class Dijkstra {
 			if (tempNode == ende) {
 				erfolgreich = true;
 			}
-			getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten));
+//			getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten));
+			
+			if(getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten))==null){
+				return false;
+			}
 
 		}
 
@@ -310,6 +314,13 @@ public class Dijkstra {
 
 			}
 			tempEdge = getMinimumEdge(tempNode, tempList);
+			
+			if(tempEdge==null){
+				
+				return null;
+				
+			}
+			
 			shortestWay.add(tempEdge);
 			markEdgeVisual(tempEdge);
 			tempNode = tempEdge.getOpposite(tempNode);
@@ -328,7 +339,13 @@ public class Dijkstra {
 		Node vergleichsNode;
 		Double vergleichsGewicht;
 		Edge tempEdge;
-		Edge minimumEdge = tempList.get(0);
+		Edge minimumEdge=null;
+		
+		if(tempList.size()!=0){
+			minimumEdge = tempList.get(0);
+		}else{
+			return null;
+		}
 		Double minimumWeight = (Double) minimumEdge.getOpposite(tempNode).getAttribute(GraphController.NodeAttributdistance);
 
 		Iterator listIterator = tempList.iterator();
