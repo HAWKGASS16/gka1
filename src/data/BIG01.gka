@@ -1,0 +1,7503 @@
+Node99 -> Node34  : 94.0;
+
+
+Node52 -> Node50  : 146.0;
+
+
+Node14 -> Node62  : 30.0;
+
+
+Node81 -> Node42  : 159.0;
+
+
+Node95 -> Node28  : 167.0;
+
+
+Node42 -> Node71  : 187.0;
+
+
+Node14 -> Node63  : 238.0;
+
+
+Node99 -> Node74  : 124.0;
+
+
+Node29 -> Node11  : 179.0;
+
+
+Node17 -> Node47  : 6.0;
+
+
+Node34 -> Node39  : 245.0;
+
+
+Node57 -> Node48  : 281.0;
+
+
+Node82 -> Node46  : 64.0;
+
+
+Node1 -> Node64  : 260.0;
+
+
+Node72 -> Node2  : 206.0;
+
+
+Node84 -> Node17  : 302.0;
+
+
+Node70 -> Node31  : 102.0;
+
+
+Node85 -> Node58  : 195.0;
+
+
+Node3 -> Node60  : 80.0;
+
+
+Node49 -> Node1  : 200.0;
+
+
+Node1 -> Node25  : 101.0;
+
+
+Node78 -> Node53  : 100.0;
+
+
+Node62 -> Node55  : 281.0;
+
+
+Node82 -> Node29  : 287.0;
+
+
+Node45 -> Node20  : 170.0;
+
+
+Node61 -> Node28  : 170.0;
+
+
+Node8 -> Node20  : 119.0;
+
+
+Node39 -> Node80  : 263.0;
+
+
+Node25 -> Node26  : 12.0;
+
+
+Node74 -> Node88  : 111.0;
+
+
+Node68 -> Node54  : 178.0;
+
+
+Node62 -> Node100  : 233.0;
+
+
+Node74 -> Node81  : 267.0;
+
+
+Node33 -> Node99  : 34.0;
+
+
+Node16 -> Node4  : 133.0;
+
+
+Node75 -> Node14  : 57.0;
+
+
+Node96 -> Node60  : 101.0;
+
+
+Node69 -> Node39  : 26.0;
+
+
+Node76 -> Node94  : 189.0;
+
+
+Node68 -> Node77  : 34.0;
+
+
+Node87 -> Node88  : 197.0;
+
+
+Node28 -> Node33  : 199.0;
+
+
+Node7 -> Node4  : 245.0;
+
+
+Node86 -> Node63  : 26.0;
+
+
+Node52 -> Node61  : 234.0;
+
+
+Node60 -> Node91  : 180.0;
+
+
+Node14 -> Node5  : 287.0;
+
+
+Node95 -> Node53  : 155.0;
+
+
+Node20 -> Node25  : 63.0;
+
+
+Node8 -> Node36  : 109.0;
+
+
+Node79 -> Node0  : 214.0;
+
+
+Node100 -> Node55  : 155.0;
+
+
+Node61 -> Node57  : 147.0;
+
+
+Node41 -> Node90  : 150.0;
+
+
+Node7 -> Node16  : 137.0;
+
+
+Node90 -> Node32  : 140.0;
+
+
+Node41 -> Node33  : 235.0;
+
+
+Node20 -> Node100  : 241.0;
+
+
+Node55 -> Node1  : 218.0;
+
+
+Node40 -> Node99  : 282.0;
+
+
+Node36 -> Node21  : 218.0;
+
+
+Node58 -> Node64  : 190.0;
+
+
+Node10 -> Node55  : 193.0;
+
+
+Node30 -> Node13  : 104.0;
+
+
+Node61 -> Node92  : 183.0;
+
+
+Node90 -> Node70  : 117.0;
+
+
+Node59 -> Node84  : 246.0;
+
+
+Node11 -> Node81  : 133.0;
+
+
+Node89 -> Node66  : 98.0;
+
+
+Node51 -> Node13  : 47.0;
+
+
+Node40 -> Node55  : 244.0;
+
+
+Node32 -> Node72  : 291.0;
+
+
+Node89 -> Node18  : 238.0;
+
+
+Node72 -> Node61  : 235.0;
+
+
+Node64 -> Node51  : 272.0;
+
+
+Node80 -> Node59  : 254.0;
+
+
+Node51 -> Node69  : 178.0;
+
+
+Node5 -> Node88  : 277.0;
+
+
+Node53 -> Node78  : 187.0;
+
+
+Node44 -> Node58  : 31.0;
+
+
+Node28 -> Node70  : 246.0;
+
+
+Node17 -> Node18  : 59.0;
+
+
+Node51 -> Node96  : 122.0;
+
+
+Node4 -> Node100  : 101.0;
+
+
+Node98 -> Node68  : 145.0;
+
+
+Node22 -> Node75  : 281.0;
+
+
+Node12 -> Node33  : 73.0;
+
+
+Node8 -> Node67  : 151.0;
+
+
+Node42 -> Node84  : 58.0;
+
+
+Node52 -> Node33  : 65.0;
+
+
+Node26 -> Node83  : 267.0;
+
+
+Node2 -> Node39  : 242.0;
+
+
+Node15 -> Node83  : 245.0;
+
+
+Node17 -> Node35  : 39.0;
+
+
+Node95 -> Node19  : 260.0;
+
+
+Node46 -> Node38  : 266.0;
+
+
+Node47 -> Node10  : 162.0;
+
+
+Node83 -> Node17  : 24.0;
+
+
+Node44 -> Node32  : 99.0;
+
+
+Node62 -> Node75  : 110.0;
+
+
+Node49 -> Node67  : 84.0;
+
+
+Node92 -> Node94  : 209.0;
+
+
+Node15 -> Node32  : 12.0;
+
+
+Node71 -> Node29  : 262.0;
+
+
+Node88 -> Node56  : 156.0;
+
+
+Node75 -> Node66  : 274.0;
+
+
+Node31 -> Node70  : 50.0;
+
+
+Node49 -> Node99  : 107.0;
+
+
+Node88 -> Node0  : 50.0;
+
+
+Node12 -> Node61  : 92.0;
+
+
+Node50 -> Node0  : 238.0;
+
+
+Node31 -> Node83  : 34.0;
+
+
+Node15 -> Node3  : 132.0;
+
+
+Node88 -> Node100  : 100.0;
+
+
+Node97 -> Node83  : 142.0;
+
+
+Node80 -> Node55  : 33.0;
+
+
+Node82 -> Node58  : 71.0;
+
+
+Node19 -> Node91  : 301.0;
+
+
+Node43 -> Node53  : 269.0;
+
+
+Node31 -> Node47  : 53.0;
+
+
+Node31 -> Node88  : 26.0;
+
+
+Node58 -> Node12  : 246.0;
+
+
+Node96 -> Node66  : 35.0;
+
+
+Node93 -> Node55  : 165.0;
+
+
+Node63 -> Node49  : 159.0;
+
+
+Node84 -> Node4  : 271.0;
+
+
+Node98 -> Node70  : 274.0;
+
+
+Node8 -> Node22  : 103.0;
+
+
+Node23 -> Node95  : 235.0;
+
+
+Node88 -> Node57  : 109.0;
+
+
+Node19 -> Node32  : 275.0;
+
+
+Node71 -> Node22  : 255.0;
+
+
+Node89 -> Node100  : 102.0;
+
+
+Node33 -> Node68  : 171.0;
+
+
+Node21 -> Node96  : 247.0;
+
+
+Node98 -> Node53  : 96.0;
+
+
+Node59 -> Node19  : 229.0;
+
+
+Node92 -> Node69  : 267.0;
+
+
+Node76 -> Node20  : 244.0;
+
+
+Node64 -> Node91  : 32.0;
+
+
+Node38 -> Node2  : 209.0;
+
+
+Node53 -> Node32  : 75.0;
+
+
+Node2 -> Node54  : 237.0;
+
+
+Node100 -> Node62  : 31.0;
+
+
+Node86 -> Node12  : 81.0;
+
+
+Node85 -> Node98  : 195.0;
+
+
+Node66 -> Node9  : 201.0;
+
+
+Node49 -> Node9  : 98.0;
+
+
+Node1 -> Node56  : 92.0;
+
+
+Node12 -> Node56  : 163.0;
+
+
+Node77 -> Node40  : 99.0;
+
+
+Node45 -> Node75  : 201.0;
+
+
+Node18 -> Node59  : 288.0;
+
+
+Node96 -> Node6  : 182.0;
+
+
+Node5 -> Node70  : 32.0;
+
+
+Node90 -> Node2  : 276.0;
+
+
+Node45 -> Node79  : 135.0;
+
+
+Node21 -> Node3  : 207.0;
+
+
+Node1 -> Node86  : 197.0;
+
+
+Node50 -> Node36  : 205.0;
+
+
+Node29 -> Node43  : 5.0;
+
+
+Node47 -> Node57  : 168.0;
+
+
+Node24 -> Node70  : 251.0;
+
+
+Node62 -> Node64  : 303.0;
+
+
+Node79 -> Node3  : 160.0;
+
+
+Node51 -> Node60  : 123.0;
+
+
+Node81 -> Node79  : 281.0;
+
+
+Node13 -> Node84  : 68.0;
+
+
+Node65 -> Node89  : 201.0;
+
+
+Node79 -> Node6  : 174.0;
+
+
+Node61 -> Node48  : 241.0;
+
+
+Node97 -> Node28  : 300.0;
+
+
+Node56 -> Node94  : 277.0;
+
+
+Node84 -> Node10  : 22.0;
+
+
+Node58 -> Node60  : 191.0;
+
+
+Node30 -> Node3  : 66.0;
+
+
+Node43 -> Node11  : 169.0;
+
+
+Node82 -> Node61  : 223.0;
+
+
+Node18 -> Node26  : 141.0;
+
+
+Node8 -> Node11  : 14.0;
+
+
+Node96 -> Node33  : 125.0;
+
+
+Node71 -> Node11  : 56.0;
+
+
+Node27 -> Node81  : 224.0;
+
+
+Node37 -> Node74  : 136.0;
+
+
+Node87 -> Node51  : 187.0;
+
+
+Node35 -> Node4  : 219.0;
+
+
+Node7 -> Node85  : 262.0;
+
+
+Node64 -> Node83  : 233.0;
+
+
+Node92 -> Node26  : 82.0;
+
+
+Node12 -> Node55  : 31.0;
+
+
+Node61 -> Node20  : 113.0;
+
+
+Node98 -> Node74  : 64.0;
+
+
+Node2 -> Node96  : 179.0;
+
+
+Node58 -> Node56  : 15.0;
+
+
+Node66 -> Node8  : 296.0;
+
+
+Node65 -> Node45  : 233.0;
+
+
+Node46 -> Node80  : 265.0;
+
+
+Node9 -> Node71  : 18.0;
+
+
+Node34 -> Node41  : 110.0;
+
+
+Node9 -> Node60  : 235.0;
+
+
+Node69 -> Node91  : 250.0;
+
+
+Node49 -> Node100  : 15.0;
+
+
+Node69 -> Node92  : 37.0;
+
+
+Node76 -> Node54  : 128.0;
+
+
+Node41 -> Node88  : 261.0;
+
+
+Node46 -> Node82  : 126.0;
+
+
+Node18 -> Node57  : 200.0;
+
+
+Node1 -> Node81  : 208.0;
+
+
+Node82 -> Node2  : 60.0;
+
+
+Node27 -> Node77  : 191.0;
+
+
+Node62 -> Node54  : 15.0;
+
+
+Node28 -> Node65  : 253.0;
+
+
+Node11 -> Node1  : 238.0;
+
+
+Node46 -> Node18  : 94.0;
+
+
+Node74 -> Node65  : 267.0;
+
+
+Node16 -> Node72  : 117.0;
+
+
+Node81 -> Node34  : 147.0;
+
+
+Node92 -> Node67  : 253.0;
+
+
+Node83 -> Node96  : 112.0;
+
+
+Node85 -> Node53  : 200.0;
+
+
+Node41 -> Node11  : 75.0;
+
+
+Node26 -> Node40  : 241.0;
+
+
+Node30 -> Node81  : 45.0;
+
+
+Node53 -> Node12  : 176.0;
+
+
+Node84 -> Node5  : 278.0;
+
+
+Node84 -> Node59  : 63.0;
+
+
+Node28 -> Node71  : 69.0;
+
+
+Node39 -> Node46  : 164.0;
+
+
+Node13 -> Node0  : 289.0;
+
+
+Node40 -> Node71  : 162.0;
+
+
+Node14 -> Node61  : 162.0;
+
+
+Node14 -> Node69  : 259.0;
+
+
+Node54 -> Node29  : 229.0;
+
+
+Node92 -> Node57  : 154.0;
+
+
+Node77 -> Node28  : 7.0;
+
+
+Node87 -> Node80  : 221.0;
+
+
+Node7 -> Node55  : 188.0;
+
+
+Node11 -> Node63  : 266.0;
+
+
+Node71 -> Node89  : 110.0;
+
+
+Node89 -> Node9  : 124.0;
+
+
+Node32 -> Node45  : 204.0;
+
+
+Node91 -> Node72  : 119.0;
+
+
+Node62 -> Node47  : 303.0;
+
+
+Node51 -> Node45  : 227.0;
+
+
+Node100 -> Node52  : 275.0;
+
+
+Node80 -> Node78  : 94.0;
+
+
+Node6 -> Node30  : 169.0;
+
+
+Node43 -> Node48  : 95.0;
+
+
+Node33 -> Node71  : 230.0;
+
+
+Node10 -> Node51  : 49.0;
+
+
+Node0 -> Node47  : 182.0;
+
+
+Node41 -> Node7  : 133.0;
+
+
+Node13 -> Node15  : 80.0;
+
+
+Node0 -> Node2  : 152.0;
+
+
+Node10 -> Node95  : 264.0;
+
+
+Node53 -> Node3  : 175.0;
+
+
+Node45 -> Node1  : 270.0;
+
+
+Node4 -> Node7  : 84.0;
+
+
+Node83 -> Node6  : 54.0;
+
+
+Node45 -> Node10  : 65.0;
+
+
+Node52 -> Node43  : 259.0;
+
+
+Node61 -> Node26  : 100.0;
+
+
+Node32 -> Node17  : 140.0;
+
+
+Node50 -> Node78  : 157.0;
+
+
+Node35 -> Node92  : 242.0;
+
+
+Node54 -> Node38  : 94.0;
+
+
+Node34 -> Node68  : 37.0;
+
+
+Node3 -> Node96  : 27.0;
+
+
+Node4 -> Node3  : 122.0;
+
+
+Node17 -> Node5  : 54.0;
+
+
+Node54 -> Node16  : 115.0;
+
+
+Node9 -> Node15  : 165.0;
+
+
+Node3 -> Node40  : 173.0;
+
+
+Node50 -> Node54  : 259.0;
+
+
+Node76 -> Node89  : 211.0;
+
+
+Node81 -> Node83  : 259.0;
+
+
+Node74 -> Node22  : 156.0;
+
+
+Node82 -> Node72  : 10.0;
+
+
+Node72 -> Node24  : 151.0;
+
+
+Node86 -> Node24  : 80.0;
+
+
+Node23 -> Node27  : 214.0;
+
+
+Node4 -> Node49  : 127.0;
+
+
+Node99 -> Node65  : 66.0;
+
+
+Node77 -> Node3  : 289.0;
+
+
+Node87 -> Node94  : 236.0;
+
+
+Node1 -> Node40  : 28.0;
+
+
+Node10 -> Node98  : 188.0;
+
+
+Node0 -> Node33  : 6.0;
+
+
+Node69 -> Node27  : 117.0;
+
+
+Node62 -> Node9  : 237.0;
+
+
+Node88 -> Node73  : 189.0;
+
+
+Node81 -> Node4  : 189.0;
+
+
+Node8 -> Node82  : 227.0;
+
+
+Node55 -> Node25  : 266.0;
+
+
+Node28 -> Node54  : 149.0;
+
+
+Node2 -> Node51  : 236.0;
+
+
+Node92 -> Node45  : 114.0;
+
+
+Node58 -> Node72  : 54.0;
+
+
+Node19 -> Node20  : 143.0;
+
+
+Node68 -> Node39  : 136.0;
+
+
+Node63 -> Node19  : 271.0;
+
+
+Node82 -> Node83  : 168.0;
+
+
+Node43 -> Node83  : 97.0;
+
+
+Node70 -> Node36  : 184.0;
+
+
+Node57 -> Node29  : 268.0;
+
+
+Node65 -> Node23  : 19.0;
+
+
+Node56 -> Node95  : 112.0;
+
+
+Node70 -> Node24  : 268.0;
+
+
+Node98 -> Node41  : 182.0;
+
+
+Node20 -> Node51  : 200.0;
+
+
+Node79 -> Node55  : 288.0;
+
+
+Node60 -> Node0  : 81.0;
+
+
+Node53 -> Node48  : 21.0;
+
+
+Node2 -> Node28  : 184.0;
+
+
+Node70 -> Node73  : 258.0;
+
+
+Node64 -> Node25  : 75.0;
+
+
+Node15 -> Node12  : 124.0;
+
+
+Node39 -> Node11  : 50.0;
+
+
+Node59 -> Node88  : 252.0;
+
+
+Node2 -> Node11  : 89.0;
+
+
+Node44 -> Node69  : 190.0;
+
+
+Node43 -> Node32  : 51.0;
+
+
+Node89 -> Node36  : 265.0;
+
+
+Node89 -> Node24  : 78.0;
+
+
+Node20 -> Node33  : 137.0;
+
+
+Node95 -> Node30  : 58.0;
+
+
+Node18 -> Node45  : 118.0;
+
+
+Node27 -> Node43  : 248.0;
+
+
+Node59 -> Node68  : 227.0;
+
+
+Node61 -> Node6  : 160.0;
+
+
+Node82 -> Node88  : 213.0;
+
+
+Node7 -> Node58  : 172.0;
+
+
+Node22 -> Node14  : 280.0;
+
+
+Node93 -> Node71  : 177.0;
+
+
+Node34 -> Node22  : 150.0;
+
+
+Node8 -> Node85  : 187.0;
+
+
+Node11 -> Node20  : 36.0;
+
+
+Node57 -> Node36  : 161.0;
+
+
+Node43 -> Node57  : 285.0;
+
+
+Node29 -> Node9  : 254.0;
+
+
+Node21 -> Node91  : 59.0;
+
+
+Node72 -> Node95  : 101.0;
+
+
+Node1 -> Node39  : 93.0;
+
+
+Node48 -> Node47  : 40.0;
+
+
+Node51 -> Node6  : 45.0;
+
+
+Node78 -> Node93  : 195.0;
+
+
+Node87 -> Node77  : 90.0;
+
+
+Node27 -> Node62  : 79.0;
+
+
+Node5 -> Node8  : 195.0;
+
+
+Node36 -> Node57  : 69.0;
+
+
+Node19 -> Node37  : 242.0;
+
+
+Node34 -> Node28  : 254.0;
+
+
+Node69 -> Node74  : 160.0;
+
+
+Node24 -> Node47  : 207.0;
+
+
+Node11 -> Node16  : 261.0;
+
+
+Node5 -> Node47  : 304.0;
+
+
+Node68 -> Node2  : 51.0;
+
+
+Node27 -> Node13  : 298.0;
+
+
+Node46 -> Node70  : 89.0;
+
+
+Node98 -> Node94  : 245.0;
+
+
+Node11 -> Node83  : 275.0;
+
+
+Node83 -> Node68  : 280.0;
+
+
+Node28 -> Node29  : 250.0;
+
+
+Node4 -> Node67  : 285.0;
+
+
+Node82 -> Node22  : 223.0;
+
+
+Node12 -> Node2  : 76.0;
+
+
+Node16 -> Node41  : 105.0;
+
+
+Node61 -> Node50  : 137.0;
+
+
+Node86 -> Node57  : 193.0;
+
+
+Node59 -> Node78  : 287.0;
+
+
+Node49 -> Node26  : 7.0;
+
+
+Node69 -> Node38  : 29.0;
+
+
+Node12 -> Node45  : 202.0;
+
+
+Node26 -> Node52  : 227.0;
+
+
+Node77 -> Node68  : 92.0;
+
+
+Node12 -> Node24  : 166.0;
+
+
+Node37 -> Node98  : 22.0;
+
+
+Node71 -> Node43  : 222.0;
+
+
+Node35 -> Node80  : 79.0;
+
+
+Node36 -> Node13  : 206.0;
+
+
+Node31 -> Node33  : 175.0;
+
+
+Node13 -> Node8  : 120.0;
+
+
+Node82 -> Node55  : 147.0;
+
+
+Node56 -> Node1  : 276.0;
+
+
+Node35 -> Node20  : 236.0;
+
+
+Node38 -> Node31  : 239.0;
+
+
+Node0 -> Node98  : 236.0;
+
+
+Node7 -> Node72  : 281.0;
+
+
+Node61 -> Node24  : 207.0;
+
+
+Node17 -> Node40  : 251.0;
+
+
+Node18 -> Node4  : 16.0;
+
+
+Node94 -> Node74  : 233.0;
+
+
+Node82 -> Node33  : 86.0;
+
+
+Node31 -> Node35  : 98.0;
+
+
+Node18 -> Node48  : 13.0;
+
+
+Node84 -> Node36  : 243.0;
+
+
+Node23 -> Node83  : 55.0;
+
+
+Node67 -> Node95  : 25.0;
+
+
+Node79 -> Node23  : 172.0;
+
+
+Node32 -> Node86  : 54.0;
+
+
+Node47 -> Node5  : 196.0;
+
+
+Node42 -> Node15  : 7.0;
+
+
+Node39 -> Node1  : 123.0;
+
+
+Node42 -> Node66  : 51.0;
+
+
+Node29 -> Node71  : 187.0;
+
+
+Node64 -> Node49  : 93.0;
+
+
+Node74 -> Node26  : 69.0;
+
+
+Node46 -> Node83  : 224.0;
+
+
+Node5 -> Node99  : 202.0;
+
+
+Node36 -> Node69  : 267.0;
+
+
+Node90 -> Node30  : 169.0;
+
+
+Node4 -> Node68  : 81.0;
+
+
+Node16 -> Node100  : 26.0;
+
+
+Node88 -> Node58  : 280.0;
+
+
+Node13 -> Node1  : 208.0;
+
+
+Node17 -> Node96  : 16.0;
+
+
+Node3 -> Node45  : 52.0;
+
+
+Node73 -> Node10  : 104.0;
+
+
+Node61 -> Node22  : 172.0;
+
+
+Node1 -> Node49  : 27.0;
+
+
+Node77 -> Node48  : 90.0;
+
+
+Node9 -> Node28  : 180.0;
+
+
+Node12 -> Node8  : 103.0;
+
+
+Node14 -> Node28  : 214.0;
+
+
+Node85 -> Node86  : 5.0;
+
+
+Node39 -> Node89  : 94.0;
+
+
+Node79 -> Node17  : 49.0;
+
+
+Node75 -> Node26  : 95.0;
+
+
+Node85 -> Node5  : 178.0;
+
+
+Node64 -> Node86  : 24.0;
+
+
+Node88 -> Node44  : 211.0;
+
+
+Node37 -> Node49  : 176.0;
+
+
+Node75 -> Node68  : 222.0;
+
+
+Node5 -> Node58  : 16.0;
+
+
+Node7 -> Node6  : 93.0;
+
+
+Node60 -> Node53  : 159.0;
+
+
+Node51 -> Node67  : 244.0;
+
+
+Node9 -> Node45  : 23.0;
+
+
+Node80 -> Node57  : 61.0;
+
+
+Node36 -> Node3  : 30.0;
+
+
+Node66 -> Node98  : 298.0;
+
+
+Node56 -> Node18  : 116.0;
+
+
+Node53 -> Node74  : 49.0;
+
+
+Node89 -> Node26  : 66.0;
+
+
+Node97 -> Node71  : 76.0;
+
+
+Node76 -> Node12  : 244.0;
+
+
+Node9 -> Node53  : 65.0;
+
+
+Node14 -> Node89  : 112.0;
+
+
+Node20 -> Node28  : 13.0;
+
+
+Node82 -> Node59  : 8.0;
+
+
+Node93 -> Node68  : 243.0;
+
+
+Node7 -> Node52  : 17.0;
+
+
+Node27 -> Node41  : 252.0;
+
+
+Node52 -> Node70  : 91.0;
+
+
+Node37 -> Node99  : 272.0;
+
+
+Node76 -> Node21  : 141.0;
+
+
+Node55 -> Node88  : 221.0;
+
+
+Node86 -> Node89  : 237.0;
+
+
+Node65 -> Node66  : 52.0;
+
+
+Node9 -> Node10  : 99.0;
+
+
+Node100 -> Node88  : 14.0;
+
+
+Node61 -> Node3  : 9.0;
+
+
+Node38 -> Node25  : 176.0;
+
+
+Node14 -> Node27  : 247.0;
+
+
+Node69 -> Node60  : 135.0;
+
+
+Node59 -> Node97  : 204.0;
+
+
+Node79 -> Node19  : 240.0;
+
+
+Node35 -> Node19  : 49.0;
+
+
+Node48 -> Node66  : 113.0;
+
+
+Node46 -> Node87  : 79.0;
+
+
+Node51 -> Node83  : 180.0;
+
+
+Node85 -> Node75  : 59.0;
+
+
+Node81 -> Node99  : 131.0;
+
+
+Node96 -> Node80  : 249.0;
+
+
+Node3 -> Node100  : 253.0;
+
+
+Node45 -> Node91  : 54.0;
+
+
+Node6 -> Node94  : 112.0;
+
+
+Node54 -> Node11  : 154.0;
+
+
+Node60 -> Node33  : 175.0;
+
+
+Node96 -> Node0  : 178.0;
+
+
+Node65 -> Node71  : 197.0;
+
+
+Node4 -> Node99  : 49.0;
+
+
+Node94 -> Node75  : 115.0;
+
+
+Node56 -> Node7  : 69.0;
+
+
+Node78 -> Node12  : 61.0;
+
+
+Node86 -> Node59  : 303.0;
+
+
+Node24 -> Node80  : 83.0;
+
+
+Node80 -> Node69  : 196.0;
+
+
+Node83 -> Node49  : 295.0;
+
+
+Node24 -> Node76  : 113.0;
+
+
+Node20 -> Node96  : 54.0;
+
+
+Node58 -> Node5  : 24.0;
+
+
+Node64 -> Node13  : 181.0;
+
+
+Node86 -> Node97  : 111.0;
+
+
+Node14 -> Node81  : 303.0;
+
+
+Node59 -> Node25  : 275.0;
+
+
+Node51 -> Node40  : 46.0;
+
+
+Node42 -> Node41  : 192.0;
+
+
+Node53 -> Node38  : 96.0;
+
+
+Node97 -> Node6  : 54.0;
+
+
+Node57 -> Node39  : 258.0;
+
+
+Node51 -> Node32  : 16.0;
+
+
+Node85 -> Node49  : 282.0;
+
+
+Node66 -> Node44  : 143.0;
+
+
+Node60 -> Node38  : 171.0;
+
+
+Node28 -> Node66  : 181.0;
+
+
+Node43 -> Node0  : 108.0;
+
+
+Node59 -> Node67  : 130.0;
+
+
+Node57 -> Node25  : 187.0;
+
+
+Node22 -> Node4  : 227.0;
+
+
+Node83 -> Node97  : 137.0;
+
+
+Node86 -> Node3  : 121.0;
+
+
+Node43 -> Node38  : 106.0;
+
+
+Node49 -> Node63  : 259.0;
+
+
+Node64 -> Node35  : 52.0;
+
+
+Node14 -> Node8  : 167.0;
+
+
+Node21 -> Node55  : 160.0;
+
+
+Node55 -> Node65  : 70.0;
+
+
+Node98 -> Node49  : 301.0;
+
+
+Node68 -> Node46  : 264.0;
+
+
+Node34 -> Node95  : 41.0;
+
+
+Node77 -> Node9  : 175.0;
+
+
+Node19 -> Node29  : 161.0;
+
+
+Node61 -> Node7  : 171.0;
+
+
+Node99 -> Node50  : 5.0;
+
+
+Node19 -> Node3  : 304.0;
+
+
+Node16 -> Node30  : 289.0;
+
+
+Node1 -> Node98  : 56.0;
+
+
+Node17 -> Node23  : 297.0;
+
+
+Node59 -> Node34  : 105.0;
+
+
+Node71 -> Node60  : 151.0;
+
+
+Node64 -> Node47  : 18.0;
+
+
+Node57 -> Node98  : 266.0;
+
+
+Node40 -> Node12  : 116.0;
+
+
+Node67 -> Node84  : 44.0;
+
+
+Node73 -> Node9  : 182.0;
+
+
+Node90 -> Node3  : 126.0;
+
+
+Node72 -> Node53  : 136.0;
+
+
+Node95 -> Node13  : 93.0;
+
+
+Node16 -> Node73  : 152.0;
+
+
+Node37 -> Node17  : 255.0;
+
+
+Node63 -> Node69  : 137.0;
+
+
+Node28 -> Node63  : 266.0;
+
+
+Node70 -> Node54  : 289.0;
+
+
+Node63 -> Node77  : 130.0;
+
+
+Node44 -> Node80  : 51.0;
+
+
+Node68 -> Node0  : 304.0;
+
+
+Node50 -> Node62  : 184.0;
+
+
+Node75 -> Node2  : 147.0;
+
+
+Node83 -> Node19  : 110.0;
+
+
+Node13 -> Node92  : 228.0;
+
+
+Node50 -> Node7  : 226.0;
+
+
+Node37 -> Node35  : 247.0;
+
+
+Node71 -> Node62  : 89.0;
+
+
+Node96 -> Node78  : 257.0;
+
+
+Node74 -> Node24  : 243.0;
+
+
+Node36 -> Node89  : 35.0;
+
+
+Node59 -> Node9  : 11.0;
+
+
+Node56 -> Node42  : 232.0;
+
+
+Node1 -> Node43  : 286.0;
+
+
+Node30 -> Node46  : 107.0;
+
+
+Node73 -> Node51  : 162.0;
+
+
+Node40 -> Node48  : 37.0;
+
+
+Node87 -> Node76  : 182.0;
+
+
+Node15 -> Node7  : 15.0;
+
+
+Node76 -> Node24  : 95.0;
+
+
+Node67 -> Node40  : 161.0;
+
+
+Node100 -> Node22  : 217.0;
+
+
+Node38 -> Node16  : 176.0;
+
+
+Node28 -> Node52  : 247.0;
+
+
+Node24 -> Node40  : 224.0;
+
+
+Node72 -> Node11  : 251.0;
+
+
+Node49 -> Node78  : 93.0;
+
+
+Node48 -> Node4  : 235.0;
+
+
+Node33 -> Node39  : 196.0;
+
+
+Node58 -> Node6  : 211.0;
+
+
+Node49 -> Node17  : 277.0;
+
+
+Node60 -> Node92  : 216.0;
+
+
+Node69 -> Node67  : 15.0;
+
+
+Node10 -> Node13  : 146.0;
+
+
+Node1 -> Node35  : 162.0;
+
+
+Node32 -> Node84  : 110.0;
+
+
+Node11 -> Node46  : 284.0;
+
+
+Node15 -> Node72  : 299.0;
+
+
+Node81 -> Node55  : 123.0;
+
+
+Node28 -> Node20  : 277.0;
+
+
+Node99 -> Node80  : 242.0;
+
+
+Node58 -> Node85  : 224.0;
+
+
+Node73 -> Node50  : 47.0;
+
+
+Node66 -> Node17  : 107.0;
+
+
+Node7 -> Node57  : 175.0;
+
+
+Node82 -> Node99  : 302.0;
+
+
+Node69 -> Node90  : 49.0;
+
+
+Node18 -> Node100  : 260.0;
+
+
+Node17 -> Node24  : 166.0;
+
+
+Node82 -> Node89  : 261.0;
+
+
+Node97 -> Node42  : 280.0;
+
+
+Node50 -> Node9  : 220.0;
+
+
+Node96 -> Node97  : 285.0;
+
+
+Node26 -> Node87  : 31.0;
+
+
+Node55 -> Node15  : 176.0;
+
+
+Node4 -> Node86  : 22.0;
+
+
+Node3 -> Node43  : 238.0;
+
+
+Node97 -> Node89  : 131.0;
+
+
+Node52 -> Node45  : 226.0;
+
+
+Node17 -> Node38  : 163.0;
+
+
+Node88 -> Node35  : 303.0;
+
+
+Node63 -> Node54  : 80.0;
+
+
+Node28 -> Node57  : 139.0;
+
+
+Node98 -> Node25  : 84.0;
+
+
+Node30 -> Node39  : 130.0;
+
+
+Node28 -> Node9  : 295.0;
+
+
+Node59 -> Node24  : 47.0;
+
+
+Node56 -> Node19  : 227.0;
+
+
+Node78 -> Node20  : 240.0;
+
+
+Node11 -> Node100  : 262.0;
+
+
+Node41 -> Node55  : 285.0;
+
+
+Node75 -> Node100  : 49.0;
+
+
+Node73 -> Node39  : 165.0;
+
+
+Node20 -> Node10  : 108.0;
+
+
+Node71 -> Node65  : 193.0;
+
+
+Node99 -> Node28  : 32.0;
+
+
+Node100 -> Node46  : 110.0;
+
+
+Node49 -> Node3  : 112.0;
+
+
+Node24 -> Node64  : 34.0;
+
+
+Node42 -> Node58  : 214.0;
+
+
+Node14 -> Node99  : 265.0;
+
+
+Node85 -> Node4  : 262.0;
+
+
+Node62 -> Node4  : 55.0;
+
+
+Node40 -> Node10  : 281.0;
+
+
+Node29 -> Node84  : 194.0;
+
+
+Node43 -> Node4  : 115.0;
+
+
+Node18 -> Node51  : 81.0;
+
+
+Node77 -> Node1  : 140.0;
+
+
+Node9 -> Node55  : 28.0;
+
+
+Node95 -> Node96  : 63.0;
+
+
+Node69 -> Node80  : 231.0;
+
+
+Node40 -> Node49  : 161.0;
+
+
+Node59 -> Node38  : 7.0;
+
+
+Node43 -> Node15  : 99.0;
+
+
+Node26 -> Node57  : 89.0;
+
+
+Node39 -> Node16  : 42.0;
+
+
+Node99 -> Node12  : 149.0;
+
+
+Node76 -> Node78  : 296.0;
+
+
+Node70 -> Node0  : 147.0;
+
+
+Node27 -> Node33  : 44.0;
+
+
+Node12 -> Node16  : 137.0;
+
+
+Node40 -> Node57  : 188.0;
+
+
+Node70 -> Node95  : 11.0;
+
+
+Node60 -> Node15  : 164.0;
+
+
+Node45 -> Node58  : 292.0;
+
+
+Node6 -> Node23  : 177.0;
+
+
+Node99 -> Node52  : 104.0;
+
+
+Node41 -> Node34  : 48.0;
+
+
+Node28 -> Node46  : 153.0;
+
+
+Node19 -> Node66  : 60.0;
+
+
+Node9 -> Node73  : 223.0;
+
+
+Node23 -> Node24  : 300.0;
+
+
+Node33 -> Node52  : 116.0;
+
+
+Node87 -> Node12  : 229.0;
+
+
+Node50 -> Node96  : 21.0;
+
+
+Node47 -> Node76  : 255.0;
+
+
+Node25 -> Node44  : 155.0;
+
+
+Node58 -> Node63  : 25.0;
+
+
+Node30 -> Node40  : 207.0;
+
+
+Node52 -> Node9  : 259.0;
+
+
+Node89 -> Node92  : 183.0;
+
+
+Node40 -> Node37  : 81.0;
+
+
+Node10 -> Node99  : 144.0;
+
+
+Node4 -> Node40  : 248.0;
+
+
+Node44 -> Node34  : 252.0;
+
+
+Node38 -> Node85  : 64.0;
+
+
+Node41 -> Node4  : 8.0;
+
+
+Node10 -> Node72  : 238.0;
+
+
+Node41 -> Node66  : 81.0;
+
+
+Node51 -> Node14  : 160.0;
+
+
+Node55 -> Node30  : 248.0;
+
+
+Node8 -> Node13  : 234.0;
+
+
+Node35 -> Node99  : 94.0;
+
+
+Node29 -> Node74  : 151.0;
+
+
+Node47 -> Node25  : 111.0;
+
+
+Node35 -> Node15  : 213.0;
+
+
+Node51 -> Node20  : 155.0;
+
+
+Node83 -> Node95  : 122.0;
+
+
+Node13 -> Node7  : 69.0;
+
+
+Node34 -> Node57  : 118.0;
+
+
+Node39 -> Node7  : 53.0;
+
+
+Node11 -> Node25  : 177.0;
+
+
+Node52 -> Node80  : 18.0;
+
+
+Node33 -> Node46  : 21.0;
+
+
+Node40 -> Node75  : 244.0;
+
+
+Node72 -> Node19  : 197.0;
+
+
+Node2 -> Node48  : 72.0;
+
+
+Node11 -> Node69  : 280.0;
+
+
+Node68 -> Node67  : 123.0;
+
+
+Node96 -> Node94  : 189.0;
+
+
+Node41 -> Node28  : 48.0;
+
+
+Node33 -> Node14  : 95.0;
+
+
+Node6 -> Node51  : 136.0;
+
+
+Node13 -> Node37  : 258.0;
+
+
+Node21 -> Node13  : 260.0;
+
+
+Node45 -> Node34  : 144.0;
+
+
+Node75 -> Node78  : 84.0;
+
+
+Node8 -> Node42  : 216.0;
+
+
+Node61 -> Node42  : 222.0;
+
+
+Node76 -> Node8  : 68.0;
+
+
+Node6 -> Node40  : 108.0;
+
+
+Node31 -> Node25  : 236.0;
+
+
+Node65 -> Node2  : 57.0;
+
+
+Node2 -> Node15  : 134.0;
+
+
+Node70 -> Node15  : 102.0;
+
+
+Node82 -> Node73  : 79.0;
+
+
+Node44 -> Node55  : 176.0;
+
+
+Node60 -> Node64  : 246.0;
+
+
+Node97 -> Node7  : 254.0;
+
+
+Node17 -> Node3  : 209.0;
+
+
+Node49 -> Node48  : 161.0;
+
+
+Node14 -> Node57  : 68.0;
+
+
+Node76 -> Node38  : 122.0;
+
+
+Node37 -> Node26  : 171.0;
+
+
+Node98 -> Node62  : 39.0;
+
+
+Node69 -> Node65  : 97.0;
+
+
+Node92 -> Node9  : 228.0;
+
+
+Node10 -> Node43  : 68.0;
+
+
+Node87 -> Node31  : 35.0;
+
+
+Node62 -> Node71  : 267.0;
+
+
+Node9 -> Node37  : 304.0;
+
+
+Node95 -> Node84  : 210.0;
+
+
+Node94 -> Node92  : 102.0;
+
+
+Node47 -> Node78  : 232.0;
+
+
+Node2 -> Node69  : 119.0;
+
+
+Node80 -> Node49  : 184.0;
+
+
+Node71 -> Node51  : 216.0;
+
+
+Node47 -> Node68  : 292.0;
+
+
+Node78 -> Node84  : 114.0;
+
+
+Node48 -> Node71  : 210.0;
+
+
+Node94 -> Node76  : 14.0;
+
+
+Node40 -> Node23  : 291.0;
+
+
+Node14 -> Node6  : 207.0;
+
+
+Node34 -> Node98  : 203.0;
+
+
+Node23 -> Node42  : 236.0;
+
+
+Node73 -> Node34  : 217.0;
+
+
+Node91 -> Node28  : 14.0;
+
+
+Node70 -> Node13  : 216.0;
+
+
+Node68 -> Node25  : 14.0;
+
+
+Node19 -> Node67  : 161.0;
+
+
+Node42 -> Node17  : 197.0;
+
+
+Node2 -> Node30  : 51.0;
+
+
+Node93 -> Node35  : 32.0;
+
+
+Node55 -> Node61  : 107.0;
+
+
+Node82 -> Node10  : 31.0;
+
+
+Node21 -> Node11  : 66.0;
+
+
+Node73 -> Node14  : 264.0;
+
+
+Node71 -> Node27  : 190.0;
+
+
+Node47 -> Node74  : 101.0;
+
+
+Node1 -> Node97  : 193.0;
+
+
+Node39 -> Node32  : 101.0;
+
+
+Node11 -> Node31  : 85.0;
+
+
+Node81 -> Node87  : 149.0;
+
+
+Node70 -> Node45  : 292.0;
+
+
+Node82 -> Node38  : 81.0;
+
+
+Node58 -> Node55  : 288.0;
+
+
+Node61 -> Node0  : 145.0;
+
+
+Node21 -> Node97  : 211.0;
+
+
+Node88 -> Node94  : 181.0;
+
+
+Node77 -> Node34  : 256.0;
+
+
+Node75 -> Node86  : 218.0;
+
+
+Node13 -> Node31  : 141.0;
+
+
+Node1 -> Node32  : 163.0;
+
+
+Node83 -> Node77  : 52.0;
+
+
+Node20 -> Node59  : 113.0;
+
+
+Node75 -> Node50  : 134.0;
+
+
+Node97 -> Node14  : 119.0;
+
+
+Node65 -> Node81  : 83.0;
+
+
+Node55 -> Node53  : 288.0;
+
+
+Node86 -> Node46  : 130.0;
+
+
+Node97 -> Node13  : 52.0;
+
+
+Node96 -> Node65  : 253.0;
+
+
+Node100 -> Node71  : 137.0;
+
+
+Node84 -> Node30  : 246.0;
+
+
+Node37 -> Node7  : 196.0;
+
+
+Node2 -> Node91  : 70.0;
+
+
+Node36 -> Node79  : 76.0;
+
+
+Node66 -> Node73  : 156.0;
+
+
+Node86 -> Node28  : 131.0;
+
+
+Node85 -> Node100  : 109.0;
+
+
+Node87 -> Node34  : 17.0;
+
+
+Node54 -> Node66  : 264.0;
+
+
+Node51 -> Node17  : 13.0;
+
+
+Node17 -> Node81  : 166.0;
+
+
+Node63 -> Node6  : 273.0;
+
+
+Node6 -> Node82  : 208.0;
+
+
+Node44 -> Node28  : 142.0;
+
+
+Node28 -> Node25  : 67.0;
+
+
+Node68 -> Node94  : 90.0;
+
+
+Node17 -> Node25  : 214.0;
+
+
+Node79 -> Node85  : 93.0;
+
+
+Node60 -> Node59  : 184.0;
+
+
+Node33 -> Node23  : 269.0;
+
+
+Node0 -> Node81  : 294.0;
+
+
+Node43 -> Node95  : 145.0;
+
+
+Node42 -> Node91  : 78.0;
+
+
+Node44 -> Node3  : 77.0;
+
+
+Node53 -> Node9  : 109.0;
+
+
+Node99 -> Node69  : 54.0;
+
+
+Node36 -> Node17  : 217.0;
+
+
+Node80 -> Node76  : 175.0;
+
+
+Node16 -> Node97  : 99.0;
+
+
+Node23 -> Node90  : 207.0;
+
+
+Node100 -> Node50  : 222.0;
+
+
+Node95 -> Node42  : 155.0;
+
+
+Node2 -> Node75  : 257.0;
+
+
+Node88 -> Node43  : 263.0;
+
+
+Node6 -> Node22  : 191.0;
+
+
+Node13 -> Node76  : 19.0;
+
+
+Node37 -> Node19  : 77.0;
+
+
+Node47 -> Node77  : 201.0;
+
+
+Node62 -> Node29  : 169.0;
+
+
+Node16 -> Node54  : 235.0;
+
+
+Node86 -> Node36  : 177.0;
+
+
+Node23 -> Node51  : 274.0;
+
+
+Node82 -> Node11  : 223.0;
+
+
+Node40 -> Node62  : 29.0;
+
+
+Node25 -> Node17  : 141.0;
+
+
+Node31 -> Node82  : 89.0;
+
+
+Node46 -> Node19  : 256.0;
+
+
+Node50 -> Node1  : 115.0;
+
+
+Node69 -> Node4  : 110.0;
+
+
+Node38 -> Node65  : 113.0;
+
+
+Node65 -> Node96  : 36.0;
+
+
+Node21 -> Node61  : 292.0;
+
+
+Node84 -> Node31  : 65.0;
+
+
+Node47 -> Node35  : 29.0;
+
+
+Node1 -> Node92  : 135.0;
+
+
+Node66 -> Node43  : 259.0;
+
+
+Node89 -> Node58  : 49.0;
+
+
+Node53 -> Node22  : 14.0;
+
+
+Node70 -> Node20  : 121.0;
+
+
+Node67 -> Node66  : 273.0;
+
+
+Node90 -> Node25  : 157.0;
+
+
+Node38 -> Node68  : 42.0;
+
+
+Node37 -> Node89  : 10.0;
+
+
+Node22 -> Node21  : 169.0;
+
+
+Node64 -> Node7  : 79.0;
+
+
+Node99 -> Node72  : 45.0;
+
+
+Node1 -> Node63  : 267.0;
+
+
+Node24 -> Node21  : 16.0;
+
+
+Node53 -> Node44  : 262.0;
+
+
+Node86 -> Node100  : 267.0;
+
+
+Node96 -> Node84  : 235.0;
+
+
+Node67 -> Node59  : 68.0;
+
+
+Node14 -> Node16  : 152.0;
+
+
+Node88 -> Node8  : 81.0;
+
+
+Node27 -> Node30  : 236.0;
+
+
+Node72 -> Node34  : 304.0;
+
+
+Node83 -> Node75  : 264.0;
+
+
+Node18 -> Node41  : 137.0;
+
+
+Node18 -> Node47  : 240.0;
+
+
+Node24 -> Node7  : 250.0;
+
+
+Node78 -> Node67  : 218.0;
+
+
+Node18 -> Node35  : 160.0;
+
+
+Node20 -> Node48  : 125.0;
+
+
+Node30 -> Node78  : 84.0;
+
+
+Node12 -> Node90  : 294.0;
+
+
+Node90 -> Node45  : 248.0;
+
+
+Node51 -> Node36  : 28.0;
+
+
+Node8 -> Node79  : 51.0;
+
+
+Node29 -> Node56  : 279.0;
+
+
+Node36 -> Node80  : 64.0;
+
+
+Node51 -> Node42  : 205.0;
+
+
+Node26 -> Node68  : 304.0;
+
+
+Node79 -> Node78  : 36.0;
+
+
+Node17 -> Node30  : 89.0;
+
+
+Node25 -> Node6  : 100.0;
+
+
+Node7 -> Node96  : 172.0;
+
+
+Node28 -> Node14  : 173.0;
+
+
+Node88 -> Node97  : 90.0;
+
+
+Node88 -> Node36  : 179.0;
+
+
+Node91 -> Node7  : 164.0;
+
+
+Node59 -> Node10  : 70.0;
+
+
+Node90 -> Node62  : 292.0;
+
+
+Node21 -> Node14  : 94.0;
+
+
+Node36 -> Node33  : 98.0;
+
+
+Node19 -> Node71  : 176.0;
+
+
+Node28 -> Node34  : 254.0;
+
+
+Node25 -> Node83  : 154.0;
+
+
+Node23 -> Node67  : 175.0;
+
+
+Node98 -> Node50  : 275.0;
+
+
+Node91 -> Node5  : 128.0;
+
+
+Node0 -> Node65  : 31.0;
+
+
+Node10 -> Node69  : 270.0;
+
+
+Node39 -> Node82  : 297.0;
+
+
+Node95 -> Node25  : 207.0;
+
+
+Node37 -> Node72  : 141.0;
+
+
+Node15 -> Node88  : 56.0;
+
+
+Node31 -> Node11  : 216.0;
+
+
+Node26 -> Node48  : 76.0;
+
+
+Node9 -> Node89  : 279.0;
+
+
+Node33 -> Node95  : 46.0;
+
+
+Node89 -> Node34  : 39.0;
+
+
+Node75 -> Node43  : 240.0;
+
+
+Node29 -> Node12  : 295.0;
+
+
+Node87 -> Node67  : 177.0;
+
+
+Node68 -> Node92  : 230.0;
+
+
+Node53 -> Node31  : 274.0;
+
+
+Node64 -> Node46  : 248.0;
+
+
+Node21 -> Node63  : 133.0;
+
+
+Node67 -> Node32  : 304.0;
+
+
+Node89 -> Node80  : 79.0;
+
+
+Node2 -> Node22  : 273.0;
+
+
+Node0 -> Node93  : 246.0;
+
+
+Node50 -> Node80  : 25.0;
+
+
+Node28 -> Node76  : 283.0;
+
+
+Node45 -> Node67  : 224.0;
+
+
+Node14 -> Node40  : 185.0;
+
+
+Node67 -> Node81  : 171.0;
+
+
+Node0 -> Node34  : 245.0;
+
+
+Node93 -> Node69  : 141.0;
+
+
+Node49 -> Node6  : 252.0;
+
+
+Node4 -> Node42  : 96.0;
+
+
+Node8 -> Node48  : 43.0;
+
+
+Node67 -> Node11  : 226.0;
+
+
+Node2 -> Node18  : 102.0;
+
+
+Node57 -> Node15  : 284.0;
+
+
+Node33 -> Node47  : 51.0;
+
+
+Node56 -> Node86  : 51.0;
+
+
+Node52 -> Node7  : 58.0;
+
+
+Node23 -> Node64  : 36.0;
+
+
+Node59 -> Node43  : 169.0;
+
+
+Node6 -> Node5  : 50.0;
+
+
+Node24 -> Node2  : 227.0;
+
+
+Node25 -> Node31  : 41.0;
+
+
+Node10 -> Node78  : 64.0;
+
+
+Node86 -> Node53  : 260.0;
+
+
+Node100 -> Node1  : 250.0;
+
+
+Node78 -> Node4  : 102.0;
+
+
+Node68 -> Node3  : 194.0;
+
+
+Node90 -> Node98  : 131.0;
+
+
+Node52 -> Node65  : 286.0;
+
+
+Node71 -> Node12  : 239.0;
+
+
+Node41 -> Node95  : 161.0;
+
+
+Node56 -> Node30  : 37.0;
+
+
+Node27 -> Node37  : 18.0;
+
+
+Node50 -> Node26  : 144.0;
+
+
+Node73 -> Node67  : 194.0;
+
+
+Node38 -> Node95  : 288.0;
+
+
+Node23 -> Node99  : 234.0;
+
+
+Node18 -> Node64  : 244.0;
+
+
+Node21 -> Node27  : 172.0;
+
+
+Node26 -> Node46  : 46.0;
+
+
+Node76 -> Node68  : 89.0;
+
+
+Node41 -> Node16  : 173.0;
+
+
+Node52 -> Node53  : 123.0;
+
+
+Node64 -> Node80  : 215.0;
+
+
+Node48 -> Node8  : 31.0;
+
+
+Node78 -> Node33  : 160.0;
+
+
+Node39 -> Node57  : 124.0;
+
+
+Node4 -> Node70  : 108.0;
+
+
+Node93 -> Node46  : 268.0;
+
+
+Node57 -> Node99  : 165.0;
+
+
+Node70 -> Node72  : 160.0;
+
+
+Node73 -> Node12  : 49.0;
+
+
+Node80 -> Node96  : 281.0;
+
+
+Node60 -> Node5  : 198.0;
+
+
+Node70 -> Node16  : 301.0;
+
+
+Node44 -> Node77  : 110.0;
+
+
+Node86 -> Node55  : 178.0;
+
+
+Node60 -> Node32  : 90.0;
+
+
+Node27 -> Node54  : 125.0;
+
+
+Node34 -> Node5  : 203.0;
+
+
+Node14 -> Node7  : 288.0;
+
+
+Node95 -> Node87  : 240.0;
+
+
+Node85 -> Node81  : 295.0;
+
+
+Node24 -> Node11  : 108.0;
+
+
+Node45 -> Node5  : 94.0;
+
+
+Node10 -> Node61  : 51.0;
+
+
+Node45 -> Node62  : 227.0;
+
+
+Node30 -> Node88  : 44.0;
+
+
+Node8 -> Node68  : 151.0;
+
+
+Node15 -> Node13  : 227.0;
+
+
+Node87 -> Node57  : 146.0;
+
+
+Node33 -> Node74  : 187.0;
+
+
+Node72 -> Node14  : 91.0;
+
+
+Node67 -> Node51  : 24.0;
+
+
+Node80 -> Node88  : 223.0;
+
+
+Node18 -> Node85  : 62.0;
+
+
+Node89 -> Node84  : 92.0;
+
+
+Node69 -> Node96  : 156.0;
+
+
+Node15 -> Node46  : 9.0;
+
+
+Node22 -> Node17  : 119.0;
+
+
+Node65 -> Node73  : 71.0;
+
+
+Node9 -> Node63  : 123.0;
+
+
+Node6 -> Node58  : 88.0;
+
+
+Node3 -> Node56  : 286.0;
+
+
+Node35 -> Node67  : 95.0;
+
+
+Node81 -> Node46  : 33.0;
+
+
+Node45 -> Node56  : 60.0;
+
+
+Node22 -> Node33  : 191.0;
+
+
+Node30 -> Node56  : 253.0;
+
+
+Node52 -> Node67  : 177.0;
+
+
+Node97 -> Node9  : 191.0;
+
+
+Node13 -> Node25  : 57.0;
+
+
+Node35 -> Node66  : 65.0;
+
+
+Node20 -> Node77  : 149.0;
+
+
+Node18 -> Node17  : 92.0;
+
+
+Node13 -> Node96  : 49.0;
+
+
+Node100 -> Node85  : 211.0;
+
+
+Node35 -> Node37  : 150.0;
+
+
+Node70 -> Node57  : 212.0;
+
+
+Node70 -> Node62  : 215.0;
+
+
+Node70 -> Node34  : 294.0;
+
+
+Node47 -> Node45  : 252.0;
+
+
+Node99 -> Node48  : 251.0;
+
+
+Node53 -> Node41  : 23.0;
+
+
+Node92 -> Node8  : 77.0;
+
+
+Node68 -> Node51  : 162.0;
+
+
+Node70 -> Node49  : 242.0;
+
+
+Node67 -> Node50  : 93.0;
+
+
+Node49 -> Node96  : 175.0;
+
+
+Node39 -> Node50  : 273.0;
+
+
+Node30 -> Node28  : 151.0;
+
+
+Node61 -> Node49  : 33.0;
+
+
+Node6 -> Node72  : 76.0;
+
+
+Node84 -> Node62  : 75.0;
+
+
+Node82 -> Node75  : 97.0;
+
+
+Node70 -> Node56  : 277.0;
+
+
+Node87 -> Node100  : 46.0;
+
+
+Node27 -> Node74  : 217.0;
+
+
+Node39 -> Node92  : 291.0;
+
+
+Node84 -> Node26  : 215.0;
+
+
+Node52 -> Node28  : 301.0;
+
+
+Node68 -> Node96  : 295.0;
+
+
+Node64 -> Node65  : 272.0;
+
+
+Node20 -> Node98  : 218.0;
+
+
+Node58 -> Node65  : 186.0;
+
+
+Node35 -> Node8  : 180.0;
+
+
+Node55 -> Node72  : 23.0;
+
+
+Node88 -> Node2  : 299.0;
+
+
+Node71 -> Node86  : 270.0;
+
+
+Node58 -> Node93  : 102.0;
+
+
+Node27 -> Node34  : 159.0;
+
+
+Node80 -> Node46  : 158.0;
+
+
+Node69 -> Node51  : 280.0;
+
+
+Node54 -> Node89  : 77.0;
+
+
+Node89 -> Node55  : 296.0;
+
+
+Node50 -> Node74  : 227.0;
+
+
+Node38 -> Node29  : 31.0;
+
+
+Node55 -> Node56  : 122.0;
+
+
+Node51 -> Node26  : 13.0;
+
+
+Node88 -> Node28  : 263.0;
+
+
+Node79 -> Node61  : 153.0;
+
+
+Node2 -> Node21  : 239.0;
+
+
+Node92 -> Node28  : 40.0;
+
+
+Node91 -> Node32  : 58.0;
+
+
+Node84 -> Node8  : 135.0;
+
+
+Node56 -> Node12  : 93.0;
+
+
+Node52 -> Node58  : 183.0;
+
+
+Node19 -> Node1  : 123.0;
+
+
+Node57 -> Node67  : 105.0;
+
+
+Node19 -> Node27  : 143.0;
+
+
+Node23 -> Node38  : 30.0;
+
+
+Node71 -> Node87  : 237.0;
+
+
+Node5 -> Node24  : 75.0;
+
+
+Node12 -> Node87  : 62.0;
+
+
+Node11 -> Node85  : 210.0;
+
+
+Node95 -> Node29  : 264.0;
+
+
+Node84 -> Node80  : 297.0;
+
+
+Node99 -> Node42  : 35.0;
+
+
+Node58 -> Node79  : 192.0;
+
+
+Node71 -> Node0  : 120.0;
+
+
+Node1 -> Node0  : 28.0;
+
+
+Node4 -> Node97  : 123.0;
+
+
+Node94 -> Node15  : 150.0;
+
+
+Node97 -> Node75  : 285.0;
+
+
+Node96 -> Node90  : 141.0;
+
+
+Node40 -> Node91  : 266.0;
+
+
+Node40 -> Node58  : 94.0;
+
+
+Node22 -> Node25  : 176.0;
+
+
+Node53 -> Node82  : 71.0;
+
+
+Node57 -> Node33  : 251.0;
+
+
+Node94 -> Node50  : 160.0;
+
+
+Node100 -> Node4  : 179.0;
+
+
+Node44 -> Node100  : 240.0;
+
+
+Node98 -> Node40  : 218.0;
+
+
+Node31 -> Node24  : 174.0;
+
+
+Node17 -> Node100  : 164.0;
+
+
+Node32 -> Node71  : 296.0;
+
+
+Node83 -> Node89  : 55.0;
+
+
+Node6 -> Node62  : 103.0;
+
+
+Node40 -> Node61  : 173.0;
+
+
+Node92 -> Node61  : 157.0;
+
+
+Node19 -> Node74  : 180.0;
+
+
+Node41 -> Node73  : 21.0;
+
+
+Node100 -> Node10  : 108.0;
+
+
+Node83 -> Node47  : 285.0;
+
+
+Node9 -> Node61  : 10.0;
+
+
+Node57 -> Node78  : 247.0;
+
+
+Node65 -> Node80  : 182.0;
+
+
+Node37 -> Node86  : 115.0;
+
+
+Node71 -> Node63  : 127.0;
+
+
+Node67 -> Node38  : 299.0;
+
+
+Node56 -> Node68  : 68.0;
+
+
+Node16 -> Node55  : 243.0;
+
+
+Node40 -> Node35  : 132.0;
+
+
+Node25 -> Node18  : 72.0;
+
+
+Node45 -> Node63  : 177.0;
+
+
+Node97 -> Node35  : 100.0;
+
+
+Node57 -> Node70  : 211.0;
+
+
+Node32 -> Node5  : 58.0;
+
+
+Node52 -> Node29  : 134.0;
+
+
+Node52 -> Node13  : 234.0;
+
+
+Node79 -> Node68  : 104.0;
+
+
+Node92 -> Node51  : 276.0;
+
+
+Node23 -> Node97  : 18.0;
+
+
+Node22 -> Node80  : 88.0;
+
+
+Node40 -> Node7  : 226.0;
+
+
+Node32 -> Node66  : 180.0;
+
+
+Node35 -> Node75  : 230.0;
+
+
+Node98 -> Node95  : 135.0;
+
+
+Node9 -> Node51  : 277.0;
+
+
+Node70 -> Node96  : 71.0;
+
+
+Node44 -> Node13  : 20.0;
+
+
+Node29 -> Node0  : 17.0;
+
+
+Node84 -> Node98  : 253.0;
+
+
+Node35 -> Node74  : 155.0;
+
+
+Node21 -> Node73  : 197.0;
+
+
+Node0 -> Node7  : 80.0;
+
+
+Node69 -> Node24  : 96.0;
+
+
+Node46 -> Node39  : 128.0;
+
+
+Node100 -> Node11  : 267.0;
+
+
+Node39 -> Node83  : 57.0;
+
+
+Node17 -> Node88  : 296.0;
+
+
+Node79 -> Node60  : 70.0;
+
+
+Node3 -> Node49  : 203.0;
+
+
+Node54 -> Node27  : 106.0;
+
+
+Node49 -> Node86  : 42.0;
+
+
+Node59 -> Node14  : 256.0;
+
+
+Node100 -> Node44  : 113.0;
+
+
+Node9 -> Node29  : 29.0;
+
+
+Node49 -> Node76  : 193.0;
+
+
+Node86 -> Node30  : 242.0;
+
+
+Node5 -> Node22  : 44.0;
+
+
+Node86 -> Node95  : 32.0;
+
+
+Node98 -> Node0  : 13.0;
+
+
+Node85 -> Node26  : 177.0;
+
+
+Node64 -> Node24  : 77.0;
+
+
+Node93 -> Node51  : 98.0;
+
+
+Node22 -> Node8  : 169.0;
+
+
+Node85 -> Node84  : 73.0;
+
+
+Node98 -> Node44  : 56.0;
+
+
+Node56 -> Node72  : 48.0;
+
+
+Node18 -> Node37  : 265.0;
+
+
+Node87 -> Node54  : 74.0;
+
+
+Node24 -> Node83  : 48.0;
+
+
+Node20 -> Node9  : 194.0;
+
+
+Node82 -> Node95  : 139.0;
+
+
+Node84 -> Node15  : 187.0;
+
+
+Node78 -> Node85  : 287.0;
+
+
+Node89 -> Node5  : 58.0;
+
+
+Node100 -> Node17  : 271.0;
+
+
+Node88 -> Node37  : 295.0;
+
+
+Node45 -> Node28  : 51.0;
+
+
+Node27 -> Node36  : 217.0;
+
+
+Node88 -> Node7  : 143.0;
+
+
+Node6 -> Node61  : 5.0;
+
+
+Node25 -> Node89  : 20.0;
+
+
+Node25 -> Node70  : 99.0;
+
+
+Node87 -> Node3  : 190.0;
+
+
+Node89 -> Node60  : 38.0;
+
+
+Node66 -> Node56  : 196.0;
+
+
+Node5 -> Node83  : 93.0;
+
+
+Node1 -> Node47  : 67.0;
+
+
+Node64 -> Node71  : 206.0;
+
+
+Node1 -> Node79  : 163.0;
+
+
+Node25 -> Node87  : 73.0;
+
+
+Node1 -> Node45  : 135.0;
+
+
+Node35 -> Node100  : 277.0;
+
+
+Node79 -> Node86  : 54.0;
+
+
+Node52 -> Node17  : 242.0;
+
+
+Node46 -> Node60  : 165.0;
+
+
+Node26 -> Node56  : 50.0;
+
+
+Node5 -> Node92  : 269.0;
+
+
+Node28 -> Node56  : 23.0;
+
+
+Node83 -> Node92  : 108.0;
+
+
+Node38 -> Node15  : 294.0;
+
+
+Node80 -> Node22  : 145.0;
+
+
+Node54 -> Node26  : 260.0;
+
+
+Node33 -> Node63  : 21.0;
+
+
+Node98 -> Node77  : 31.0;
+
+
+Node88 -> Node78  : 276.0;
+
+
+Node58 -> Node68  : 274.0;
+
+
+Node37 -> Node60  : 206.0;
+
+
+Node51 -> Node99  : 176.0;
+
+
+Node90 -> Node11  : 146.0;
+
+
+Node60 -> Node34  : 36.0;
+
+
+Node16 -> Node92  : 147.0;
+
+
+Node36 -> Node96  : 208.0;
+
+
+Node20 -> Node80  : 16.0;
+
+
+Node21 -> Node7  : 282.0;
+
+
+Node63 -> Node62  : 99.0;
+
+
+Node93 -> Node83  : 8.0;
+
+
+Node44 -> Node30  : 67.0;
+
+
+Node98 -> Node75  : 44.0;
+
+
+Node55 -> Node57  : 16.0;
+
+
+Node30 -> Node52  : 92.0;
+
+
+Node6 -> Node15  : 251.0;
+
+
+Node48 -> Node40  : 193.0;
+
+
+Node100 -> Node78  : 226.0;
+
+
+Node29 -> Node50  : 200.0;
+
+
+Node32 -> Node30  : 242.0;
+
+
+Node9 -> Node18  : 92.0;
+
+
+Node82 -> Node30  : 247.0;
+
+
+Node93 -> Node45  : 58.0;
+
+
+Node98 -> Node66  : 157.0;
+
+
+Node14 -> Node43  : 9.0;
+
+
+Node21 -> Node28  : 220.0;
+
+
+Node90 -> Node18  : 29.0;
+
+
+Node40 -> Node36  : 162.0;
+
+
+Node100 -> Node87  : 187.0;
+
+
+Node43 -> Node16  : 190.0;
+
+
+Node9 -> Node88  : 266.0;
+
+
+Node41 -> Node92  : 190.0;
+
+
+Node68 -> Node15  : 153.0;
+
+
+Node53 -> Node75  : 238.0;
+
+
+Node11 -> Node24  : 111.0;
+
+
+Node80 -> Node70  : 56.0;
+
+
+Node85 -> Node33  : 10.0;
+
+
+Node92 -> Node54  : 237.0;
+
+
+Node27 -> Node100  : 171.0;
+
+
+Node30 -> Node53  : 153.0;
+
+
+Node46 -> Node10  : 262.0;
+
+
+Node33 -> Node36  : 184.0;
+
+
+Node91 -> Node16  : 167.0;
+
+
+Node65 -> Node75  : 254.0;
+
+
+Node30 -> Node25  : 263.0;
+
+
+Node15 -> Node1  : 240.0;
+
+
+Node40 -> Node81  : 62.0;
+
+
+Node57 -> Node49  : 287.0;
+
+
+Node17 -> Node60  : 83.0;
+
+
+Node41 -> Node21  : 280.0;
+
+
+Node1 -> Node71  : 183.0;
+
+
+Node51 -> Node55  : 115.0;
+
+
+Node53 -> Node14  : 199.0;
+
+
+Node30 -> Node92  : 293.0;
+
+
+Node65 -> Node33  : 171.0;
+
+
+Node62 -> Node1  : 179.0;
+
+
+Node37 -> Node40  : 177.0;
+
+
+Node91 -> Node64  : 229.0;
+
+
+Node56 -> Node36  : 210.0;
+
+
+Node29 -> Node94  : 242.0;
+
+
+Node5 -> Node73  : 132.0;
+
+
+Node93 -> Node52  : 302.0;
+
+
+Node4 -> Node69  : 127.0;
+
+
+Node87 -> Node6  : 247.0;
+
+
+Node52 -> Node30  : 83.0;
+
+
+Node73 -> Node72  : 214.0;
+
+
+Node58 -> Node39  : 45.0;
+
+
+Node90 -> Node87  : 81.0;
+
+
+Node68 -> Node49  : 95.0;
+
+
+Node85 -> Node60  : 47.0;
+
+
+Node61 -> Node89  : 235.0;
+
+
+Node71 -> Node84  : 281.0;
+
+
+Node52 -> Node24  : 82.0;
+
+
+Node4 -> Node11  : 17.0;
+
+
+Node7 -> Node89  : 136.0;
+
+
+Node67 -> Node60  : 92.0;
+
+
+Node49 -> Node15  : 240.0;
+
+
+Node62 -> Node81  : 33.0;
+
+
+Node69 -> Node75  : 270.0;
+
+
+Node18 -> Node86  : 211.0;
+
+
+Node73 -> Node57  : 49.0;
+
+
+Node94 -> Node6  : 105.0;
+
+
+Node94 -> Node99  : 271.0;
+
+
+Node99 -> Node55  : 129.0;
+
+
+Node59 -> Node1  : 240.0;
+
+
+Node63 -> Node87  : 213.0;
+
+
+Node62 -> Node94  : 264.0;
+
+
+Node52 -> Node27  : 77.0;
+
+
+Node46 -> Node26  : 237.0;
+
+
+Node68 -> Node7  : 202.0;
+
+
+Node67 -> Node34  : 43.0;
+
+
+Node69 -> Node12  : 148.0;
+
+
+Node43 -> Node98  : 194.0;
+
+
+Node7 -> Node53  : 144.0;
+
+
+Node79 -> Node84  : 58.0;
+
+
+Node48 -> Node7  : 122.0;
+
+
+Node95 -> Node75  : 110.0;
+
+
+Node5 -> Node57  : 70.0;
+
+
+Node80 -> Node32  : 59.0;
+
+
+Node95 -> Node98  : 172.0;
+
+
+Node33 -> Node62  : 50.0;
+
+
+Node22 -> Node26  : 269.0;
+
+
+Node6 -> Node90  : 133.0;
+
+
+Node23 -> Node96  : 221.0;
+
+
+Node8 -> Node50  : 290.0;
+
+
+Node52 -> Node32  : 89.0;
+
+
+Node3 -> Node64  : 193.0;
+
+
+Node93 -> Node84  : 223.0;
+
+
+Node80 -> Node35  : 112.0;
+
+
+Node33 -> Node22  : 13.0;
+
+
+Node7 -> Node14  : 80.0;
+
+
+Node21 -> Node79  : 121.0;
+
+
+Node82 -> Node44  : 46.0;
+
+
+Node6 -> Node59  : 282.0;
+
+
+Node89 -> Node47  : 294.0;
+
+
+Node0 -> Node17  : 238.0;
+
+
+Node25 -> Node5  : 193.0;
+
+
+Node17 -> Node27  : 287.0;
+
+
+Node29 -> Node26  : 103.0;
+
+
+Node71 -> Node33  : 98.0;
+
+
+Node22 -> Node67  : 281.0;
+
+
+Node98 -> Node10  : 235.0;
+
+
+Node69 -> Node10  : 134.0;
+
+
+Node37 -> Node88  : 267.0;
+
+
+Node67 -> Node43  : 220.0;
+
+
+Node36 -> Node16  : 122.0;
+
+
+Node96 -> Node9  : 141.0;
+
+
+Node99 -> Node97  : 258.0;
+
+
+Node49 -> Node32  : 288.0;
+
+
+Node9 -> Node24  : 138.0;
+
+
+Node12 -> Node10  : 37.0;
+
+
+Node51 -> Node22  : 275.0;
+
+
+Node77 -> Node18  : 23.0;
+
+
+Node93 -> Node23  : 251.0;
+
+
+Node78 -> Node75  : 262.0;
+
+
+Node35 -> Node88  : 23.0;
+
+
+Node5 -> Node50  : 188.0;
+
+
+Node84 -> Node9  : 89.0;
+
+
+Node31 -> Node90  : 150.0;
+
+
+Node8 -> Node84  : 60.0;
+
+
+Node49 -> Node2  : 163.0;
+
+
+Node72 -> Node41  : 39.0;
+
+
+Node54 -> Node32  : 304.0;
+
+
+Node57 -> Node55  : 140.0;
+
+
+Node10 -> Node50  : 47.0;
+
+
+Node93 -> Node77  : 95.0;
+
+
+Node49 -> Node38  : 304.0;
+
+
+Node97 -> Node61  : 98.0;
+
+
+Node46 -> Node97  : 271.0;
+
+
+Node90 -> Node33  : 188.0;
+
+
+Node21 -> Node35  : 234.0;
+
+
+Node33 -> Node45  : 243.0;
+
+
+Node92 -> Node90  : 127.0;
+
+
+Node39 -> Node52  : 234.0;
+
+
+Node80 -> Node33  : 279.0;
+
+
+Node92 -> Node95  : 280.0;
+
+
+Node67 -> Node64  : 178.0;
+
+
+Node72 -> Node67  : 211.0;
+
+
+Node98 -> Node37  : 213.0;
+
+
+Node82 -> Node39  : 236.0;
+
+
+Node92 -> Node19  : 223.0;
+
+
+Node28 -> Node15  : 64.0;
+
+
+Node33 -> Node21  : 78.0;
+
+
+Node83 -> Node11  : 109.0;
+
+
+Node62 -> Node28  : 115.0;
+
+
+Node50 -> Node30  : 259.0;
+
+
+Node56 -> Node67  : 170.0;
+
+
+Node97 -> Node54  : 180.0;
+
+
+Node85 -> Node11  : 273.0;
+
+
+Node4 -> Node51  : 177.0;
+
+
+Node62 -> Node27  : 215.0;
+
+
+Node88 -> Node33  : 290.0;
+
+
+Node64 -> Node42  : 242.0;
+
+
+Node78 -> Node42  : 72.0;
+
+
+Node85 -> Node70  : 10.0;
+
+
+Node100 -> Node82  : 187.0;
+
+
+Node1 -> Node16  : 36.0;
+
+
+Node28 -> Node82  : 11.0;
+
+
+Node93 -> Node31  : 89.0;
+
+
+Node5 -> Node55  : 211.0;
+
+
+Node33 -> Node27  : 180.0;
+
+
+Node93 -> Node80  : 49.0;
+
+
+Node84 -> Node91  : 299.0;
+
+
+Node92 -> Node18  : 122.0;
+
+
+Node34 -> Node87  : 39.0;
+
+
+Node100 -> Node54  : 74.0;
+
+
+Node77 -> Node97  : 98.0;
+
+
+Node27 -> Node76  : 67.0;
+
+
+Node48 -> Node96  : 111.0;
+
+
+Node18 -> Node53  : 188.0;
+
+
+Node19 -> Node80  : 190.0;
+
+
+Node68 -> Node52  : 53.0;
+
+
+Node86 -> Node37  : 247.0;
+
+
+Node57 -> Node42  : 121.0;
+
+
+Node77 -> Node46  : 263.0;
+
+
+Node61 -> Node40  : 196.0;
+
+
+Node50 -> Node67  : 169.0;
+
+
+Node42 -> Node7  : 291.0;
+
+
+Node63 -> Node89  : 275.0;
+
+
+Node78 -> Node44  : 22.0;
+
+
+Node89 -> Node71  : 56.0;
+
+
+Node49 -> Node75  : 96.0;
+
+
+Node11 -> Node52  : 286.0;
+
+
+Node38 -> Node87  : 110.0;
+
+
+Node93 -> Node29  : 6.0;
+
+
+Node0 -> Node52  : 235.0;
+
+
+Node65 -> Node62  : 285.0;
+
+
+Node52 -> Node41  : 151.0;
+
+
+Node79 -> Node16  : 164.0;
+
+
+Node74 -> Node17  : 203.0;
+
+
+Node27 -> Node55  : 40.0;
+
+
+Node77 -> Node83  : 247.0;
+
+
+Node81 -> Node88  : 75.0;
+
+
+Node3 -> Node75  : 113.0;
+
+
+Node3 -> Node21  : 82.0;
+
+
+Node13 -> Node88  : 84.0;
+
+
+Node92 -> Node14  : 39.0;
+
+
+Node62 -> Node53  : 262.0;
+
+
+Node40 -> Node17  : 169.0;
+
+
+Node0 -> Node22  : 190.0;
+
+
+Node48 -> Node99  : 143.0;
+
+
+Node83 -> Node99  : 292.0;
+
+
+Node39 -> Node85  : 171.0;
+
+
+Node12 -> Node81  : 269.0;
+
+
+Node72 -> Node39  : 215.0;
+
+
+Node16 -> Node59  : 229.0;
+
+
+Node54 -> Node56  : 287.0;
+
+
+Node17 -> Node72  : 269.0;
+
+
+Node42 -> Node65  : 174.0;
+
+
+Node29 -> Node41  : 72.0;
+
+
+Node83 -> Node81  : 229.0;
+
+
+Node68 -> Node86  : 232.0;
+
+
+Node93 -> Node86  : 152.0;
+
+
+Node33 -> Node65  : 283.0;
+
+
+Node42 -> Node27  : 222.0;
+
+
+Node6 -> Node85  : 232.0;
+
+
+Node30 -> Node33  : 34.0;
+
+
+Node98 -> Node22  : 94.0;
+
+
+Node87 -> Node74  : 294.0;
+
+
+Node50 -> Node51  : 192.0;
+
+
+Node61 -> Node74  : 221.0;
+
+
+Node87 -> Node92  : 216.0;
+
+
+Node15 -> Node14  : 92.0;
+
+
+Node52 -> Node40  : 55.0;
+
+
+Node86 -> Node38  : 104.0;
+
+
+Node77 -> Node36  : 245.0;
+
+
+Node85 -> Node29  : 248.0;
+
+
+Node91 -> Node26  : 254.0;
+
+
+Node54 -> Node67  : 106.0;
+
+
+Node89 -> Node1  : 40.0;
+
+
+Node5 -> Node44  : 205.0;
+
+
+Node87 -> Node79  : 304.0;
+
+
+Node28 -> Node59  : 287.0;
+
+
+Node88 -> Node89  : 214.0;
+
+
+Node94 -> Node67  : 59.0;
+
+
+Node3 -> Node39  : 132.0;
+
+
+Node25 -> Node58  : 83.0;
+
+
+Node44 -> Node93  : 19.0;
+
+
+Node20 -> Node61  : 167.0;
+
+
+Node80 -> Node15  : 249.0;
+
+
+Node23 -> Node0  : 145.0;
+
+
+Node59 -> Node52  : 17.0;
+
+
+Node18 -> Node81  : 132.0;
+
+
+Node70 -> Node71  : 254.0;
+
+
+Node37 -> Node93  : 280.0;
+
+
+Node16 -> Node2  : 159.0;
+
+
+Node29 -> Node76  : 262.0;
+
+
+Node20 -> Node50  : 124.0;
+
+
+Node76 -> Node55  : 84.0;
+
+
+Node80 -> Node93  : 12.0;
+
+
+Node15 -> Node6  : 93.0;
+
+
+Node95 -> Node38  : 105.0;
+
+
+Node23 -> Node87  : 12.0;
+
+
+Node53 -> Node64  : 29.0;
+
+
+Node81 -> Node40  : 199.0;
+
+
+Node29 -> Node44  : 93.0;
+
+
+Node81 -> Node73  : 264.0;
+
+
+Node19 -> Node2  : 38.0;
+
+
+Node56 -> Node53  : 232.0;
+
+
+Node61 -> Node94  : 10.0;
+
+
+Node24 -> Node75  : 265.0;
+
+
+Node7 -> Node20  : 87.0;
+
+
+Node97 -> Node78  : 236.0;
+
+
+Node6 -> Node45  : 73.0;
+
+
+Node74 -> Node27  : 38.0;
+
+
+Node7 -> Node41  : 47.0;
+
+
+Node95 -> Node50  : 193.0;
+
+
+Node7 -> Node49  : 49.0;
+
+
+Node59 -> Node82  : 6.0;
+
+
+Node100 -> Node14  : 294.0;
+
+
+Node16 -> Node45  : 176.0;
+
+
+Node0 -> Node96  : 7.0;
+
+
+Node75 -> Node30  : 251.0;
+
+
+Node69 -> Node77  : 13.0;
+
+
+Node37 -> Node27  : 249.0;
+
+
+Node57 -> Node87  : 226.0;
+
+
+Node8 -> Node87  : 88.0;
+
+
+Node77 -> Node23  : 265.0;
+
+
+Node59 -> Node87  : 33.0;
+
+
+Node19 -> Node62  : 145.0;
+
+
+Node19 -> Node50  : 122.0;
+
+
+Node80 -> Node43  : 199.0;
+
+
+Node6 -> Node53  : 114.0;
+
+
+Node72 -> Node69  : 213.0;
+
+
+Node56 -> Node37  : 283.0;
+
+
+Node7 -> Node37  : 186.0;
+
+
+Node51 -> Node89  : 237.0;
+
+
+Node77 -> Node5  : 165.0;
+
+
+Node42 -> Node1  : 86.0;
+
+
+Node96 -> Node1  : 157.0;
+
+
+Node50 -> Node90  : 229.0;
+
+
+Node18 -> Node21  : 191.0;
+
+
+Node14 -> Node84  : 203.0;
+
+
+Node37 -> Node15  : 240.0;
+
+
+Node11 -> Node62  : 304.0;
+
+
+Node56 -> Node11  : 7.0;
+
+
+Node9 -> Node54  : 78.0;
+
+
+Node24 -> Node86  : 99.0;
+
+
+Node54 -> Node43  : 215.0;
+
+
+Node11 -> Node51  : 130.0;
+
+
+Node89 -> Node86  : 69.0;
+
+
+Node94 -> Node38  : 65.0;
+
+
+Node1 -> Node19  : 246.0;
+
+
+Node38 -> Node10  : 204.0;
+
+
+Node85 -> Node83  : 172.0;
+
+
+Node62 -> Node44  : 196.0;
+
+
+Node90 -> Node5  : 207.0;
+
+
+Node68 -> Node32  : 263.0;
+
+
+Node84 -> Node20  : 48.0;
+
+
+Node44 -> Node72  : 216.0;
+
+
+Node84 -> Node32  : 273.0;
+
+
+Node38 -> Node48  : 56.0;
+
+
+Node21 -> Node30  : 75.0;
+
+
+Node19 -> Node42  : 258.0;
+
+
+Node92 -> Node52  : 72.0;
+
+
+Node90 -> Node27  : 256.0;
+
+
+Node51 -> Node25  : 270.0;
+
+
+Node72 -> Node3  : 236.0;
+
+
+Node78 -> Node30  : 247.0;
+
+
+Node54 -> Node99  : 116.0;
+
+
+Node32 -> Node16  : 139.0;
+
+
+Node25 -> Node42  : 238.0;
+
+
+Node80 -> Node42  : 184.0;
+
+
+Node25 -> Node28  : 221.0;
+
+
+Node90 -> Node66  : 287.0;
+
+
+Node29 -> Node13  : 286.0;
+
+
+Node74 -> Node55  : 206.0;
+
+
+Node86 -> Node1  : 208.0;
+
+
+Node20 -> Node88  : 46.0;
+
+
+Node95 -> Node89  : 259.0;
+
+
+Node74 -> Node51  : 230.0;
+
+
+Node27 -> Node85  : 61.0;
+
+
+Node87 -> Node40  : 51.0;
+
+
+Node68 -> Node80  : 245.0;
+
+
+Node27 -> Node31  : 30.0;
+
+
+Node51 -> Node44  : 270.0;
+
+
+Node31 -> Node10  : 20.0;
+
+
+Node71 -> Node54  : 239.0;
+
+
+Node59 -> Node50  : 112.0;
+
+
+Node77 -> Node63  : 192.0;
+
+
+Node78 -> Node14  : 299.0;
+
+
+Node78 -> Node91  : 116.0;
+
+
+Node8 -> Node1  : 133.0;
+
+
+Node59 -> Node54  : 114.0;
+
+
+Node30 -> Node26  : 222.0;
+
+
+Node29 -> Node30  : 244.0;
+
+
+Node18 -> Node60  : 92.0;
+
+
+Node23 -> Node76  : 60.0;
+
+
+Node85 -> Node67  : 160.0;
+
+
+Node15 -> Node17  : 95.0;
+
+
+Node22 -> Node81  : 111.0;
+
+
+Node81 -> Node53  : 302.0;
+
+
+Node3 -> Node23  : 30.0;
+
+
+Node9 -> Node39  : 50.0;
+
+
+Node73 -> Node13  : 25.0;
+
+
+Node36 -> Node30  : 120.0;
+
+
+Node66 -> Node61  : 35.0;
+
+
+Node36 -> Node35  : 125.0;
+
+
+Node5 -> Node18  : 73.0;
+
+
+Node14 -> Node26  : 143.0;
+
+
+Node13 -> Node18  : 271.0;
+
+
+Node45 -> Node73  : 211.0;
+
+
+Node59 -> Node90  : 97.0;
+
+
+Node8 -> Node29  : 15.0;
+
+
+Node5 -> Node39  : 5.0;
+
+
+Node20 -> Node92  : 150.0;
+
+
+Node44 -> Node15  : 137.0;
+
+
+Node25 -> Node56  : 142.0;
+
+
+Node19 -> Node22  : 246.0;
+
+
+Node1 -> Node7  : 56.0;
+
+
+Node57 -> Node53  : 222.0;
+
+
+Node16 -> Node25  : 297.0;
+
+
+Node45 -> Node30  : 304.0;
+
+
+Node80 -> Node52  : 276.0;
+
+
+Node85 -> Node47  : 55.0;
+
+
+Node5 -> Node0  : 65.0;
+
+
+Node87 -> Node45  : 148.0;
+
+
+Node6 -> Node42  : 99.0;
+
+
+Node42 -> Node29  : 71.0;
+
+
+Node66 -> Node2  : 286.0;
+
+
+Node86 -> Node23  : 63.0;
+
+
+Node42 -> Node97  : 286.0;
+
+
+Node74 -> Node13  : 304.0;
+
+
+Node58 -> Node18  : 22.0;
+
+
+Node0 -> Node53  : 174.0;
+
+
+Node41 -> Node5  : 51.0;
+
+
+Node55 -> Node82  : 110.0;
+
+
+Node44 -> Node75  : 19.0;
+
+
+Node46 -> Node14  : 105.0;
+
+
+Node45 -> Node94  : 299.0;
+
+
+Node18 -> Node42  : 37.0;
+
+
+Node38 -> Node86  : 229.0;
+
+
+Node84 -> Node68  : 60.0;
+
+
+Node19 -> Node35  : 103.0;
+
+
+Node41 -> Node96  : 143.0;
+
+
+Node56 -> Node88  : 47.0;
+
+
+Node94 -> Node81  : 299.0;
+
+
+Node76 -> Node44  : 28.0;
+
+
+Node78 -> Node59  : 157.0;
+
+
+Node88 -> Node77  : 290.0;
+
+
+Node29 -> Node99  : 152.0;
+
+
+Node26 -> Node3  : 149.0;
+
+
+Node87 -> Node83  : 170.0;
+
+
+Node38 -> Node27  : 31.0;
+
+
+Node52 -> Node25  : 142.0;
+
+
+Node28 -> Node73  : 155.0;
+
+
+Node53 -> Node57  : 100.0;
+
+
+Node67 -> Node82  : 166.0;
+
+
+Node7 -> Node94  : 260.0;
+
+
+Node12 -> Node57  : 149.0;
+
+
+Node4 -> Node23  : 55.0;
+
+
+Node20 -> Node27  : 52.0;
+
+
+Node78 -> Node0  : 138.0;
+
+
+Node53 -> Node56  : 117.0;
+
+
+Node36 -> Node59  : 242.0;
+
+
+Node36 -> Node19  : 155.0;
+
+
+Node78 -> Node5  : 292.0;
+
+
+Node95 -> Node62  : 51.0;
+
+
+Node17 -> Node52  : 52.0;
+
+
+Node0 -> Node83  : 101.0;
+
+
+Node18 -> Node10  : 63.0;
+
+
+Node22 -> Node38  : 14.0;
+
+
+Node6 -> Node71  : 288.0;
+
+
+Node57 -> Node58  : 166.0;
+
+
+Node32 -> Node42  : 215.0;
+
+
+Node100 -> Node12  : 59.0;
+
+
+Node7 -> Node26  : 143.0;
+
+
+Node71 -> Node55  : 123.0;
+
+
+Node64 -> Node21  : 32.0;
+
+
+Node81 -> Node80  : 103.0;
+
+
+Node70 -> Node10  : 275.0;
+
+
+Node53 -> Node85  : 18.0;
+
+
+Node93 -> Node100  : 106.0;
+
+
+Node40 -> Node83  : 100.0;
+
+
+Node22 -> Node2  : 65.0;
+
+
+Node36 -> Node55  : 58.0;
+
+
+Node68 -> Node10  : 269.0;
+
+
+Node81 -> Node5  : 30.0;
+
+
+Node77 -> Node69  : 41.0;
+
+
+Node93 -> Node43  : 158.0;
+
+
+Node71 -> Node42  : 91.0;
+
+
+Node17 -> Node86  : 258.0;
+
+
+Node41 -> Node59  : 100.0;
+
+
+Node36 -> Node1  : 15.0;
+
+
+Node86 -> Node14  : 270.0;
+
+
+Node54 -> Node53  : 127.0;
+
+
+Node49 -> Node92  : 176.0;
+
+
+Node66 -> Node5  : 32.0;
+
+
+Node61 -> Node78  : 295.0;
+
+
+Node91 -> Node82  : 8.0;
+
+
+Node46 -> Node27  : 284.0;
+
+
+Node13 -> Node29  : 228.0;
+
+
+Node60 -> Node86  : 123.0;
+
+
+Node47 -> Node54  : 60.0;
+
+
+Node77 -> Node32  : 31.0;
+
+
+Node75 -> Node1  : 183.0;
+
+
+Node75 -> Node40  : 265.0;
+
+
+Node46 -> Node63  : 159.0;
+
+
+Node48 -> Node46  : 86.0;
+
+
+Node58 -> Node71  : 213.0;
+
+
+Node53 -> Node60  : 14.0;
+
+
+Node87 -> Node60  : 281.0;
+
+
+Node1 -> Node50  : 52.0;
+
+
+Node74 -> Node90  : 230.0;
+
+
+Node32 -> Node38  : 264.0;
+
+
+Node9 -> Node36  : 153.0;
+
+
+Node49 -> Node13  : 96.0;
+
+
+Node80 -> Node20  : 175.0;
+
+
+Node46 -> Node17  : 90.0;
+
+
+Node17 -> Node48  : 278.0;
+
+
+Node3 -> Node2  : 79.0;
+
+
+Node69 -> Node71  : 259.0;
+
+
+Node92 -> Node12  : 179.0;
+
+
+Node88 -> Node47  : 124.0;
+
+
+Node34 -> Node94  : 77.0;
+
+
+Node97 -> Node11  : 6.0;
+
+
+Node74 -> Node50  : 223.0;
+
+
+Node66 -> Node22  : 150.0;
+
+
+Node48 -> Node76  : 170.0;
+
+
+Node56 -> Node98  : 129.0;
+
+
+Node59 -> Node63  : 120.0;
+
+
+Node57 -> Node27  : 198.0;
+
+
+Node35 -> Node28  : 90.0;
+
+
+Node67 -> Node87  : 218.0;
+
+
+Node22 -> Node44  : 93.0;
+
+
+Node38 -> Node17  : 56.0;
+
+
+Node83 -> Node74  : 38.0;
+
+
+Node19 -> Node21  : 251.0;
+
+
+Node52 -> Node64  : 274.0;
+
+
+Node13 -> Node46  : 265.0;
+
+
+Node13 -> Node95  : 219.0;
+
+
+Node73 -> Node26  : 150.0;
+
+
+Node21 -> Node12  : 112.0;
+
+
+Node100 -> Node68  : 94.0;
+
+
+Node48 -> Node25  : 206.0;
+
+
+Node79 -> Node21  : 276.0;
+
+
+Node31 -> Node12  : 225.0;
+
+
+Node2 -> Node86  : 293.0;
+
+
+Node57 -> Node75  : 131.0;
+
+
+Node39 -> Node78  : 20.0;
+
+
+Node18 -> Node52  : 129.0;
+
+
+Node71 -> Node64  : 75.0;
+
+
+Node3 -> Node52  : 126.0;
+
+
+Node66 -> Node63  : 163.0;
+
+
+Node93 -> Node63  : 16.0;
+
+
+Node65 -> Node63  : 208.0;
+
+
+Node80 -> Node60  : 38.0;
+
+
+Node10 -> Node40  : 119.0;
+
+
+Node74 -> Node69  : 16.0;
+
+
+Node13 -> Node75  : 302.0;
+
+
+Node60 -> Node97  : 53.0;
+
+
+Node57 -> Node88  : 38.0;
+
+
+Node16 -> Node28  : 282.0;
+
+
+Node56 -> Node71  : 75.0;
+
+
+Node95 -> Node99  : 110.0;
+
+
+Node8 -> Node28  : 279.0;
+
+
+Node17 -> Node57  : 43.0;
+
+
+Node52 -> Node21  : 117.0;
+
+
+Node75 -> Node56  : 90.0;
+
+
+Node78 -> Node62  : 256.0;
+
+
+Node53 -> Node97  : 180.0;
+
+
+Node76 -> Node26  : 59.0;
+
+
+Node12 -> Node14  : 154.0;
+
+
+Node92 -> Node31  : 82.0;
+
+
+Node64 -> Node27  : 148.0;
+
+
+Node81 -> Node60  : 248.0;
+
+
+Node73 -> Node74  : 230.0;
+
+
+Node33 -> Node3  : 270.0;
+
+
+Node71 -> Node2  : 123.0;
+
+
+Node59 -> Node60  : 272.0;
+
+
+Node57 -> Node92  : 257.0;
+
+
+Node16 -> Node58  : 38.0;
+
+
+Node25 -> Node1  : 141.0;
+
+
+Node89 -> Node67  : 200.0;
+
+
+Node57 -> Node61  : 74.0;
+
+
+Node20 -> Node3  : 172.0;
+
+
+Node64 -> Node0  : 296.0;
+
+
+Node50 -> Node82  : 244.0;
+
+
+Node81 -> Node21  : 278.0;
+
+
+Node71 -> Node31  : 39.0;
+
+
+Node5 -> Node53  : 113.0;
+
+
+Node34 -> Node81  : 184.0;
+
+
+Node22 -> Node72  : 138.0;
+
+
+Node14 -> Node78  : 231.0;
+
+
+Node39 -> Node68  : 149.0;
+
+
+Node89 -> Node17  : 269.0;
+
+
+Node28 -> Node93  : 193.0;
+
+
+Node4 -> Node10  : 193.0;
+
+
+Node90 -> Node28  : 76.0;
+
+
+Node65 -> Node72  : 10.0;
+
+
+Node88 -> Node38  : 62.0;
+
+
+Node34 -> Node40  : 284.0;
+
+
+Node49 -> Node46  : 18.0;
+
+
+Node37 -> Node39  : 287.0;
+
+
+Node74 -> Node70  : 187.0;
+
+
+Node5 -> Node96  : 238.0;
+
+
+Node18 -> Node96  : 248.0;
+
+
+Node53 -> Node72  : 220.0;
+
+
+Node5 -> Node54  : 243.0;
+
+
+Node84 -> Node78  : 132.0;
+
+
+Node24 -> Node9  : 263.0;
+
+
+Node19 -> Node57  : 261.0;
+
+
+Node51 -> Node27  : 282.0;
+
+
+Node40 -> Node52  : 166.0;
+
+
+Node68 -> Node11  : 265.0;
+
+
+Node95 -> Node88  : 140.0;
+
+
+Node64 -> Node73  : 15.0;
+
+
+Node24 -> Node67  : 287.0;
+
+
+Node60 -> Node48  : 124.0;
+
+
+Node86 -> Node54  : 245.0;
+
+
+Node46 -> Node12  : 304.0;
+
+
+Node23 -> Node1  : 267.0;
+
+
+Node7 -> Node48  : 241.0;
+
+
+Node55 -> Node68  : 192.0;
+
+
+Node78 -> Node35  : 233.0;
+
+
+Node47 -> Node75  : 172.0;
+
+
+Node78 -> Node41  : 200.0;
+
+
+Node87 -> Node44  : 168.0;
+
+
+Node23 -> Node21  : 195.0;
+
+
+Node28 -> Node79  : 209.0;
+
+
+Node96 -> Node30  : 293.0;
+
+
+Node14 -> Node17  : 228.0;
+
+
+Node14 -> Node21  : 35.0;
+
+
+Node16 -> Node85  : 62.0;
+
+
+Node47 -> Node21  : 41.0;
+
+
+Node75 -> Node49  : 34.0;
+
+
+Node26 -> Node84  : 238.0;
+
+
+Node74 -> Node42  : 259.0;
+
+
+Node6 -> Node89  : 240.0;
+
+
+Node17 -> Node8  : 202.0;
+
+
+Node95 -> Node55  : 19.0;
+
+
+Node71 -> Node74  : 93.0;
+
+
+Node82 -> Node78  : 107.0;
+
+
+Node94 -> Node22  : 294.0;
+
+
+Node59 -> Node66  : 90.0;
+
+
+Node92 -> Node66  : 216.0;
+
+
+Node79 -> Node72  : 23.0;
+
+
+Node4 -> Node65  : 226.0;
+
+
+Node84 -> Node66  : 269.0;
+
+
+Node61 -> Node95  : 246.0;
+
+
+Node21 -> Node46  : 169.0;
+
+
+Node51 -> Node0  : 8.0;
+
+
+Node49 -> Node73  : 137.0;
+
+
+Node36 -> Node9  : 272.0;
+
+
+Node94 -> Node44  : 267.0;
+
+
+Node77 -> Node90  : 163.0;
+
+
+Node26 -> Node36  : 37.0;
+
+
+Node53 -> Node84  : 257.0;
+
+
+Node34 -> Node7  : 147.0;
+
+
+Node68 -> Node50  : 195.0;
+
+
+Node21 -> Node94  : 66.0;
+
+
+Node2 -> Node6  : 55.0;
+
+
+Node38 -> Node19  : 43.0;
+
+
+Node100 -> Node19  : 159.0;
+
+
+Node85 -> Node48  : 43.0;
+
+
+Node35 -> Node68  : 160.0;
+
+
+Node56 -> Node21  : 282.0;
+
+
+Node55 -> Node35  : 74.0;
+
+
+Node70 -> Node63  : 195.0;
+
+
+Node2 -> Node58  : 143.0;
+
+
+Node62 -> Node32  : 50.0;
+
+
+Node19 -> Node92  : 151.0;
+
+
+Node97 -> Node82  : 79.0;
+
+
+Node12 -> Node11  : 76.0;
+
+
+Node14 -> Node91  : 184.0;
+
+
+Node78 -> Node73  : 191.0;
+
+
+Node19 -> Node59  : 90.0;
+
+
+Node78 -> Node29  : 211.0;
+
+
+Node56 -> Node91  : 179.0;
+
+
+Node61 -> Node71  : 294.0;
+
+
+Node22 -> Node91  : 252.0;
+
+
+Node5 -> Node89  : 57.0;
+
+
+Node47 -> Node63  : 270.0;
+
+
+Node66 -> Node77  : 35.0;
+
+
+Node54 -> Node70  : 61.0;
+
+
+Node93 -> Node9  : 270.0;
+
+
+Node73 -> Node98  : 244.0;
+
+
+Node21 -> Node84  : 179.0;
+
+
+Node96 -> Node98  : 109.0;
+
+
+Node30 -> Node85  : 28.0;
+
+
+Node80 -> Node79  : 146.0;
+
+
+Node42 -> Node9  : 18.0;
+
+
+Node45 -> Node35  : 71.0;
+
+
+Node34 -> Node83  : 294.0;
+
+
+Node17 -> Node74  : 166.0;
+
+
+Node43 -> Node1  : 146.0;
+
+
+Node35 -> Node47  : 181.0;
+
+
+Node53 -> Node59  : 122.0;
+
+
+Node26 -> Node62  : 248.0;
+
+
+Node73 -> Node6  : 261.0;
+
+
+Node6 -> Node74  : 16.0;
+
+
+Node69 -> Node0  : 207.0;
+
+
+Node46 -> Node11  : 223.0;
+
+
+Node51 -> Node61  : 290.0;
+
+
+Node8 -> Node19  : 231.0;
+
+
+Node97 -> Node77  : 90.0;
+
+
+Node12 -> Node34  : 169.0;
+
+
+Node50 -> Node75  : 114.0;
+
+
+Node5 -> Node49  : 278.0;
+
+
+Node100 -> Node37  : 223.0;
+
+
+Node75 -> Node47  : 176.0;
+
+
+Node10 -> Node15  : 18.0;
+
+
+Node3 -> Node93  : 135.0;
+
+
+Node41 -> Node14  : 291.0;
+
+
+Node42 -> Node78  : 243.0;
+
+
+Node66 -> Node14  : 107.0;
+
+
+Node28 -> Node6  : 226.0;
+
+
+Node20 -> Node71  : 178.0;
+
+
+Node96 -> Node23  : 122.0;
+
+
+Node35 -> Node71  : 130.0;
+
+
+Node54 -> Node61  : 71.0;
+
+
+Node1 -> Node74  : 106.0;
+
+
+Node50 -> Node92  : 126.0;
+
+
+Node34 -> Node19  : 302.0;
+
+
+Node37 -> Node87  : 87.0;
+
+
+Node20 -> Node37  : 246.0;
+
+
+Node8 -> Node30  : 171.0;
+
+
+Node52 -> Node47  : 97.0;
+
+
+Node55 -> Node81  : 88.0;
+
+
+Node33 -> Node48  : 170.0;
+
+
+Node61 -> Node34  : 186.0;
+
+
+Node66 -> Node80  : 276.0;
+
+
+Node28 -> Node41  : 195.0;
+
+
+Node60 -> Node68  : 279.0;
+
+
+Node18 -> Node6  : 81.0;
+
+
+Node66 -> Node51  : 156.0;
+
+
+Node67 -> Node92  : 19.0;
+
+
+Node28 -> Node3  : 180.0;
+
+
+Node26 -> Node21  : 89.0;
+
+
+Node60 -> Node36  : 177.0;
+
+
+Node97 -> Node72  : 246.0;
+
+
+Node76 -> Node4  : 275.0;
+
+
+Node97 -> Node4  : 200.0;
+
+
+Node44 -> Node66  : 81.0;
+
+
+Node61 -> Node37  : 124.0;
+
+
+Node61 -> Node100  : 64.0;
+
+
+Node28 -> Node22  : 158.0;
+
+
+Node54 -> Node87  : 67.0;
+
+
+Node25 -> Node59  : 198.0;
+
+
+Node41 -> Node49  : 191.0;
+
+
+Node21 -> Node81  : 8.0;
+
+
+Node33 -> Node54  : 50.0;
+
+
+Node56 -> Node51  : 109.0;
+
+
+Node5 -> Node26  : 75.0;
+
+
+Node56 -> Node40  : 142.0;
+
+
+Node75 -> Node18  : 185.0;
+
+
+Node93 -> Node1  : 133.0;
+
+
+Node59 -> Node71  : 148.0;
+
+
+Node6 -> Node84  : 159.0;
+
+
+Node9 -> Node80  : 256.0;
+
+
+Node75 -> Node61  : 59.0;
+
+
+Node3 -> Node30  : 155.0;
+
+
+Node5 -> Node56  : 293.0;
+
+
+Node10 -> Node48  : 301.0;
+
+
+Node16 -> Node12  : 207.0;
+
+
+Node52 -> Node93  : 221.0;
+
+
+Node46 -> Node6  : 239.0;
+
+
+Node47 -> Node100  : 184.0;
+
+
+Node3 -> Node18  : 45.0;
+
+
+Node39 -> Node4  : 128.0;
+
+
+Node65 -> Node43  : 216.0;
+
+
+Node7 -> Node97  : 25.0;
+
+
+Node97 -> Node40  : 300.0;
+
+
+Node12 -> Node63  : 33.0;
+
+
+Node59 -> Node72  : 204.0;
+
+
+Node25 -> Node68  : 16.0;
+
+
+Node88 -> Node21  : 41.0;
+
+
+Node32 -> Node53  : 134.0;
+
+
+Node72 -> Node16  : 269.0;
+
+
+Node58 -> Node97  : 40.0;
+
+
+Node56 -> Node73  : 279.0;
+
+
+Node64 -> Node1  : 138.0;
+
+
+Node31 -> Node57  : 61.0;
+
+
+Node94 -> Node95  : 303.0;
+
+
+Node1 -> Node15  : 203.0;
+
+
+Node65 -> Node34  : 214.0;
+
+
+Node75 -> Node69  : 56.0;
+
+
+Node3 -> Node16  : 218.0;
+
+
+Node50 -> Node95  : 304.0;
+
+
+Node14 -> Node30  : 245.0;
+
+
+Node54 -> Node18  : 265.0;
+
+
+Node21 -> Node68  : 16.0;
+
+
+Node96 -> Node70  : 169.0;
+
+
+Node63 -> Node48  : 156.0;
+
+
+Node41 -> Node27  : 188.0;
+
+
+Node54 -> Node92  : 261.0;
+
+
+Node96 -> Node35  : 33.0;
+
+
+Node2 -> Node84  : 253.0;
+
+
+Node13 -> Node16  : 80.0;
+
+
+Node25 -> Node37  : 180.0;
+
+
+Node94 -> Node23  : 237.0;
+
+
+Node67 -> Node53  : 157.0;
+
+
+Node35 -> Node57  : 14.0;
+
+
+Node20 -> Node36  : 19.0;
+
+
+Node24 -> Node65  : 253.0;
+
+
+Node40 -> Node11  : 160.0;
+
+
+Node1 -> Node10  : 301.0;
+
+
+Node95 -> Node40  : 278.0;
+
+
+Node97 -> Node86  : 216.0;
+
+
+Node45 -> Node44  : 190.0;
+
+
+Node15 -> Node25  : 238.0;
+
+
+Node94 -> Node8  : 229.0;
+
+
+Node13 -> Node59  : 255.0;
+
+
+Node94 -> Node7  : 116.0;
+
+
+Node51 -> Node54  : 28.0;
+
+
+Node42 -> Node86  : 142.0;
+
+
+Node21 -> Node95  : 129.0;
+
+
+Node82 -> Node90  : 191.0;
+
+
+Node17 -> Node83  : 258.0;
+
+
+Node65 -> Node30  : 237.0;
+
+
+Node91 -> Node58  : 68.0;
+
+
+Node12 -> Node83  : 209.0;
+
+
+Node14 -> Node2  : 201.0;
+
+
+Node33 -> Node81  : 246.0;
+
+
+Node59 -> Node46  : 191.0;
+
+
+Node49 -> Node28  : 227.0;
+
+
+Node30 -> Node51  : 77.0;
+
+
+Node96 -> Node37  : 45.0;
+
+
+Node41 -> Node22  : 114.0;
+
+
+Node17 -> Node58  : 260.0;
+
+
+Node9 -> Node17  : 65.0;
+
+
+Node31 -> Node61  : 36.0;
+
+
+Node6 -> Node57  : 249.0;
+
+
+Node24 -> Node81  : 227.0;
+
+
+Node38 -> Node92  : 139.0;
+
+
+Node95 -> Node76  : 175.0;
+
+
+Node14 -> Node53  : 128.0;
+
+
+Node47 -> Node93  : 91.0;
+
+
+Node37 -> Node3  : 235.0;
+
+
+Node34 -> Node64  : 27.0;
+
+
+Node56 -> Node23  : 56.0;
+
+
+Node17 -> Node62  : 172.0;
+
+
+Node79 -> Node58  : 176.0;
+
+
+Node78 -> Node61  : 28.0;
+
+
+Node10 -> Node74  : 218.0;
+
+
+Node45 -> Node76  : 143.0;
+
+
+Node35 -> Node9  : 268.0;
+
+
+Node18 -> Node79  : 86.0;
+
+
+Node97 -> Node99  : 151.0;
+
+
+Node76 -> Node2  : 290.0;
+
+
+Node34 -> Node90  : 147.0;
+
+
+Node66 -> Node20  : 231.0;
+
+
+Node36 -> Node91  : 84.0;
+
+
+Node17 -> Node63  : 249.0;
+
+
+Node82 -> Node19  : 151.0;
+
+
+Node51 -> Node82  : 298.0;
+
+
+Node61 -> Node47  : 213.0;
+
+
+Node99 -> Node23  : 20.0;
+
+
+Node65 -> Node100  : 207.0;
+
+
+Node31 -> Node2  : 62.0;
+
+
+Node94 -> Node16  : 211.0;
+
+
+Node0 -> Node58  : 22.0;
+
+
+Node38 -> Node12  : 58.0;
+
+
+Node56 -> Node24  : 203.0;
+
+
+Node65 -> Node98  : 178.0;
+
+
+Node0 -> Node76  : 152.0;
+
+
+Node79 -> Node92  : 233.0;
+
+
+Node88 -> Node65  : 18.0;
+
+
+Node52 -> Node95  : 6.0;
+
+
+Node15 -> Node50  : 168.0;
+
+
+Node29 -> Node81  : 282.0;
+
+
+Node94 -> Node35  : 116.0;
+
+
+Node77 -> Node14  : 190.0;
+
+
+Node27 -> Node86  : 288.0;
+
+
+Node62 -> Node51  : 53.0;
+
+
+Node67 -> Node9  : 86.0;
+
+
+Node47 -> Node13  : 297.0;
+
+
+Node22 -> Node71  : 228.0;
+
+
+Node68 -> Node33  : 185.0;
+
+
+Node56 -> Node62  : 36.0;
+
+
+Node4 -> Node82  : 241.0;
+
+
+Node30 -> Node100  : 289.0;
+
+
+Node41 -> Node83  : 235.0;
+
+
+Node75 -> Node90  : 65.0;
+
+
+Node61 -> Node63  : 6.0;
+
+
+Node93 -> Node92  : 101.0;
+
+
+Node43 -> Node76  : 149.0;
+
+
+Node91 -> Node48  : 247.0;
+
+
+Node93 -> Node89  : 288.0;
+
+
+Node27 -> Node70  : 177.0;
+
+
+Node1 -> Node76  : 84.0;
+
+
+Node10 -> Node27  : 33.0;
+
+
+Node48 -> Node80  : 273.0;
+
+
+Node75 -> Node39  : 88.0;
+
+
+Node73 -> Node21  : 68.0;
+
+
+Node47 -> Node41  : 168.0;
+
+
+Node34 -> Node15  : 143.0;
+
+
+Node94 -> Node28  : 12.0;
+
+
+Node36 -> Node93  : 145.0;
+
+
+Node60 -> Node30  : 164.0;
+
+
+Node84 -> Node71  : 127.0;
+
+
+Node32 -> Node11  : 241.0;
+
+
+Node7 -> Node31  : 248.0;
+
+
+Node26 -> Node10  : 129.0;
+
+
+Node42 -> Node81  : 47.0;
+
+
+Node4 -> Node73  : 264.0;
+
+
+Node78 -> Node52  : 35.0;
+
+
+Node92 -> Node36  : 113.0;
+
+
+Node42 -> Node74  : 278.0;
+
+
+Node4 -> Node21  : 43.0;
+
+
+Node35 -> Node52  : 77.0;
+
+
+Node8 -> Node58  : 29.0;
+
+
+Node99 -> Node9  : 288.0;
+
+
+Node26 -> Node64  : 19.0;
+
+
+Node75 -> Node22  : 219.0;
+
+
+Node14 -> Node95  : 27.0;
+
+
+Node36 -> Node54  : 267.0;
+
+
+Node48 -> Node93  : 10.0;
+
+
+Node82 -> Node92  : 273.0;
+
+
+Node82 -> Node34  : 269.0;
+
+
+Node76 -> Node34  : 103.0;
+
+
+Node53 -> Node4  : 184.0;
+
+
+Node33 -> Node31  : 106.0;
+
+
+Node72 -> Node0  : 144.0;
+
+
+Node84 -> Node77  : 220.0;
+
+
+Node72 -> Node65  : 173.0;
+
+
+Node82 -> Node26  : 172.0;
+
+
+Node7 -> Node77  : 284.0;
+
+
+Node54 -> Node46  : 196.0;
+
+
+Node13 -> Node91  : 151.0;
+
+
+Node74 -> Node85  : 295.0;
+
+
+Node15 -> Node24  : 175.0;
+
+
+Node18 -> Node68  : 174.0;
+
+
+Node53 -> Node30  : 177.0;
+
+
+Node25 -> Node19  : 110.0;
+
+
+Node97 -> Node29  : 34.0;
+
+
+Node87 -> Node11  : 26.0;
+
+
+Node100 -> Node57  : 245.0;
+
+
+Node3 -> Node55  : 288.0;
+
+
+Node37 -> Node62  : 292.0;
+
+
+Node97 -> Node55  : 171.0;
+
+
+Node56 -> Node45  : 7.0;
+
+
+Node88 -> Node75  : 145.0;
+
+
+Node38 -> Node28  : 77.0;
+
+
+Node52 -> Node19  : 66.0;
+
+
+Node44 -> Node20  : 272.0;
+
+
+Node21 -> Node32  : 146.0;
+
+
+Node57 -> Node28  : 234.0;
+
+
+Node25 -> Node39  : 81.0;
+
+
+Node39 -> Node100  : 112.0;
+
+
+Node6 -> Node32  : 20.0;
+
+
+Node41 -> Node78  : 88.0;
+
+
+Node50 -> Node49  : 256.0;
+
+
+Node22 -> Node76  : 267.0;
+
+
+Node68 -> Node69  : 209.0;
+
+
+Node18 -> Node71  : 303.0;
+
+
+Node93 -> Node4  : 93.0;
+
+
+Node95 -> Node68  : 39.0;
+
+
+Node17 -> Node4  : 254.0;
+
+
+Node58 -> Node23  : 171.0;
+
+
+Node87 -> Node7  : 259.0;
+
+
+Node91 -> Node4  : 127.0;
+
+
+Node42 -> Node12  : 280.0;
+
+
+Node46 -> Node4  : 301.0;
+
+
+Node59 -> Node27  : 73.0;
+
+
+Node65 -> Node91  : 283.0;
+
+
+Node15 -> Node77  : 81.0;
+
+
+Node17 -> Node41  : 166.0;
+
+
+Node17 -> Node87  : 258.0;
+
+
+Node94 -> Node58  : 14.0;
+
+
+Node43 -> Node40  : 146.0;
+
+
+Node63 -> Node80  : 34.0;
+
+
+Node36 -> Node34  : 262.0;
+
+
+Node16 -> Node38  : 172.0;
+
+
+Node53 -> Node65  : 238.0;
+
+
+Node91 -> Node59  : 26.0;
+
+
+Node48 -> Node77  : 192.0;
+
+
+Node19 -> Node95  : 238.0;
+
+
+Node34 -> Node52  : 246.0;
+
+
+Node41 -> Node80  : 118.0;
+
+
+Node27 -> Node87  : 58.0;
+
+
+Node90 -> Node86  : 29.0;
+
+
+Node40 -> Node8  : 45.0;
+
+
+Node32 -> Node51  : 43.0;
+
+
+Node70 -> Node38  : 11.0;
+
+
+Node48 -> Node41  : 253.0;
+
+
+Node54 -> Node83  : 32.0;
+
+
+Node52 -> Node89  : 132.0;
+
+
+Node84 -> Node67  : 126.0;
+
+
+Node59 -> Node2  : 127.0;
+
+
+Node35 -> Node93  : 299.0;
+
+
+Node99 -> Node39  : 47.0;
+
+
+Node22 -> Node9  : 108.0;
+
+
+Node52 -> Node2  : 255.0;
+
+
+Node47 -> Node70  : 30.0;
+
+
+Node1 -> Node22  : 130.0;
+
+
+Node51 -> Node95  : 115.0;
+
+
+Node0 -> Node75  : 155.0;
+
+
+Node98 -> Node82  : 132.0;
+
+
+Node5 -> Node30  : 42.0;
+
+
+Node17 -> Node66  : 249.0;
+
+
+Node76 -> Node3  : 99.0;
+
+
+Node11 -> Node10  : 210.0;
+
+
+Node92 -> Node38  : 178.0;
+
+
+Node51 -> Node56  : 216.0;
+
+
+Node75 -> Node55  : 191.0;
+
+
+Node42 -> Node63  : 31.0;
+
+
+Node36 -> Node26  : 141.0;
+
+
+Node72 -> Node13  : 254.0;
+
+
+Node3 -> Node37  : 111.0;
+
+
+Node4 -> Node64  : 224.0;
+
+
+Node73 -> Node77  : 294.0;
+
+
+Node54 -> Node57  : 222.0;
+
+
+Node90 -> Node53  : 181.0;
+
+
+Node94 -> Node49  : 148.0;
+
+
+Node78 -> Node40  : 125.0;
+
+
+Node73 -> Node43  : 54.0;
+
+
+Node27 -> Node4  : 40.0;
+
+
+Node58 -> Node47  : 23.0;
+
+
+Node11 -> Node15  : 235.0;
+
+
+Node3 -> Node4  : 47.0;
+
+
+Node0 -> Node84  : 224.0;
+
+
+Node93 -> Node49  : 144.0;
+
+
+Node66 -> Node75  : 224.0;
+
+
+Node41 -> Node50  : 37.0;
+
+
+Node90 -> Node91  : 205.0;
+
+
+Node99 -> Node90  : 203.0;
+
+
+Node21 -> Node5  : 124.0;
+
+
+Node35 -> Node87  : 44.0;
+
+
+Node10 -> Node71  : 240.0;
+
+
+Node72 -> Node46  : 293.0;
+
+
+Node38 -> Node72  : 7.0;
+
+
+Node55 -> Node85  : 63.0;
+
+
+Node19 -> Node93  : 126.0;
+
+
+Node95 -> Node83  : 260.0;
+
+
+Node30 -> Node94  : 152.0;
+
+
+Node33 -> Node44  : 14.0;
+
+
+Node67 -> Node41  : 65.0;
+
+
+Node96 -> Node24  : 251.0;
+
+
+Node55 -> Node90  : 82.0;
+
+
+Node99 -> Node77  : 17.0;
+
+
+Node48 -> Node94  : 255.0;
+
+
+Node99 -> Node7  : 271.0;
+
+
+Node21 -> Node82  : 62.0;
+
+
+Node68 -> Node87  : 233.0;
+
+
+Node58 -> Node22  : 202.0;
+
+
+Node17 -> Node11  : 168.0;
+
+
+Node93 -> Node91  : 131.0;
+
+
+Node85 -> Node37  : 44.0;
+
+
+Node78 -> Node34  : 35.0;
+
+
+Node0 -> Node72  : 263.0;
+
+
+Node67 -> Node83  : 54.0;
+
+
+Node84 -> Node90  : 99.0;
+
+
+Node87 -> Node62  : 182.0;
+
+
+Node26 -> Node41  : 292.0;
+
+
+Node15 -> Node81  : 105.0;
+
+
+Node78 -> Node82  : 103.0;
+
+
+Node1 -> Node87  : 151.0;
+
+
+Node51 -> Node23  : 190.0;
+
+
+Node38 -> Node81  : 74.0;
+
+
+Node87 -> Node39  : 197.0;
+
+
+Node73 -> Node32  : 218.0;
+
+
+Node96 -> Node79  : 217.0;
+
+
+Node41 -> Node54  : 13.0;
+
+
+Node12 -> Node28  : 131.0;
+
+
+Node37 -> Node50  : 80.0;
+
+
+Node31 -> Node4  : 164.0;
+
+
+Node26 -> Node11  : 66.0;
+
+
+Node4 -> Node79  : 259.0;
+
+
+Node3 -> Node54  : 62.0;
+
+
+Node1 -> Node30  : 254.0;
+
+
+Node58 -> Node87  : 246.0;
+
+
+Node35 -> Node34  : 39.0;
+
+
+Node38 -> Node97  : 299.0;
+
+
+Node77 -> Node75  : 185.0;
+
+
+Node100 -> Node70  : 115.0;
+
+
+Node35 -> Node41  : 69.0;
+
+
+Node40 -> Node96  : 24.0;
+
+
+Node20 -> Node18  : 167.0;
+
+
+Node99 -> Node6  : 211.0;
+
+
+Node78 -> Node48  : 284.0;
+
+
+Node0 -> Node74  : 285.0;
+
+
+Node29 -> Node64  : 66.0;
+
+
+Node83 -> Node32  : 127.0;
+
+
+Node9 -> Node31  : 228.0;
+
+
+Node4 -> Node9  : 222.0;
+
+
+Node34 -> Node1  : 77.0;
+
+
+Node95 -> Node16  : 292.0;
+
+
+Node18 -> Node75  : 102.0;
+
+
+Node0 -> Node73  : 258.0;
+
+
+Node41 -> Node81  : 265.0;
+
+
+Node7 -> Node92  : 218.0;
+
+
+Node53 -> Node26  : 8.0;
+
+
+Node88 -> Node14  : 110.0;
+
+
+Node61 -> Node72  : 65.0;
+
+
+Node73 -> Node41  : 183.0;
+
+
+Node24 -> Node61  : 279.0;
+
+
+Node36 -> Node6  : 303.0;
+
+
+Node39 -> Node79  : 180.0;
+
+
+Node4 -> Node56  : 167.0;
+
+
+Node50 -> Node33  : 78.0;
+
+
+Node67 -> Node28  : 145.0;
+
+
+Node44 -> Node35  : 90.0;
+
+
+Node0 -> Node87  : 129.0;
+
+
+Node48 -> Node73  : 136.0;
+
+
+Node98 -> Node64  : 169.0;
+
+
+Node91 -> Node88  : 289.0;
+
+
+Node88 -> Node99  : 81.0;
+
+
+Node60 -> Node95  : 236.0;
+
+
+Node13 -> Node99  : 235.0;
+
+
+Node98 -> Node58  : 170.0;
+
+
+Node96 -> Node2  : 113.0;
+
+
+Node65 -> Node48  : 99.0;
+
+
+Node82 -> Node23  : 289.0;
+
+
+Node2 -> Node17  : 112.0;
+
+
+Node54 -> Node79  : 170.0;
+
+
+Node35 -> Node12  : 200.0;
+
+
+Node33 -> Node37  : 197.0;
+
+
+Node37 -> Node66  : 133.0;
+
+
+Node16 -> Node91  : 13.0;
+
+
+Node38 -> Node23  : 246.0;
+
+
+Node48 -> Node57  : 90.0;
+
+
+Node34 -> Node74  : 128.0;
+
+
+Node81 -> Node51  : 212.0;
+
+
+Node5 -> Node32  : 295.0;
+
+
+Node72 -> Node66  : 28.0;
+
+
+Node62 -> Node67  : 66.0;
+
+
+Node12 -> Node39  : 86.0;
+
+
+Node93 -> Node27  : 37.0;
+
+
+Node21 -> Node6  : 26.0;
+
+
+Node69 -> Node41  : 52.0;
+
+
+Node24 -> Node6  : 33.0;
+
+
+Node14 -> Node60  : 171.0;
+
+
+Node69 -> Node85  : 201.0;
+
+
+Node19 -> Node84  : 282.0;
+
+
+Node31 -> Node17  : 38.0;
+
+
+Node10 -> Node33  : 15.0;
+
+
+Node53 -> Node61  : 114.0;
+
+
+Node70 -> Node92  : 263.0;
+
+
+Node19 -> Node89  : 295.0;
+
+
+Node96 -> Node53  : 30.0;
+
+
+Node99 -> Node32  : 73.0;
+
+
+Node86 -> Node61  : 31.0;
+
+
+Node57 -> Node66  : 10.0;
+
+
+Node63 -> Node76  : 275.0;
+
+
+Node98 -> Node52  : 256.0;
+
+
+Node1 -> Node67  : 270.0;
+
+
+Node98 -> Node48  : 115.0;
+
+
+Node8 -> Node33  : 27.0;
+
+
+Node57 -> Node9  : 36.0;
+
+
+Node20 -> Node73  : 15.0;
+
+
+Node92 -> Node11  : 194.0;
+
+
+Node42 -> Node57  : 185.0;
+
+
+Node96 -> Node71  : 143.0;
+
+
+Node75 -> Node88  : 16.0;
+
+
+Node52 -> Node42  : 189.0;
+
+
+Node93 -> Node60  : 272.0;
+
+
+Node22 -> Node28  : 95.0;
+
+
+Node78 -> Node69  : 66.0;
+
+
+Node59 -> Node80  : 19.0;
+
+
+Node88 -> Node72  : 162.0;
+
+
+Node74 -> Node19  : 24.0;
+
+
+Node87 -> Node56  : 65.0;
+
+
+Node49 -> Node91  : 261.0;
+
+
+Node99 -> Node88  : 255.0;
+
+
+Node74 -> Node62  : 193.0;
+
+
+Node6 -> Node43  : 45.0;
+
+
+Node35 -> Node78  : 104.0;
+
+
+Node94 -> Node18  : 42.0;
+
+
+Node8 -> Node25  : 264.0;
+
+
+Node36 -> Node0  : 251.0;
+
+
+Node6 -> Node68  : 60.0;
+
+
+Node33 -> Node25  : 196.0;
+
+
+Node79 -> Node20  : 164.0;
+
+
+Node2 -> Node8  : 200.0;
+
+
+Node9 -> Node42  : 26.0;
+
+
+Node18 -> Node30  : 173.0;
+
+
+Node46 -> Node66  : 293.0;
+
+
+Node0 -> Node26  : 15.0;
+
+
+Node51 -> Node15  : 218.0;
+
+
+Node69 -> Node97  : 101.0;
+
+
+Node87 -> Node90  : 18.0;
+
+
+Node2 -> Node14  : 236.0;
+
+
+Node67 -> Node0  : 288.0;
+
+
+Node82 -> Node94  : 94.0;
+
+
+Node42 -> Node95  : 123.0;
+
+
+Node54 -> Node8  : 245.0;
+
+
+Node73 -> Node76  : 235.0;
+
+
+Node75 -> Node85  : 292.0;
+
+
+Node69 -> Node50  : 273.0;
+
+
+Node77 -> Node59  : 280.0;
+
+
+Node99 -> Node47  : 192.0;
+
+
+Node3 -> Node17  : 139.0;
+
+
+Node70 -> Node52  : 266.0;
+
+
+Node83 -> Node9  : 21.0;
+
+
+Node33 -> Node35  : 174.0;
+
+
+Node91 -> Node65  : 101.0;
+
+
+Node49 -> Node50  : 239.0;
+
+
+Node56 -> Node5  : 189.0;
+
+
+Node80 -> Node47  : 87.0;
+
+
+Node32 -> Node87  : 107.0;
+
+
+Node20 -> Node75  : 296.0;
+
+
+Node38 -> Node76  : 140.0;
+
+
+Node93 -> Node22  : 273.0;
+
+
+Node100 -> Node0  : 35.0;
+
+
+Node6 -> Node27  : 237.0;
+
+
+Node21 -> Node49  : 20.0;
+
+
+Node79 -> Node7  : 189.0;
+
+
+Node7 -> Node40  : 242.0;
+
+
+Node8 -> Node0  : 274.0;
+
+
+Node52 -> Node54  : 145.0;
+
+
+Node85 -> Node2  : 95.0;
+
+
+Node59 -> Node13  : 24.0;
+
+
+Node27 -> Node12  : 153.0;
+
+
+Node63 -> Node39  : 28.0;
+
+
+Node29 -> Node7  : 170.0;
+
+
+Node2 -> Node87  : 277.0;
+
+
+Node15 -> Node16  : 87.0;
+
+
+Node11 -> Node9  : 148.0;
+
+
+Node3 -> Node14  : 140.0;
+
+
+Node36 -> Node7  : 101.0;
+
+
+Node42 -> Node70  : 151.0;
+
+
+Node18 -> Node36  : 58.0;
+
+
+Node66 -> Node10  : 111.0;
+
+
+Node38 -> Node41  : 303.0;
+
+
+Node58 -> Node69  : 259.0;
+
+
+Node66 -> Node18  : 164.0;
+
+
+Node96 -> Node28  : 10.0;
+
+
+Node26 -> Node28  : 165.0;
+
+
+Node53 -> Node36  : 289.0;
+
+
+Node47 -> Node65  : 264.0;
+
+
+Node30 -> Node4  : 282.0;
+
+
+Node63 -> Node14  : 130.0;
+
+
+Node47 -> Node67  : 94.0;
+
+
+Node68 -> Node48  : 150.0;
+
+
+Node14 -> Node48  : 59.0;
+
+
+Node1 -> Node90  : 51.0;
+
+
+Node39 -> Node49  : 259.0;
+
+
+Node58 -> Node45  : 230.0;
+
+
+Node48 -> Node87  : 107.0;
+
+
+Node96 -> Node10  : 228.0;
+
+
+Node98 -> Node16  : 213.0;
+
+
+Node27 -> Node24  : 139.0;
+
+
+Node15 -> Node61  : 53.0;
+
+
+Node99 -> Node71  : 67.0;
+
+
+Node44 -> Node96  : 67.0;
+
+
+Node38 -> Node90  : 237.0;
+
+
+Node4 -> Node54  : 272.0;
+
+
+Node40 -> Node69  : 167.0;
+
+
+Node8 -> Node95  : 176.0;
+
+
+Node97 -> Node84  : 280.0;
+
+
+Node7 -> Node19  : 117.0;
+
+
+Node62 -> Node87  : 186.0;
+
+
+Node68 -> Node21  : 25.0;
+
+
+Node0 -> Node29  : 249.0;
+
+
+Node6 -> Node7  : 93.0;
+
+
+Node14 -> Node77  : 98.0;
+
+
+Node52 -> Node51  : 8.0;
+
+
+Node83 -> Node46  : 98.0;
+
+
+Node72 -> Node27  : 46.0;
+
+
+Node22 -> Node57  : 193.0;
+
+
+Node19 -> Node81  : 258.0;
+
+
+Node24 -> Node59  : 108.0;
+
+
+Node66 -> Node32  : 13.0;
+
+
+Node71 -> Node97  : 158.0;
+
+
+Node60 -> Node90  : 76.0;
+
+
+Node60 -> Node63  : 104.0;
+
+
+Node71 -> Node8  : 253.0;
+
+
+Node84 -> Node45  : 104.0;
+
+
+Node89 -> Node25  : 80.0;
+
+
+Node97 -> Node33  : 76.0;
+
+
+Node29 -> Node80  : 130.0;
+
+
+Node62 -> Node43  : 94.0;
+
+
+Node94 -> Node52  : 76.0;
+
+
+Node44 -> Node65  : 292.0;
+
+
+Node96 -> Node93  : 212.0;
+
+
+Node25 -> Node79  : 13.0;
+
+
+Node41 -> Node24  : 118.0;
+
+
+Node70 -> Node29  : 209.0;
+
+
+Node9 -> Node19  : 286.0;
+
+
+Node87 -> Node14  : 16.0;
+
+
+Node31 -> Node81  : 140.0;
+
+
+Node89 -> Node81  : 245.0;
+
+
+Node91 -> Node33  : 282.0;
+
+
+Node73 -> Node90  : 77.0;
+
+
+Node8 -> Node38  : 192.0;
+
+
+Node98 -> Node18  : 173.0;
+
+
+Node61 -> Node43  : 128.0;
+
+
+Node75 -> Node10  : 75.0;
+
+
+Node47 -> Node86  : 136.0;
+
+
+Node51 -> Node78  : 91.0;
+
+
+Node47 -> Node14  : 181.0;
+
+
+Node65 -> Node36  : 59.0;
+
+
+Node18 -> Node98  : 274.0;
+
+
+Node11 -> Node4  : 209.0;
+
+
+Node61 -> Node84  : 138.0;
+
+
+Node23 -> Node54  : 241.0;
+
+
+Node44 -> Node2  : 72.0;
+
+
+Node91 -> Node12  : 123.0;
+
+
+Node78 -> Node24  : 166.0;
+
+
+Node41 -> Node46  : 125.0;
+
+
+Node70 -> Node4  : 273.0;
+
+
+Node17 -> Node16  : 157.0;
+
+
+Node89 -> Node91  : 172.0;
+
+
+Node16 -> Node33  : 99.0;
+
+
+Node27 -> Node61  : 152.0;
+
+
+Node22 -> Node65  : 126.0;
+
+
+Node84 -> Node48  : 139.0;
+
+
+Node26 -> Node17  : 168.0;
+
+
+Node85 -> Node18  : 146.0;
+
+
+Node42 -> Node72  : 199.0;
+
+
+Node25 -> Node72  : 73.0;
+
+
+Node29 -> Node77  : 251.0;
+
+
+Node13 -> Node47  : 40.0;
+
+
+Node13 -> Node11  : 211.0;
+
+
+Node1 -> Node44  : 211.0;
+
+
+Node44 -> Node1  : 252.0;
+
+
+Node95 -> Node12  : 162.0;
+
+
+Node1 -> Node18  : 270.0;
+
+
+Node91 -> Node15  : 105.0;
+
+
+Node72 -> Node32  : 77.0;
+
+
+Node47 -> Node82  : 23.0;
+
+
+Node20 -> Node2  : 300.0;
+
+
+Node61 -> Node10  : 64.0;
+
+
+Node61 -> Node2  : 263.0;
+
+
+Node43 -> Node42  : 293.0;
+
+
+Node71 -> Node73  : 164.0;
+
+
+Node53 -> Node66  : 87.0;
+
+
+Node56 -> Node50  : 37.0;
+
+
+Node17 -> Node31  : 183.0;
+
+
+Node85 -> Node27  : 29.0;
+
+
+Node39 -> Node41  : 152.0;
+
+
+Node27 -> Node56  : 68.0;
+
+
+Node44 -> Node76  : 201.0;
+
+
+Node15 -> Node68  : 201.0;
+
+
+Node23 -> Node30  : 259.0;
+
+
+Node64 -> Node69  : 30.0;
+
+
+Node28 -> Node36  : 129.0;
+
+
+Node87 -> Node28  : 218.0;
+
+
+Node13 -> Node62  : 208.0;
+
+
+Node58 -> Node40  : 229.0;
+
+

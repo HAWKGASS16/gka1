@@ -1,0 +1,33 @@
+Node7 -> Node0  : 157.0;
+
+
+Node10 -> Node6  : 182.0;
+
+
+Node1 -> Node9  : 7.0;
+
+
+Node10 -> Node8  : 160.0;
+
+
+Node0 -> Node5  : 237.0;
+
+
+Node1 -> Node3  : 295.0;
+
+
+Node8 -> Node7  : 67.0;
+
+
+Node0 -> Node1  : 283.0;
+
+
+Node4 -> Node5  : 53.0;
+
+
+Node9 -> Node5  : 187.0;
+
+
+Node8 -> Node10  : 106.0;
+
+
