@@ -74,7 +74,7 @@ public class BIG {
 				edges++;
 				
 			}
-			
+			graph.addAttribute(GraphController.GraphAttributeDirected, true);
 			
 			
 		}
@@ -82,7 +82,7 @@ public class BIG {
 //		graph.addEdge("Node1Node"+anzahlNodes, "Node1", "Node"+anzahlNodes);
 		if(big){
 			
-			Node node1 = getRandomNode();
+			Node node1 = graph.getNode("Node1");
 			Node node2 = getRandomNode(node1);
 			graph.addNode("v1");
 			Node node3 = graph.getNode("v1");
