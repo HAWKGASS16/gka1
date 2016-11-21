@@ -1,14 +1,23 @@
 package algorithmen;
 
+import org.graphstream.graph.Graph;
+
 public class BTS {
 	
+	private String startKnoten;
+	private String endKnoten;
+	Dijkstra dijkstra;
 	
 	
-	public BTS() {
-		// TODO Auto-generated constructor stub
+	public BTS(Graph g, String start, String end) {
+		startKnoten=start;
+		endKnoten=end;
+		
+		dijkstra = new Dijkstra(g, start, end, true);
 	}
 	
 	public boolean suche(){
+		
 		
 //		zugriffsZaehler.startMeasure("BFS-Suche von " + start + " nach " + ende);
 //		zugriffsZaehler.log("Knotenanzahl: " + graph.getNodeCount());
@@ -26,9 +35,11 @@ public class BTS {
 //		zugriffsZaehler.stopMeasure();
 //
 //		return erfolgreich;
-		return false;
+		return dijkstra.suche();
 		
 	}
-	
+	public Double getKosten(){
+		return dijkstra.getKosten(startKnoten, endKnoten);
+	}
 
 }

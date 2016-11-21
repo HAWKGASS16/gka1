@@ -9,7 +9,6 @@ import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 
 import application.GraphController;
-import scala.Array;
 import util.MeasureObject;
 
 public class Dijkstra {
@@ -43,7 +42,7 @@ public class Dijkstra {
 		zugriffsZaehler.read("initialisierung", 2);
 
 		Node temp;
-		Iterator nodeIterator = graph.getNodeIterator();
+		Iterator<Node> nodeIterator = graph.getNodeIterator();
 		while (nodeIterator.hasNext()) {
 			temp = (Node) nodeIterator.next();
 
@@ -57,7 +56,7 @@ public class Dijkstra {
 
 		Edge tempEdge;
 
-		Iterator edgeIterator = graph.getEdgeIterator();
+		Iterator<Edge> edgeIterator = graph.getEdgeIterator();
 		while (edgeIterator.hasNext()) {
 			tempEdge = (Edge) edgeIterator.next();
 
@@ -84,6 +83,8 @@ public class Dijkstra {
 
 	
 	public boolean suche(){
+		
+		
 		
 		if(!bts){
 			
@@ -138,7 +139,7 @@ public class Dijkstra {
 
 			// Iteriert über alle Kanten die an dem Knoten anliegen, der
 			// momentan untersucht wird.
-			Iterator edgeIterator = tempNode.getEdgeIterator();
+			Iterator<?> edgeIterator = tempNode.getEdgeIterator();
 			while (edgeIterator.hasNext()) {
 
 				zugriffsZaehler.read("Dijkstra", 4);
@@ -174,25 +175,22 @@ public class Dijkstra {
 			// denn wenn der zuletzt gefundene Knoten der Zielknoten ist,
 			// ist das schon der kürzeste weg da immer der aktuell kürzeste weg
 			// untersucht wird.
-			if (false && tempNode == ende) {
-				erfolgreich = true;
-				break;
-			}//---------------------------------------------------------------------------den codeblock nochmal verbesser, da ist der fehler
+//---------------------------------------------------------------------------den codeblock nochmal verbesser, da ist der fehler
 			if (tempNode == ende) {
 				erfolgreich = true;
+				getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten));
+//				break;
 			}
-//			getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten));
+
 			
-			if(getShortestWay(graph.getNode(startKnoten), graph.getNode(endKnoten))==null){
-				return false;
-			}
+
 
 		}
 
 		if(erfolgreich){
 //			logShortestWay(start, getShortestWay(start, ende));
 		}
-//		log("dijstra---fertig");
+
 
 		if (!bts) {
 			zugriffsZaehler.stopMeasure();
@@ -205,6 +203,7 @@ public class Dijkstra {
 
 	private void distanzUpdate(Node knoten, Edge kante) {
 		zugriffsZaehler.read("distanzUpdate()", 1);
+		
 
 		// die Variable "nachbar" wird mit dem übergebenen knoten initialisiert
 		// einfach nur damit sie initialisiert ist^^
@@ -263,12 +262,10 @@ public class Dijkstra {
 
 		Node minimalNode = queue.getFirst();
 		Node temp = null;
-		Double minimumEntfernung = (Double) minimalNode.getAttribute(GraphController.NodeAttributdistance);
-
 		// iteriert über alle Einträge der queue und merkt sich
 		// immer das kleinste Element also den Knoten mit der geringsten
 		// entfernung
-		Iterator queueIterator = queue.iterator();
+		Iterator<Node> queueIterator = queue.iterator();
 		while (queueIterator.hasNext()) {
 
 			zugriffsZaehler.read("getMinimumNode()", 4);
@@ -308,7 +305,7 @@ public class Dijkstra {
 
 			zugriffsZaehler.read("getShortestWay()", 1);
 
-			Iterator edgeIterator = tempNode.getEdgeIterator();
+			Iterator<?> edgeIterator = tempNode.getEdgeIterator();
 			while (edgeIterator.hasNext()) {
 				tempEdge = (Edge) edgeIterator.next();
 				zugriffsZaehler.read("getShortestWay()", 2);
@@ -360,7 +357,7 @@ public class Dijkstra {
 		}
 		Double minimumWeight = (Double) minimumEdge.getOpposite(tempNode).getAttribute(GraphController.NodeAttributdistance);
 
-		Iterator listIterator = tempList.iterator();
+		Iterator<Edge> listIterator = tempList.iterator();
 		while (listIterator.hasNext()) {
 			zugriffsZaehler.read("getMinimumEdge()", 3);
 			tempEdge = (Edge) listIterator.next();
@@ -377,6 +374,19 @@ public class Dijkstra {
 		}
 
 		return minimumEdge;
+	}
+	public Double getKosten(String start, String ziel){
+		
+		Node node2 = graph.getNode(ziel);
+		
+		if(node2==null){
+			return null;
+		}
+		
+		Double kosten = node2.getAttribute(GraphController.NodeAttributdistance);
+		
+		return kosten;
+		
 	}
 	
 }

@@ -1,5 +1,6 @@
 package algorithmen;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.graphstream.graph.Edge;
@@ -31,7 +32,7 @@ public class FloydWarshall {
 		transitMatrix = new Integer[matrixgroesse][matrixgroesse];
 		matrixIndizes = new String[matrixgroesse];
 
-		Iterator iterator = graph.getNodeIterator();
+		Iterator<Node> iterator = graph.getNodeIterator();
 		int i = 0;
 		while (iterator.hasNext()) {
 			Node object = (Node) iterator.next();
@@ -48,14 +49,29 @@ public class FloydWarshall {
 
 	}
 
-	public void suche() {
+	public boolean suche() {
+		
+		if(startKnoten.equals(endKnoten)){
+			return true;
+		}
+		
+		
 
 		zugriffsZaehler.startMeasure("FloydWarschall von " + startKnoten + " nach " + endKnoten);
 		zugriffsZaehler.log("Knotenanzahl: " + graph.getNodeCount());
 		zugriffsZaehler.log("Kantenanzahl: " + graph.getEdgeCount());
 
-		initialize();
+
+		Node node1 = graph.getNode(startKnoten);
+		Node node2 = graph.getNode(endKnoten);
 		
+		zugriffsZaehler.read("suche()", 2);
+		
+		if(node1 == null || node2 == null){
+			return false;
+		}
+		
+		initialize();
 		
 		showDistanzmatrix();
 		showTransitMatrix();
@@ -71,9 +87,11 @@ public class FloydWarshall {
 							Double momentangewicht = distanzMatrix[i][k];
 							Double neuesGewicht = Math.min(momentangewicht, (distanzMatrix[i][j]+distanzMatrix[j][k]));
 							if(momentangewicht!=neuesGewicht){
-								transitMatrix[i][k]=j;
+//								transitMatrix[i][k]=j; //alternative
+								transitMatrix[i][k]=transitMatrix[i][j];
+								distanzMatrix[i][k]=neuesGewicht;
 							}
-							distanzMatrix[i][k]=neuesGewicht;
+							
 							
 							
 						
@@ -81,8 +99,10 @@ public class FloydWarshall {
 						}
 						
 					}
+					//negativer kreis
 					if(distanzMatrix[i][i]<0){
-						return;
+						zugriffsZaehler.stopMeasure();
+						return false;
 					}
 
 				}
@@ -92,12 +112,31 @@ public class FloydWarshall {
 		}
 		showDistanzmatrix();
 		showTransitMatrix();
+		
+		Integer indexStart = getIndex(startKnoten);
+		Integer indexEnde = getIndex(endKnoten);
+		
+		zugriffsZaehler.stopMeasure();
+		
+
+		
+//		ArrayList<Integer> kuerzesterWegalsInteger = new ArrayList<Integer>();
+//		shortestWay(kuerzesterWegalsInteger, startKnoten, endKnoten);
+		
+		if(distanzMatrix[indexStart][indexEnde]!=Double.POSITIVE_INFINITY){
+//			System.out.println(startKnoten+" nach "+endKnoten+"ist erreichbar");
+			return true;
+		}else{
+			return false;
+		}
+		
+		
 
 	}
 
 	// ------------------------------------------------------------------------------------
 	/**
-	 * Initialisiert die Suche - also setzt alle distanzen aud default un so
+	 * Initialisiert die Suche - also setzt alle distanzen auf default
 	 */
 	private void initialize() {
 
@@ -119,11 +158,11 @@ public class FloydWarshall {
 		}
 
 		 zugriffsZaehler.read("initialize()", 1);
-		Iterator edgeIterator = graph.getEdgeIterator();
+		Iterator<Edge> edgeIterator = graph.getEdgeIterator();
 
 		while (edgeIterator.hasNext()) {
 			Edge object = (Edge) edgeIterator.next();
-			 zugriffsZaehler.read("initialize()", 1);
+			 zugriffsZaehler.read("initialize()", 4);
 
 			Node node1 = object.getSourceNode();
 
@@ -136,6 +175,13 @@ public class FloydWarshall {
 
 				distanzMatrix[indexNode1][indexNode2] = gewicht;
 				transitMatrix[indexNode1][indexNode2]= indexNode1;
+				
+				boolean directedGraph = (boolean)graph.getAttribute(GraphController.GraphAttributeDirected);
+				if(!directedGraph){
+					distanzMatrix[indexNode2][indexNode1] = gewicht;
+					transitMatrix[indexNode2][indexNode1]= indexNode2;
+				}
+				
 			}
 
 		}
@@ -155,15 +201,18 @@ public class FloydWarshall {
 		}
 		return null;
 	}
+	private String getName(Integer index){
+		return matrixIndizes[index];
+	}
 
 	private void showDistanzmatrix() {
 		// ausgabe der Matrix
 		System.out.println("-----------------------------------------------");
 		System.out.println("Distanzmatrix:");
 		for (int i = 0; i < distanzMatrix.length; i++) {
-			System.out.print(matrixIndizes[i] + ": ");
+			System.out.print(matrixIndizes[i] + ":\t");
 			for (int j = 0; j < distanzMatrix.length; j++) {
-				System.out.print(distanzMatrix[i][j] + " ");
+				System.out.print(distanzMatrix[i][j] + "\t ");
 			}
 			System.out.print("\n");
 		}
@@ -183,5 +232,39 @@ public class FloydWarshall {
 		}
 
 	}
+	/**
+	 * 
+	 * @param liste Liste enthält die jeweiligen Vorgänger aber nur die Indizes
+	 * @param u startKnoten
+	 * @param v der jeweilige vorgänger vom Zielknoten
+	 */
+	private void shortestWay(ArrayList<Integer> liste, String u, String v){
+		Integer vorg = transitMatrix[getIndex(u)][getIndex(v)];
+		if(vorg!=null){
+			if(u.equals(v)){
+				return;
+			}
+			
+			liste.add(getIndex(v));
+			
+			
+			shortestWay(liste, u, getName(vorg));
+			
+		}
+	}
+	public Double getKosten(String start, String ende){
+		
+		Node node1 = graph.getNode(start);
+		Node node2 = graph.getNode(ende);
+		if(node1==null||node2==null){
+			
+			return null;
+			
+		}
+		Double kosten = distanzMatrix[getIndex(node1.getId())][getIndex(node2.getId())];
+		return kosten;
+		
+	}
+	
 
 }

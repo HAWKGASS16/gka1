@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -88,16 +87,16 @@ public class FileParser {
 	 */
 	public void parsefile() {
 
-		
+		graph.addAttribute(GraphController.GraphAttributeDirected, false);
 
 		try {
 			//der Reader um die Datei zeilenweise einzulesen
+			@SuppressWarnings("resource")
 			BufferedReader bf = new BufferedReader(new FileReader(new File(path)));
 			for (String line; (line = bf.readLine()) != null;) {
 				
 //				System.out.println(line.replaceAll(" ", ""));
 				
-				String temp;
 				String[] splitSemikolon;
 				String node1;
 				String node2;
@@ -121,12 +120,14 @@ public class FileParser {
 
 				if (splitSemikolon[0].contains("->")) {
 					undirected = false;
+					
+					graph.addAttribute(GraphController.GraphAttributeDirected, true);
+					
 				}
 				if (splitSemikolon[0].contains(":")) {
 					weighted = true;
 				}
-				temp = splitSemikolon[0].replaceAll(" ", "");
-//				System.out.println(temp);
+				splitSemikolon[0].replaceAll(" ", "");
 
 				node1 = getFirstNode(splitSemikolon[0]);
 //				System.out.println("node1: "+node1);
@@ -225,7 +226,6 @@ public class FileParser {
 
 	private String getFirstNode(String string) {
 		List<String> results = new ArrayList<String>();
-		String temp = "";
 		Matcher matcher = nodePattern.matcher(string);
 
 		while (matcher.find()) {
@@ -277,7 +277,6 @@ public class FileParser {
 //		}
 		
 		List<String> results = new ArrayList<String>();
-		String temp = "";
 		Matcher matcher = node2Pattern.matcher(string);
 
 		while (matcher.find()) {
@@ -336,12 +335,9 @@ public class FileParser {
 		
 		
 		
-		int position =0;
-		
 		if(string.contains(":")){
 			
-			String[] tempSplit = string.split(":");
-//			System.out.println("inhalt nach dem :Split "+tempSplit[1].toString());
+			string.split(":");
 			
 			//wenn im gewichteten graphen kein gewicht aufteucht, ist die Quelle fehlerhaft
 			//und es wird mit null rausgesprungen
@@ -353,13 +349,11 @@ public class FileParser {
 			
 			
 			List<String> results = new ArrayList<String>();
-			String temp1 = "";
 			Matcher matcher = weightPattern.matcher(string);
 
 			while (matcher.find()) {
 				results.add(matcher.group(2));
-//				 System.out.println(matcher.group(2));
-				temp1=matcher.group();
+matcher.group();
 			}
 			 
 			 if(!results.isEmpty()){
@@ -394,13 +388,11 @@ public class FileParser {
 		if(string.contains("(")&&string.contains(")")){
 //			System.out.println("der string "+string+" matched dem pattern");
 			List<String> results = new ArrayList<String>();
-			String temp1 = "";
 			Matcher matcher = edgeNamePattern.matcher(string);
 
 			while (matcher.find()) {
 				results.add(matcher.group(2));
-//				 System.out.println(matcher.group(2));
-				temp1=matcher.group();
+matcher.group();
 			}
 			 
 			 if(!results.isEmpty()){
@@ -427,9 +419,6 @@ public class FileParser {
 //		
 //		
 //		return string.substring(start, ende);
-	}
-	private void log(String log){
-		
 	}
 
 }

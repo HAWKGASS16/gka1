@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.URL;
 import java.util.HashSet;
@@ -54,6 +53,7 @@ public class GraphController implements Initializable {
 	public static final String EdgeAttributeWeight = "Gewicht";
 	public static final String NodeAttributVisited = "visited";
 	public static final String NodeAttributdistance = "Distanz";
+	public static final String GraphAttributeDirected = "Gerichtet";
 	private FileHandler fileHandler;
 	protected static String stylesheet = "node {fill-color: black; size: 15px, 15px; stroke-mode: plain; stroke-color: blue;} node.marked{ fill-color: red;}node.start{fill-color: green;} node.shortest{ fill-color:green; }edge { fill-color: grey;} edge.shortest{fill-color: green; stroke-width:2px;}";
 
@@ -158,6 +158,8 @@ public class GraphController implements Initializable {
 				
 				dijkstra.suche();
 				
+				log("system> Dijkstra hat gekostet: "+dijkstra.getKosten(temp[1], temp[2]));
+				
 				//addEdge(temp[1], temp[2]);
 			
 			}else if(eingabe.startsWith("floyd")){
@@ -168,9 +170,11 @@ public class GraphController implements Initializable {
 				FloydWarshall fw = new FloydWarshall(graph, temp[1], temp[2]);
 				fw.suche();
 				
+				log("system> Floyd hat gekostet: "+fw.getKosten(temp[1], temp[2]));
 				
 				
 			}else if(eingabe.startsWith("generate ")){
+				graphNeu();
 				
 				String[] temp = eingabe.split(" ");
 				
@@ -188,6 +192,21 @@ public class GraphController implements Initializable {
 			}
 			else if(eingabe.startsWith("empty")){
 				graphNeu();
+			}else if(eingabe.startsWith("dualtest ")){
+				
+				String[] temp = eingabe.split(" ");
+				FloydWarshall fw = new FloydWarshall(graph, temp[1], temp[2]);
+				fw.suche();
+				
+				Double kostenFW = fw.getKosten(temp[1], temp[2]);
+				log("system> Kosten für FloydWarshall von "+temp[1]+" nach "+temp[2]+"\nbetragen: "+kostenFW);
+				
+				Dijkstra dijkstra = new Dijkstra(graph, temp[1], temp[2]);
+				dijkstra.suche();
+				
+				Double kostenDijkstra = dijkstra.getKosten(temp[1], temp[2]);
+				log("system> Kosten für Dijkstra von "+temp[1]+" nach "+temp[2]+"\nbetragen: "+kostenDijkstra);
+				
 			}
 
 		}
@@ -198,7 +217,10 @@ public class GraphController implements Initializable {
 		logWindow.appendText(message + "\n");
 	}
 
+	//öffnet einen neuen graphen und llert den alten zuvor
 	private void openFile() {
+		
+		
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Öffne ...");
 		File file = fc.showOpenDialog(null);
@@ -207,6 +229,7 @@ public class GraphController implements Initializable {
 		
 		if(file != null){
 //			initializeGraph();
+			graphNeu();
 			log(file.getAbsolutePath());
 			fileHandler = new FileHandler(graph, file.getAbsolutePath());
 		}
@@ -214,11 +237,6 @@ public class GraphController implements Initializable {
 		//den Pfad dann an den fileparser der dann die datei ausliest
 		
 	}
-	private void initializeGraph(){
-		graph=new MultiGraph("graph");
-	}
-	
-	
 	private void saveFile(){
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Speichern unter...");
@@ -232,9 +250,9 @@ public class GraphController implements Initializable {
 		
 		if(file!=null){
 			
-			Set temp = new HashSet();
+			Set<Edge> temp = new HashSet<Edge>();
 			
-			Iterator iterator = graph.getEdgeIterator();
+			Iterator<?> iterator = graph.getEdgeIterator();
 			
 			while (iterator.hasNext()) {
 				Edge object = (Edge) iterator.next();

@@ -36,13 +36,13 @@ public class FileSaver {
 	public void saveToFile(Graph graph, File file) {
 
 		
-		Collection edgeListe = graph.getEdgeSet();
+		Collection<?> edgeListe = graph.getEdgeSet();
 		
 		StringBuilder output = new StringBuilder();
 		ArrayList<String> outputString = new ArrayList<String>();
 		
 		Edge edgeElem;
-		Iterator edgeIterator = edgeListe.iterator();
+		Iterator<?> edgeIterator = edgeListe.iterator();
 		while (edgeIterator.hasNext()) {
 			String result = "";
 			
@@ -80,7 +80,7 @@ public class FileSaver {
 		}
 		
 		
-		Iterator nodeIterator = graph.getNodeIterator();
+		Iterator<?> nodeIterator = graph.getNodeIterator();
 		
 		while (nodeIterator.hasNext()) {
 			Node object = (Node) nodeIterator.next();
@@ -100,7 +100,7 @@ public class FileSaver {
 		
 		try {
 			fw = new FileWriter(file.getAbsolutePath());
-			Iterator outputStringIterator = outputString.iterator();
+			Iterator<String> outputStringIterator = outputString.iterator();
 			while(outputStringIterator.hasNext()){
 				line = (String)outputStringIterator.next();
 				

@@ -9,7 +9,7 @@ public class Edge {
 	private Double weight=null;
 	private boolean directed=false;
 	
-	public Edge(String name, String sartNode, String endNode) {
+	public Edge(String name, String startNode, String endNode) {
 		
 		this.name=name;
 		this.startNode=startNode;

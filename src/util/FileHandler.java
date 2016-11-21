@@ -1,8 +1,7 @@
 package util;
 
 import java.io.File;
-import java.util.Collection;
-import org.graphstream.graph.Edge;
+
 import org.graphstream.graph.Graph;
 
 public class FileHandler {

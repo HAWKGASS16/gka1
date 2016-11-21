@@ -3,13 +3,9 @@ package util;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
-
-import scala.collection.mutable.StringBuilder;
 
 public class MeasureObject {
 
@@ -19,7 +15,7 @@ public class MeasureObject {
 	private ArrayList<String> typ;
 	private ArrayList<Integer[]> typWerte;
 	private ArrayList<String> sonstiges;
-	private boolean writeToDisk = false;
+	private boolean writeToDisk = true;
 
 	public MeasureObject() {
 		// TODO Auto-generated constructor stub
@@ -45,8 +41,6 @@ public class MeasureObject {
 		int indexOfTyp = this.typ.indexOf(typ);
 
 		Integer[] wertAry = typWerte.get(indexOfTyp);
-		int wert;
-
 		wertAry[0] = wertAry[0] + 1;
 
 	}
@@ -135,7 +129,7 @@ public class MeasureObject {
 
 		try {
 			fw = new FileWriter(vorgang+ " " + dateiNameZusatz + ".gka");
-			Iterator outputStringIterator = outputString.iterator();
+			Iterator<String> outputStringIterator = outputString.iterator();
 			while (outputStringIterator.hasNext()) {
 				line = (String) outputStringIterator.next();
 

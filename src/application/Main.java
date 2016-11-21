@@ -1,13 +1,10 @@
 package application;
 	
-import org.graphstream.graph.Graph;
-import org.graphstream.graph.implementations.MultiGraph;
-
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {

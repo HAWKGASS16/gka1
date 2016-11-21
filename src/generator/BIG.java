@@ -31,7 +31,7 @@ public class BIG {
 	public void generate(){
 		
 		
-		for(int i=0; i<=anzahlNodes;i++){
+		for(int i=0; i < anzahlNodes;i++){
 			
 			graph.addNode("Node"+i);
 			Node temp = graph.getNode("Node"+i);
@@ -45,21 +45,16 @@ public class BIG {
 		int edges=0;
 		
 		
-		while(edges<=anzahlEdges){
+		while(edges < anzahlEdges){
 			Node node1 = getRandomNode();
 			Node node2 = getRandomNode(node1);
 			
 			Edge edge = graph.getEdge(node1.getId()+node2.getId());
 			
 			if(edge==null){
-				
-//				Double richtung =Math.random();
-				
-//				if(richtung < 0.5){
+
 					graph.addEdge(node1.getId()+node2.getId(), node1, node2,true);
-//				}else{
-//					graph.addEdge(node2.getId()+node1.getId(), node2, node1,true);
-//				}
+
 
 
 				edge = graph.getEdge(node1.getId()+node2.getId());
@@ -78,14 +73,15 @@ public class BIG {
 			
 			
 		}
+		graph.addAttribute(GraphController.GraphAttributeDirected, true);
 		
-//		graph.addEdge("Node1Node"+anzahlNodes, "Node1", "Node"+anzahlNodes);
 		if(big){
 			
-			Node node1 = getRandomNode();
+			Node node1 = graph.getNode("Node1");
 			Node node2 = getRandomNode(node1);
 			graph.addNode("v1");
 			Node node3 = graph.getNode("v1");
+			node3.addAttribute("ui.label", "v1");
 			
 			graph.addEdge("kurz1", node1, node2, true);
 			Edge edge = graph.getEdge("kurz1");
