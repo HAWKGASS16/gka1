@@ -214,7 +214,10 @@ public class GraphController implements Initializable {
 		logWindow.appendText(message + "\n");
 	}
 
+	//öffnet einen neuen graphen und llert den alten zuvor
 	private void openFile() {
+		graphNeu();
+		
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Öffne ...");
 		File file = fc.showOpenDialog(null);

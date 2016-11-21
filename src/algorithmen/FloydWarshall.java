@@ -173,7 +173,7 @@ public class FloydWarshall {
 				boolean directedGraph = (boolean)graph.getAttribute(GraphController.GraphAttributeDirected);
 				if(!directedGraph){
 					distanzMatrix[indexNode2][indexNode1] = gewicht;
-					transitMatrix[indexNode2][indexNode1]= indexNode1;
+					transitMatrix[indexNode2][indexNode1]= indexNode2;
 				}
 				
 			}
