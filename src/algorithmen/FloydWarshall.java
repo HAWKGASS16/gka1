@@ -50,29 +50,26 @@ public class FloydWarshall {
 	}
 
 	public boolean suche() {
-		
-		if(startKnoten.equals(endKnoten)){
+
+		if (startKnoten.equals(endKnoten)) {
 			return true;
 		}
-		
-		
 
 		zugriffsZaehler.startMeasure("FloydWarschall von " + startKnoten + " nach " + endKnoten);
 		zugriffsZaehler.log("Knotenanzahl: " + graph.getNodeCount());
 		zugriffsZaehler.log("Kantenanzahl: " + graph.getEdgeCount());
 
-
 		Node node1 = graph.getNode(startKnoten);
 		Node node2 = graph.getNode(endKnoten);
-		
+
 		zugriffsZaehler.read("suche()", 2);
-		
-		if(node1 == null || node2 == null){
+
+		if (node1 == null || node2 == null) {
 			return false;
 		}
-		
+
 		initialize();
-		
+
 		showDistanzmatrix();
 		showTransitMatrix();
 
@@ -83,54 +80,80 @@ public class FloydWarshall {
 				if (i != j) {
 
 					for (int k = 0; k < matrixIndizes.length; k++) {
-						if(k!=j){
-							Double momentangewicht = distanzMatrix[i][k];
-							Double neuesGewicht = Math.min(momentangewicht, (distanzMatrix[i][j]+distanzMatrix[j][k]));
-							if(momentangewicht!=neuesGewicht){
-//								transitMatrix[i][k]=j; //alternative
-								transitMatrix[i][k]=transitMatrix[i][j];
-								distanzMatrix[i][k]=neuesGewicht;
-							}
-							
-							
-							
-						
-							
-						}
-						
-					}
-					//negativer kreis
-					if(distanzMatrix[i][i]<0){
-						zugriffsZaehler.stopMeasure();
-						return false;
-					}
 
+						if (k != j) {
+
+							Double alt = distanzMatrix[i][k];
+							distanzMatrix[i][k] = Math.min(distanzMatrix[i][k], (distanzMatrix[i][j]+distanzMatrix[j][k]));
+
+							if (alt!=distanzMatrix[i][k]) {
+
+								transitMatrix[i][k]=j;
+								
+							}
+						}
+
+					}
 				}
 
 			}
 
 		}
+
+		// for (int j = 0; j < matrixIndizes.length; j++) {
+		//
+		// for (int i = 0; i < matrixIndizes.length; i++) {
+		//
+		// if (i != j) {
+		//
+		// for (int k = 0; k < matrixIndizes.length; k++) {
+		// if(k!=j){
+		// Double momentangewicht = distanzMatrix[i][k];
+		// Double neuesGewicht = Math.min(momentangewicht,
+		// (distanzMatrix[i][j]+distanzMatrix[j][k]));
+		// if(momentangewicht!=neuesGewicht){
+		//// transitMatrix[i][k]=j; //alternative
+		// transitMatrix[j][i]=j;
+		// distanzMatrix[i][k]=neuesGewicht;
+		// }
+		//
+		//
+		//
+		//
+		//
+		// }
+		//
+		// }
+		// //negativer kreis
+		// if(distanzMatrix[i][i]<0){
+		// zugriffsZaehler.stopMeasure();
+		// return false;
+		// }
+		//
+		// }
+		//
+		// }
+		//
+		// }
 		showDistanzmatrix();
 		showTransitMatrix();
-		
+
 		Integer indexStart = getIndex(startKnoten);
 		Integer indexEnde = getIndex(endKnoten);
-		
-		zugriffsZaehler.stopMeasure();
-		
 
-		
-//		ArrayList<Integer> kuerzesterWegalsInteger = new ArrayList<Integer>();
-//		shortestWay(kuerzesterWegalsInteger, startKnoten, endKnoten);
-		
-		if(distanzMatrix[indexStart][indexEnde]!=Double.POSITIVE_INFINITY){
-//			System.out.println(startKnoten+" nach "+endKnoten+"ist erreichbar");
+		zugriffsZaehler.stopMeasure();
+
+		// ArrayList<Integer> kuerzesterWegalsInteger = new
+		// ArrayList<Integer>();
+		// shortestWay(kuerzesterWegalsInteger, startKnoten, endKnoten);
+
+		if (distanzMatrix[indexStart][indexEnde] != Double.POSITIVE_INFINITY) {
+			// System.out.println(startKnoten+" nach "+endKnoten+"ist
+			// erreichbar");
 			return true;
-		}else{
+		} else {
 			return false;
 		}
-		
-		
 
 	}
 
@@ -147,22 +170,22 @@ public class FloydWarshall {
 
 				if (i == j) {
 					distanzMatrix[i][j] = 0.0;
-					transitMatrix[i][j] = i;
+					transitMatrix[i][j] = 0;
 				} else {
 					distanzMatrix[i][j] = Double.POSITIVE_INFINITY;
-					transitMatrix[i][j]= -1;
+					transitMatrix[i][j] = -1;
 				}
 
 			}
 
 		}
 
-		 zugriffsZaehler.read("initialize()", 1);
+		zugriffsZaehler.read("initialize()", 1);
 		Iterator<Edge> edgeIterator = graph.getEdgeIterator();
 
 		while (edgeIterator.hasNext()) {
 			Edge object = (Edge) edgeIterator.next();
-			 zugriffsZaehler.read("initialize()", 4);
+			zugriffsZaehler.read("initialize()", 4);
 
 			Node node1 = object.getSourceNode();
 
@@ -174,14 +197,14 @@ public class FloydWarshall {
 			if (gewicht != null) {
 
 				distanzMatrix[indexNode1][indexNode2] = gewicht;
-				transitMatrix[indexNode1][indexNode2]= indexNode1;
-				
-				boolean directedGraph = (boolean)graph.getAttribute(GraphController.GraphAttributeDirected);
-				if(!directedGraph){
+//				transitMatrix[indexNode1][indexNode2] = indexNode1;
+
+				boolean directedGraph = (boolean) graph.getAttribute(GraphController.GraphAttributeDirected);
+				if (!directedGraph) {
 					distanzMatrix[indexNode2][indexNode1] = gewicht;
-					transitMatrix[indexNode2][indexNode1]= indexNode2;
+//					transitMatrix[indexNode2][indexNode1] = indexNode2;
 				}
-				
+
 			}
 
 		}
@@ -201,7 +224,8 @@ public class FloydWarshall {
 		}
 		return null;
 	}
-	private String getName(Integer index){
+
+	private String getName(Integer index) {
 		return matrixIndizes[index];
 	}
 
@@ -232,39 +256,42 @@ public class FloydWarshall {
 		}
 
 	}
+
 	/**
 	 * 
-	 * @param liste Liste enthält die jeweiligen Vorgänger aber nur die Indizes
-	 * @param u startKnoten
-	 * @param v der jeweilige vorgänger vom Zielknoten
+	 * @param liste
+	 *            Liste enthält die jeweiligen Vorgänger aber nur die Indizes
+	 * @param u
+	 *            startKnoten
+	 * @param v
+	 *            der jeweilige vorgänger vom Zielknoten
 	 */
-	private void shortestWay(ArrayList<Integer> liste, String u, String v){
+	private void shortestWay(ArrayList<Integer> liste, String u, String v) {
 		Integer vorg = transitMatrix[getIndex(u)][getIndex(v)];
-		if(vorg!=null){
-			if(u.equals(v)){
+		if (vorg != null) {
+			if (u.equals(v)) {
 				return;
 			}
-			
+
 			liste.add(getIndex(v));
-			
-			
+
 			shortestWay(liste, u, getName(vorg));
-			
+
 		}
 	}
-	public Double getKosten(String start, String ende){
-		
+
+	public Double getKosten(String start, String ende) {
+
 		Node node1 = graph.getNode(start);
 		Node node2 = graph.getNode(ende);
-		if(node1==null||node2==null){
-			
+		if (node1 == null || node2 == null) {
+
 			return null;
-			
+
 		}
 		Double kosten = distanzMatrix[getIndex(node1.getId())][getIndex(node2.getId())];
 		return kosten;
-		
+
 	}
-	
 
 }
