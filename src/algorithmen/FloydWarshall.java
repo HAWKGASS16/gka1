@@ -73,19 +73,24 @@ public class FloydWarshall {
 		showDistanzmatrix();
 		showTransitMatrix();
 
+		//Für j=1,...,|V|:
 		for (int j = 0; j < matrixIndizes.length; j++) {
 
+			//Für i=1,..|V| i!=j
 			for (int i = 0; i < matrixIndizes.length; i++) {
 
 				if (i != j) {
 
+					//für k=1,...|V| k!=j
 					for (int k = 0; k < matrixIndizes.length; k++) {
 
-						if (k != j) {
+						if (j != k) {
 
 							Double alt = distanzMatrix[i][k];
+							//Setzte d[i][k] = min(d[i][k], d[i][j]+d[j][k])
 							distanzMatrix[i][k] = Math.min(distanzMatrix[i][k], (distanzMatrix[i][j]+distanzMatrix[j][k]));
 
+							//wenn die entfernung aktualisiert wurde
 							if (alt!=distanzMatrix[i][k]) {
 
 								transitMatrix[i][k]=j;
@@ -143,8 +148,7 @@ public class FloydWarshall {
 
 		zugriffsZaehler.stopMeasure();
 
-		// ArrayList<Integer> kuerzesterWegalsInteger = new
-		// ArrayList<Integer>();
+		 ArrayList<String> kuerzesterWegalsInteger = new ArrayList<String>();
 		// shortestWay(kuerzesterWegalsInteger, startKnoten, endKnoten);
 
 		if (distanzMatrix[indexStart][indexEnde] != Double.POSITIVE_INFINITY) {
@@ -266,18 +270,26 @@ public class FloydWarshall {
 	 * @param v
 	 *            der jeweilige vorgänger vom Zielknoten
 	 */
-	private void shortestWay(ArrayList<Integer> liste, String u, String v) {
-		Integer vorg = transitMatrix[getIndex(u)][getIndex(v)];
-		if (vorg != null) {
-			if (u.equals(v)) {
-				return;
-			}
-
-			liste.add(getIndex(v));
-
-			shortestWay(liste, u, getName(vorg));
-
+	private void shortestWay(ArrayList<String> listeWeg, String u, String v) {
+		
+		int indexStart=getIndex(u);
+		int indexEnde=getIndex(v);
+		int indexMitte=transitMatrix[indexStart][indexEnde];
+		String nameMitte=getName(indexMitte);
+		
+		if(indexMitte==0){
+			//dann sind beide direkt miteinander verbunden
+			listeWeg.add(v);
+		}else{
+			
+			//weg von start zur mitte
+			shortestWay(listeWeg, u, nameMitte);
+			listeWeg.add(nameMitte);
+			shortestWay(listeWeg, nameMitte, v);
+			
+			
 		}
+		
 	}
 
 	public Double getKosten(String start, String ende) {
