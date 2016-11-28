@@ -136,7 +136,9 @@ public class FloydWarshall {
 		zugriffsZaehler.stopMeasure();
 
 		 ArrayList<String> kuerzesterWegalsInteger = new ArrayList<String>();
-		// shortestWay(kuerzesterWegalsInteger, startKnoten, endKnoten);
+//		 shortestWay(kuerzesterWegalsInteger, startKnoten, endKnoten);
+		 
+//		 System.out.println(kuerzesterWegalsInteger);
 
 		if (distanzMatrix[indexStart][indexEnde] != Double.POSITIVE_INFINITY) {
 			// System.out.println(startKnoten+" nach "+endKnoten+"ist
@@ -217,7 +219,10 @@ public class FloydWarshall {
 	}
 
 	private String getName(Integer index) {
+		if(index>=0){
 		return matrixIndizes[index];
+		}
+		return null;
 	}
 
 	private void showDistanzmatrix() {
