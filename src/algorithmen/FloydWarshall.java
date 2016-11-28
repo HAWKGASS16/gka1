@@ -72,74 +72,61 @@ public class FloydWarshall {
 
 		showDistanzmatrix();
 		showTransitMatrix();
-
-		//Für j=1,...,|V|:
-		for (int j = 0; j < matrixIndizes.length; j++) {
-
-			//Für i=1,..|V| i!=j
+		
+		
+		for (int k = 0; k < matrixIndizes.length; k++) {
 			for (int i = 0; i < matrixIndizes.length; i++) {
-
-				if (i != j) {
-
-					//für k=1,...|V| k!=j
-					for (int k = 0; k < matrixIndizes.length; k++) {
-
-						if (j != k) {
-
-							Double alt = distanzMatrix[i][k];
-							//Setzte d[i][k] = min(d[i][k], d[i][j]+d[j][k])
-							distanzMatrix[i][k] = Math.min(distanzMatrix[i][k], (distanzMatrix[i][j]+distanzMatrix[j][k]));
-
-							//wenn die entfernung aktualisiert wurde
-							if (alt!=distanzMatrix[i][k]) {
-
-								transitMatrix[i][k]=j;
-								
-							}
-						}
-
+				for (int j = 0; j < matrixIndizes.length; j++) {
+					//TODO if i=k Abfrage siehe algorithmus
+					//wenn es eine kleinre distanze gibt
+					if (distanzMatrix[i][j] > (distanzMatrix[i][k] + distanzMatrix[k][j])) {
+						distanzMatrix[i][j] = distanzMatrix[i][k] + distanzMatrix[k][j];
+						transitMatrix[i][j] = k;
+						
+//						if (distanzMatrix[i][j] < 0) { // abbruch fï¿½r negative
+//														// lï¿½ngen
+//							return;
+//						}
 					}
 				}
-
 			}
-
 		}
+		
+		
 
-		// for (int j = 0; j < matrixIndizes.length; j++) {
-		//
-		// for (int i = 0; i < matrixIndizes.length; i++) {
-		//
-		// if (i != j) {
-		//
-		// for (int k = 0; k < matrixIndizes.length; k++) {
-		// if(k!=j){
-		// Double momentangewicht = distanzMatrix[i][k];
-		// Double neuesGewicht = Math.min(momentangewicht,
-		// (distanzMatrix[i][j]+distanzMatrix[j][k]));
-		// if(momentangewicht!=neuesGewicht){
-		//// transitMatrix[i][k]=j; //alternative
-		// transitMatrix[j][i]=j;
-		// distanzMatrix[i][k]=neuesGewicht;
-		// }
-		//
-		//
-		//
-		//
-		//
-		// }
-		//
-		// }
-		// //negativer kreis
-		// if(distanzMatrix[i][i]<0){
-		// zugriffsZaehler.stopMeasure();
-		// return false;
-		// }
-		//
-		// }
-		//
-		// }
-		//
-		// }
+		//FÃ¼r j=1,...,|V|:
+//		for (int j = 0; j < matrixIndizes.length; j++) {
+//
+//			//FÃ¼r i=1,..|V| i!=j
+//			for (int i = 0; i < matrixIndizes.length; i++) {
+//
+//				if (i != j) {
+//
+//					//fÃ¼r k=1,...|V| k!=j
+//					for (int k = 0; k < matrixIndizes.length; k++) {
+//
+//						if (j != k) {
+//
+//							Double alt = distanzMatrix[i][k];
+//							//Setzte d[i][k] = min(d[i][k], d[i][j]+d[j][k])
+//							distanzMatrix[i][k] = Math.min(distanzMatrix[i][k], (distanzMatrix[i][j]+distanzMatrix[j][k]));
+//
+//							//wenn die entfernung aktualisiert wurde
+//							if (alt!=distanzMatrix[i][k]) {
+//
+//								transitMatrix[i][k]=j;
+//								
+//							}
+//						}
+//
+//					}
+//				}
+//
+//			}
+//
+//		}
+
+
 		showDistanzmatrix();
 		showTransitMatrix();
 
@@ -264,11 +251,11 @@ public class FloydWarshall {
 	/**
 	 * 
 	 * @param liste
-	 *            Liste enthält die jeweiligen Vorgänger aber nur die Indizes
+	 *            Liste enthÃ¤lt die jeweiligen VorgÃ¤nger aber nur die Indizes
 	 * @param u
 	 *            startKnoten
 	 * @param v
-	 *            der jeweilige vorgänger vom Zielknoten
+	 *            der jeweilige vorgÃ¤nger vom Zielknoten
 	 */
 	private void shortestWay(ArrayList<String> listeWeg, String u, String v) {
 		
