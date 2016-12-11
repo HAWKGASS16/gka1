@@ -1,5 +1,7 @@
 package generator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.graphstream.graph.Edge;
@@ -14,23 +16,37 @@ public class BigNetGraph {
 	private Graph graph;
 	private Integer anzahlNodes;
 	private Integer anzahlEdges;
-	private Integer maxKantenGewicht = 300;
+	private Integer maxKantenGewicht = 100;
+	private List<Node> sourceList = new ArrayList<Node>();
+	private List<Node> sinkList = new ArrayList<Node>();
 
 	public BigNetGraph(Graph graph, Integer nodes, Integer edges) {
 
 		this.graph = graph;
 		anzahlNodes = nodes;
 		anzahlEdges = edges;
+		if (anzahlEdges < 3 || anzahlEdges < 0 || anzahlEdges < (anzahlEdges - 1)) {
+			throw new IllegalArgumentException("Geben Sie gültige Werte ein.");
 
+		}
+		if (anzahlEdges > ((anzahlNodes - 1) + Math.pow((anzahlNodes - 2), 2))) {
+			throw new IllegalArgumentException("Die Anzahl der Kanten muss kleiner-gleich "
+					+ ((anzahlNodes - 1) + Math.pow((anzahlNodes - 2), 2)) + " sein");
+		}
 	}
 
 	public void generateBigNet() {
 		graph.addAttribute(GraphController.GraphAttributeDirected, true);
-		for (int i = 0; i < anzahlNodes - 2; i++) {
+
+		for (int i = 1; i < anzahlNodes - 2; i++) {
 			System.out.println("füge Node hinzu" + i);
 			graph.addNode("Node" + i);
 			Node temp = graph.getNode("Node" + i);
 			temp.addAttribute("ui.label", "Node" + i);
+			sourceList.add(temp);
+			sinkList.add(temp);
+			System.out.println("Liste aller Node:" + sourceList);
+			System.out.println("Liste aller Node:" + sinkList);
 
 		}
 		// int temp = (random.nextInt() * anzahlEdges) + 5;;
@@ -50,31 +66,39 @@ public class BigNetGraph {
 
 	private void addSource(Integer temp) {
 		System.out.println("adde Source Knoten");
+
 		Node node1 = graph.getNode("q");
 
-		Random randomWeight = new Random();
-		int i = 0;
-		while (i < temp) {
-			Node node2 = getRandomNode();
-			Edge edge = graph.getEdge(node1.getId() + node2.getId());
-			System.out.println("Leere Edge?:" + graph.getEdge(node1.getId() + node2.getId()));
+		for (int i = 0; i < Math.random() * anzahlEdges; i++) {
+			if (!sourceList.isEmpty()) {
+				graph.removeEdge(i);
+				Random randomWeight = new Random();
 
-			if (edge == null) {
+				Node node2 = getRandomNode();
+				if (sourceList.contains(node2)) {
+					sourceList.remove(node2);
+					
+					System.out.println("Liste aller Nodes derzeit:" + sourceList);
+					Edge edge = graph.getEdge(node1.getId() + node2.getId());
+					System.out.println("Gibt es die Edge schon?:" + graph.getEdge(node1.getId() + node2.getId()));
 
-				graph.addEdge(node1.getId() + node2.getId(), node1, node2, true);
-				System.out.println("neue Edge:" + graph.getEdge(node1.getId() + node2.getId()));
+					if (edge == null) {
 
-				edge = graph.getEdge(node1.getId() + node2.getId());
+						graph.addEdge(node1.getId() + node2.getId(), node1, node2, true);
+						System.out.println("neue Edge:" + graph.getEdge(node1.getId() + node2.getId()));
 
-				Double gewicht = (randomWeight.nextDouble() * maxKantenGewicht) + 5;
+						edge = graph.getEdge(node1.getId() + node2.getId());
 
-				gewicht = (double) ((Math.round(gewicht * 100)) / 100);
+						Double gewicht = (randomWeight.nextDouble() * maxKantenGewicht) + 5;
 
-				edge.setAttribute(GraphController.EdgeAttributeWeight, gewicht);
-				edge.setAttribute("ui.label", gewicht);
+						gewicht = (double) ((Math.round(gewicht * 100)) / 100);
 
-				i++;
+						edge.setAttribute(GraphController.EdgeAttributeWeight, gewicht);
+						edge.setAttribute("ui.label", gewicht);
+						i++;
 
+					}
+				}
 			}
 		}
 
@@ -83,29 +107,35 @@ public class BigNetGraph {
 	private void addSink(Integer temp) {
 		System.out.println("adde Sink Knoten");
 		Node node1 = graph.getNode("s");
+		for (int i = 0; i < Math.random() * anzahlEdges; i++) {
+			if (!sinkList.isEmpty()) {
+				graph.removeEdge(i);
+				Random randomWeight = new Random();
 
-		Random randomWeight = new Random();
-		int i = 0;
-		while (i < temp) {
-			Node node2 = getRandomNode();
-			Edge edge = graph.getEdge(node2.getId() + node1.getId());
-			System.out.println("Leere Edge?:" + graph.getEdge(node2.getId() + node1.getId()));
-			if (edge == null) {
+				Node node2 = getRandomNode();
+				if (sinkList.contains(node2)) {
+					sinkList.remove(node2);
+					System.out.println("Liste aller Nodes derzeit:" + sourceList);
+					Edge edge = graph.getEdge(node2.getId() + node1.getId());
+					System.out.println("Gibt es die Edge schon?:" + graph.getEdge(node2.getId() + node1.getId()));
 
-				graph.addEdge(node2.getId() + node1.getId(), node2, node1, true);
-				System.out.println("neue Edge:" + graph.getEdge(node2.getId() + node1.getId()));
+					if (edge == null) {
 
-				edge = graph.getEdge(node2.getId() + node1.getId());
+						graph.addEdge(node2.getId() + node1.getId(), node2, node1, true);
+						System.out.println("neue Edge:" + graph.getEdge(node2.getId() + node1.getId()));
 
-				Double gewicht = (randomWeight.nextDouble() * maxKantenGewicht) + 5;
+						edge = graph.getEdge(node2.getId() + node1.getId());
 
-				gewicht = (double) ((Math.round(gewicht * 100)) / 100);
+						Double gewicht = (randomWeight.nextDouble() * maxKantenGewicht) + 5;
 
-				edge.setAttribute(GraphController.EdgeAttributeWeight, gewicht);
-				edge.setAttribute("ui.label", gewicht);
+						gewicht = (double) ((Math.round(gewicht * 100)) / 100);
 
-				i++;
+						edge.setAttribute(GraphController.EdgeAttributeWeight, gewicht);
+						edge.setAttribute("ui.label", gewicht);
+						i++;
 
+					}
+				}
 			}
 		}
 	}
@@ -132,7 +162,7 @@ public class BigNetGraph {
 		// TODO Über den Graphen iterieren um zu gucken ob q und s überhaupt
 		// einen weg haben
 
-//		d.faerben(false);
+		// d.faerben(false);
 		while (!d.suche()) {
 			System.out.println("Quelle und Senke sind nicht verbunden");
 			addEdges(3);
@@ -143,7 +173,7 @@ public class BigNetGraph {
 		Random randomWeight = new Random();
 		int edges = 0;
 
-		while (edges < temp) {
+		while (!(edges == temp - 1)) {
 			System.out.println("füge Edge hinzu" + edges);
 			Node node1 = getRandomNode();
 			System.out.println("Hole Random Node 1:" + node1.getId());
@@ -168,7 +198,7 @@ public class BigNetGraph {
 				edges++;
 				System.out.println("Nächste Runde");
 
-			}else{
+			} else {
 				System.out.println("Gibt es schon. Mach noch mal");
 			}
 		}
