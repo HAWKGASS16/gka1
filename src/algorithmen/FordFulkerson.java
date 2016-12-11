@@ -130,6 +130,7 @@ public class FordFulkerson {
 
 				Double gewicht = (Double) kante.getAttribute(attrEdgeGewicht);
 
+				//die nummer wird an den Kantennamen angefügt
 				int nummer = getEdgeNummer(node1.getId(), node2.getId());
 
 				graph.addEdge(node1.getId() + node2.getId() + nummer, node1, node2, true);
@@ -172,86 +173,87 @@ public class FordFulkerson {
 
 	private void kantenLabel(Edge kante, Double fluss) {
 
-		Double kantengewicht = (Double) kante.getAttribute(attrEdgeGewicht);
+//		Double kantengewicht = (Double) kante.getAttribute(attrEdgeGewicht);
+		Double kantengewicht = new Double(kante.getAttribute(attrEdgeGewicht));
 		kante.setAttribute("ui.label", "" + fluss + " / " + kantengewicht);
 
 	}
 
 	public void maxflow() {
 
-		System.out.println("starte initialisierung");
-
-		initialisierung();
-
-		System.out.println("initialisierung beendet");
-
-		// wähle einen beliebigen aber noch nicht inspizierten Knoten
-
-		/*
-		 * do
-		 *
-		 * inspiziere(markierten aber nicht inspizierten Knoten)
-		 *
-		 *
-		 * wenn die Senke markiert ist, vergößere den fluss else gehe zu
-		 * inspiziere();
-		 *
-		 * wenn alle Knoten inspiziert wurden, break
-		 *
-		 *
-		 *
-		 */
-		// while(esGibtErweiterndenWeg()){
-		//
-		// //erhöhe f längs des erweiternden weges
-		//
-		// }
-
-		Node q = graph.getNode("q");
-		Node s = graph.getNode("s");
-
-		do {
-
-			if (fordFulkerson) {
-
-				Node knotenMomentan = getNextNode();
-
-				if (knotenMomentan != null) {
-					System.out.println("\tuntersuche knoten: " + knotenMomentan.getId());
-
-					inspiziere(knotenMomentan);
-
-					if (!alleSindInspiziert()) {
-
-						System.out.println("\t\tes sicht nicht alle knoten ispiziert");
-
-						if (senkeIstMarkiert()) {
-
-							System.out.println("\t\tsenke ist markiert");
-							// der weg wird vergrößert und dann wird ein neuer
-							// vergrößernder weg gesucht
-							vergroessereWeg();
-
-						}
-
-					} else {
-						// es gibt keinen vergrößernden weg. Der maximale Fluss
-						// ist
-						// der
-						// der an der Senke ankommt
-						break;
-					}
-				} else {
-					break;
-				}
-
-			}
-
-		} while (true);
-
-		System.out.println("der maximalse Fluss ist: " + maximalerFluss);
-		// initialisiereBTS();
-		// breitensuche();
+//		System.out.println("starte initialisierung");
+//
+//		initialisierung();
+//
+//		System.out.println("initialisierung beendet");
+//
+//		// wähle einen beliebigen aber noch nicht inspizierten Knoten
+//
+//		/*
+//		 * do
+//		 *
+//		 * inspiziere(markierten aber nicht inspizierten Knoten)
+//		 *
+//		 *
+//		 * wenn die Senke markiert ist, vergößere den fluss else gehe zu
+//		 * inspiziere();
+//		 *
+//		 * wenn alle Knoten inspiziert wurden, break
+//		 *
+//		 *
+//		 *
+//		 */
+//		// while(esGibtErweiterndenWeg()){
+//		//
+//		// //erhöhe f längs des erweiternden weges
+//		//
+//		// }
+//
+//		Node q = graph.getNode("q");
+//		Node s = graph.getNode("s");
+//
+//		do {
+//
+//			if (fordFulkerson) {
+//
+//				Node knotenMomentan = getNextNode();
+//
+//				if (knotenMomentan != null) {
+//					System.out.println("\tuntersuche knoten: " + knotenMomentan.getId());
+//
+//					inspiziere(knotenMomentan);
+//
+//					if (!alleSindInspiziert()) {
+//
+//						System.out.println("\t\tes sicht nicht alle knoten ispiziert");
+//
+//						if (senkeIstMarkiert()) {
+//
+//							System.out.println("\t\tsenke ist markiert");
+//							// der weg wird vergrößert und dann wird ein neuer
+//							// vergrößernder weg gesucht
+//							vergroessereWeg();
+//
+//						}
+//
+//					} else {
+//						// es gibt keinen vergrößernden weg. Der maximale Fluss
+//						// ist
+//						// der
+//						// der an der Senke ankommt
+//						break;
+//					}
+//				} else {
+//					break;
+//				}
+//
+//			}
+//
+//		} while (true);
+//
+//		System.out.println("der maximalse Fluss ist: " + maximalerFluss);
+		 initialisiereBTS();
+		 breitensuche();
 
 	}
 
@@ -496,11 +498,17 @@ public class FordFulkerson {
 		Node q = graph.getNode("q");
 
 		Node vorgaenger = getBTSVorgaenger(s);
+		Node aktuell = s;
 
 		ArrayList<Edge> wegListe = new ArrayList<Edge>();
 
-		while (!vorgaenger.equals(q)) {
-
+		while (!aktuell.equals(q)) {
+			
+			vorgaenger=getBTSVorgaenger(aktuell);
+			
+			
+//			Edge kante = g 
+			
 		}
 
 		return null;
@@ -514,7 +522,34 @@ public class FordFulkerson {
 	 * @return
 	 */
 	private Node getBTSVorgaenger(Node s) {
-		// TODO Auto-generated method stub
+		
+		Node vorgaenger=null;
+		Double vorgaengerGewicht=Double.POSITIVE_INFINITY;
+		
+		Node minimum=null;
+		Double minimumGewicht=Double.POSITIVE_INFINITY;
+		
+		for(Edge kante : s){
+			
+			
+			vorgaenger = kante.getOpposite(s);
+			vorgaengerGewicht = (Double) vorgaenger.getAttribute(attNodeBTSGewicht);
+			
+			if(!kanteIsFull(kante)){
+				if(vorgaengerGewicht<minimumGewicht){
+					
+					minimum=vorgaenger;
+					minimumGewicht=vorgaengerGewicht;
+					
+				}
+			}
+			
+			
+			
+			
+		}
+		
+		
 		return null;
 	}
 
