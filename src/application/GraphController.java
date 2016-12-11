@@ -13,6 +13,7 @@ import org.graphstream.graph.implementations.MultiGraph;
 
 import algorithmen.Dijkstra;
 import algorithmen.FloydWarshall;
+import algorithmen.FordFulkerson;
 import generator.BIG;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -206,6 +207,12 @@ public class GraphController implements Initializable {
 				
 				Double kostenDijkstra = dijkstra.getKosten(temp[1], temp[2]);
 				log("system> Kosten für Dijkstra von "+temp[1]+" nach "+temp[2]+"\nbetragen: "+kostenDijkstra);
+				
+			}else if(eingabe.startsWith("ford")){
+				
+				FordFulkerson ff = new FordFulkerson(graph);
+				ff.maxflow();
+				log("maximaler Fluss: "+ff.getMaxFlow());
 				
 			}
 
