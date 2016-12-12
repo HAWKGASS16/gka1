@@ -16,6 +16,10 @@ public class MeasureObject {
 	private ArrayList<Integer[]> typWerte;
 	private ArrayList<String> sonstiges;
 	private boolean writeToDisk = true;
+	private long startZeit=0;
+	private long endZeit=0;
+	private long gesamtZeit=0;
+	
 
 	public MeasureObject() {
 		// TODO Auto-generated constructor stub
@@ -24,6 +28,8 @@ public class MeasureObject {
 	public void startMeasure(String massnahme) {
 		// z.b. Dijkstra von Husum nach Hannover:
 
+		startZeit = System.currentTimeMillis();
+		
 		vorgang = massnahme;
 		vorgangZeitpunkt = new SimpleDateFormat("dd.MM.yyyy HH.mm.ss").format(new java.util.Date());
 		dateiNameZusatz = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss").format(new java.util.Date());
@@ -59,6 +65,9 @@ public class MeasureObject {
 	}
 
 	public void stopMeasure() {
+		endZeit=System.currentTimeMillis();
+		
+		gesamtZeit = endZeit - startZeit;
 
 		ArrayList<String> stringB = new ArrayList<String>();
 
@@ -107,7 +116,10 @@ public class MeasureObject {
 		stringB.add("Gesamt:			" + gesamtSchreiben);
 		stringB.add(System.lineSeparator());
 		stringB.add("Alle Zugriffe:		" + (gesamtLesen + gesamtSchreiben));
-		
+		stringB.add(System.lineSeparator());
+		stringB.add("Gesamtlaufzeit in ms: "+gesamtZeit);
+		stringB.add(System.lineSeparator());
+		stringB.add("Gesamtlaufzeit in s:" +gesamtZeit/1000);
 		stringB.add("Ende des Vorgangs");
 
 //		System.out.println(stringB.toString());
