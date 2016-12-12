@@ -403,6 +403,7 @@ public class FordFulkerson {
 	}
 
 	private Node getNextNode() {
+		//hier ein hashset verwenden..
 		Node temp = null;
 		for (Iterator iterator = graph.getNodeIterator(); iterator.hasNext();) {
 			Node node = (Node) iterator.next();
