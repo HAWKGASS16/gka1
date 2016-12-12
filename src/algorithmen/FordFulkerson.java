@@ -11,6 +11,7 @@ import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 
 import application.GraphController;
+import util.MeasureObject;
 
 public class FordFulkerson {
 
@@ -33,6 +34,8 @@ public class FordFulkerson {
 	private HashSet<Node> inspizierterKnoten = new HashSet<Node>();
 
 	private double maximalerFluss = 0;
+	
+	private MeasureObject messObjekt = new MeasureObject();
 
 	/**
 	 * Bestimmt den maximalen Fluss in einem Graphen. Vorraussetzungen: es gibt
@@ -52,7 +55,9 @@ public class FordFulkerson {
 	 * also auch en Fluss von 0 an und es gibt keinen Vorgänger.
 	 */
 	private void initialisierung() {
+		String methodenname = "initialisierung()";
 
+		//EXPERIMENTELL konvertiert ein ungerichtetes Netzwerk in ein gerichtetes Netzwerk
 		convertGraphToNetwork();
 
 		for (Iterator iterator = graph.getEdgeIterator(); iterator.hasNext();) {
@@ -61,6 +66,9 @@ public class FordFulkerson {
 			// der anfangsfluss ist 0
 			kante.setAttribute(attrEdgeFluss, 0.0);
 			kantenLabel(kante, 0.0);
+			
+			messObjekt.read(methodenname, 1);
+			messObjekt.write(methodenname, 1);
 
 		}
 
@@ -68,6 +76,8 @@ public class FordFulkerson {
 
 		for (Iterator iterator = graph.getNodeIterator(); iterator.hasNext();) {
 			Node knoten = (Node) iterator.next();
+			messObjekt.read(methodenname, 1);
+			messObjekt.write(methodenname, 4);
 
 			// der vorgänger des Knotens ist zunächst undefiniert
 			knoten.addAttribute(attrNodeVorgaenger, object);
@@ -82,6 +92,9 @@ public class FordFulkerson {
 
 		}
 
+		messObjekt.read(methodenname, 1);
+		messObjekt.write(methodenname, 3);
+		
 		Node q = graph.getNode("q");
 
 		q.setAttribute(attrNodeMarkierung, true);
@@ -94,7 +107,7 @@ public class FordFulkerson {
 	}
 
 	private void initialisiereBTS() {
-
+System.out.println("initialoisiere BTS");
 		for (Iterator nodeIterator = graph.getNodeIterator(); nodeIterator.hasNext();) {
 			// jede entfernung wird auf 0 gesetzt
 			Node knoten = (Node) nodeIterator.next();
@@ -121,10 +134,15 @@ public class FordFulkerson {
 
 		for (Iterator alleKanten = graph.getEdgeIterator(); alleKanten.hasNext();) {
 
+			messObjekt.read("ConvertGraphtoNetwork()", 1);
+			
 			Edge kante = (Edge) alleKanten.next();
 
 			if (!kante.isDirected()) {
 
+				messObjekt.read("ConvertGraphtoNetwork()", 5);
+				messObjekt.write("ConvertGraphtoNetwork()", 2);
+				
 				Node node1 = kante.getNode0();
 				Node node2 = kante.getOpposite(node1);
 
@@ -153,6 +171,8 @@ public class FordFulkerson {
 			Edge edge = (Edge) iterator.next();
 
 			graph.removeEdge(edge);
+			
+			messObjekt.read("ConvertGraphToNetwork", 1);
 
 		}
 
@@ -160,11 +180,13 @@ public class FordFulkerson {
 
 	private int getEdgeNummer(String node1, String node2) {
 		Edge kante = graph.getEdge(node1 + node2);
+		messObjekt.read("getEdgeNummer()", 1);
 
 		int i = 0;
 		while (kante != null) {
 			i++;
 			kante = graph.getEdge(node1 + node2 + i);
+			messObjekt.read("getEdgeNummer()", 1);
 
 		}
 
@@ -173,6 +195,9 @@ public class FordFulkerson {
 
 	private void kantenLabel(Edge kante, Double fluss) {
 
+		messObjekt.read("kantenLabel()", 1);
+		messObjekt.write("kantenLabel()", 1);
+		
 		Double kantengewicht = (Double) kante.getAttribute(attrEdgeGewicht);
 		// Double kantengewicht = new
 		// Double(kante.getAttribute(attrEdgeGewicht));
@@ -184,7 +209,7 @@ public class FordFulkerson {
 
 		System.out.println("starte initialisierung");
 
-		initialisierung();
+		
 
 		System.out.println("initialisierung beendet");
 
@@ -213,42 +238,89 @@ public class FordFulkerson {
 		Node q = graph.getNode("q");
 		Node s = graph.getNode("s");
 
-		do {
-
-			if (fordFulkerson) {
+		if (fordFulkerson) {
+			
+			messObjekt.startMeasure("FordFulkerson von der Quelle zur Senke");
+			initialisierung();
+			
+			do {
+				
+				
+				
+				
 
 				System.out.println(
 						"----------------------------------------------------------------------------------------------------");
 
 				Node knotenMomentan = getNextNode();
+				// do {
+				// while (knotenMomentan != null) {
+				//
+				// inspiziere(knotenMomentan);
+				//
+				// knotenMomentan = getNextNode();
+				// }
+				// if (senkeIstMarkiert()) {
+				// vergroessereWeg();
+				// }
+				// } while (knotenMomentan != null);
 
 				if (knotenMomentan != null) {
 					System.out.println("\tuntersuche knoten: " + knotenMomentan.getId());
 
 					inspiziere(knotenMomentan);
 
-					if (senkeIstMarkiert()) {
-
-						System.out.println("\t\tsenke ist markiert");
-						// der weg wird vergrößert und dann wird ein neuer
-						// vergrößernder weg gesucht
-						vergroessereWeg();
-
-					}
-
+					
 				} else {
 					// es gibt keinen vergrößernden weg. Der maximale Fluss
 					// ist
 					// der
 					// der an der Senke ankommt
-					// vergroessereWeg();
+					 
 					break;
 				}
+				
+				
+				if (senkeIstMarkiert()) {
 
+					System.out.println("\t\tsenke ist markiert");
+					// der weg wird vergrößert und dann wird ein neuer
+					// vergrößernder weg gesucht
+					vergroessereWeg();
+					
+
+				}
+
+
+			} while (!alleSindInspiziert());
+			
+			messObjekt.stopMeasure();
+
+		}else{
+			//ab hier ist EdmondsKarp
+			
+			initialisiereBTS();
+			breitensuche();
+			
+			ArrayList<Edge> kuerzesterWeg;
+			do{
+			kuerzesterWeg= getBTSweg();
+			
+			for (int i= kuerzesterWeg.size()-1;i>=0;i--) {
+				Edge edge = kuerzesterWeg.get(i);
+				
+System.out.println("Kante von: "+edge.getSourceNode().getId()+" nach "+edge.getTargetNode().getId());
+
+				markiereKnotenAnKante(edge.getNode0(), edge);
+				
 			}
-
-		} while (!alleSindInspiziert());
-
+			
+			
+			}while(kuerzesterWeg.size()>0);
+			
+			
+			
+		}
 		System.out.println("der maximalse Fluss ist: " + maximalerFluss);
 		// initialisiereBTS();
 		// breitensuche();
@@ -263,6 +335,9 @@ public class FordFulkerson {
 	 * unterschritten wird.
 	 */
 	private void vergroessereWeg() {
+		String methodenname = "vergroessereWeg()";
+		messObjekt.read(methodenname, 3);
+		messObjekt.write(methodenname, 1);
 
 		System.out.println("vergroessere weg beginnt");
 
@@ -273,10 +348,14 @@ public class FordFulkerson {
 		Double deltaSenke = (Double) attributeSenke[2];
 
 		maximalerFluss += deltaSenke;
+		System.out.println("Delta der Senke: " + deltaSenke);
 
 		Node momentanNode = senke;
 		Node vorgaenger;
 		while (!momentanNode.equals(quelle)) {
+			
+			messObjekt.read(methodenname, 2);
+			messObjekt.write(methodenname, 2);
 
 			Object[] temp = (Object[]) momentanNode.getAttribute(attrNodeVorgaenger);
 			vorgaenger = (Node) temp[1];
@@ -301,23 +380,28 @@ public class FordFulkerson {
 			momentanNode = vorgaenger;
 
 		}
-		
-		for(Iterator nodeIterator = graph.getNodeIterator(); nodeIterator.hasNext();){
+
+		for (Iterator nodeIterator = graph.getNodeIterator(); nodeIterator.hasNext();) {
 			Node knoten = (Node) nodeIterator.next();
 			
+			messObjekt.read(methodenname, 1);
+			messObjekt.write(methodenname, 2);
+
 			knoten.setAttribute(attrNodeMarkierung, false);
 			knoten.setAttribute(attrNodeInspiziert, false);
-			
-			
+
 		}
 		quelle.setAttribute(attrNodeMarkierung, true);
-		
-		
+
 		System.out.println("vergroessere weg beendet");
 	}
 
 	private void addiereKantenfluss(Edge kante, Double delta, String vorzeichen) {
 
+		messObjekt.read("addiereKantenfluss()", 1);
+		messObjekt.write("addiereKantenFluss()", 1);
+		
+		
 		Double kantenfluss = (Double) kante.getAttribute(attrEdgeFluss);
 
 		Double neuesDelta = delta;
@@ -343,12 +427,15 @@ public class FordFulkerson {
 
 	private boolean alleSindInspiziert() {
 
+		messObjekt.read("alleSindInspiziert()", 2);
+		
 		Node quelle = graph.getNode("q");
 		Node senke = graph.getNode("s");
 
 		// Iterator alleKnoten = graph.getNodeIterator();
 
 		for (Node node : graph) {
+			messObjekt.read("alleSindInspiziert()", 3);
 
 			// if (node.equals(quelle) || node.equals(senke)) {
 			// continue;
@@ -371,6 +458,7 @@ public class FordFulkerson {
 	}
 
 	private boolean senkeIstMarkiert() {
+		messObjekt.read("senkeIstMarkiert()", 1);
 		boolean sIstMarkiert = (boolean) graph.getNode("s").getAttribute(attrNodeMarkierung);
 		return sIstMarkiert;
 	}
@@ -379,16 +467,21 @@ public class FordFulkerson {
 
 		// Double fluss = (Double)kante.getAttribute(attrEdgeFluss);
 
+		messObjekt.read("getF(edge)", 1);
+		
 		return (Double) kante.getAttribute(attrEdgeFluss);
 
 	}
 
 	private Double getC(Edge kante) {
+		messObjekt.read("getC(kante)", 1);
 		return (Double) kante.getAttribute(attrEdgeGewicht);
 	}
 
 	private boolean isRueckwaertsKante(String naeherAnQuelle, String naeherAnSenke) {
 
+		messObjekt.read("isRueckwaertsKante()", 4);
+		
 		Node node1 = graph.getNode(naeherAnQuelle);
 		Node node2 = graph.getNode(naeherAnSenke);
 
@@ -403,7 +496,12 @@ public class FordFulkerson {
 	}
 
 	private Node getNextNode() {
-		//hier ein hashset verwenden..
+		
+		String methodenname = "getNextNode()";
+		
+		
+		
+		// hier ein hashset verwenden..
 		Node temp = null;
 		for (Iterator iterator = graph.getNodeIterator(); iterator.hasNext();) {
 			Node node = (Node) iterator.next();
@@ -411,6 +509,8 @@ public class FordFulkerson {
 			boolean markiert = (boolean) node.getAttribute(attrNodeMarkierung);
 			boolean inspiziert = (boolean) node.getAttribute(attrNodeInspiziert);
 
+			messObjekt.read(methodenname, 3);
+			
 			if (markiert && !inspiziert) {
 
 				temp = node;
@@ -418,31 +518,44 @@ public class FordFulkerson {
 			}
 
 		}
+
+		// if(markierteKnoten.)
+		// for(Iterator setIterator =
+		// markierteKnoten.iterator();setIterator.hasNext();){
+		//
+		// }
+
 		return temp;
 
 	}
 
 	private void inspiziere(Node knoten) {
+		
+		
 
 		// Node vj;
 
 		System.out.println("inspiziere knoten " + knoten.getId());
 
 		for (Edge edge : knoten) {
-			System.out
-					.println("\tuntersuche kante von " + knoten.getId() + " nach " + edge.getOpposite(knoten).getId());
+			System.out.println("\tuntersuche kante von " + knoten.getId() + " nach " + edge.getOpposite(knoten).getId());
 			markiereKnotenAnKante(knoten, edge);
+			messObjekt.read("inspiziere()", 1);
 
 		}
 
+		messObjekt.write("inspiziere()", 1);
 		knoten.setAttribute(attrNodeInspiziert, true);
 		inspizierterKnoten.add(knoten);
 
 	}
 
 	private void markiereKnotenAnKante(Node knoten, Edge edge) {
+		String methodenname = "markiereKnotenAnKante()";
 		Node vj = edge.getOpposite(knoten);
 		boolean vjMarkiert = (boolean) vj.getAttribute(attrNodeMarkierung);
+		
+		messObjekt.read(methodenname, 1);
 
 		// Wenn der Knoten vj nicht inspiziert ist, wird er markiert. Wenn er
 		// schon markiert ist, wird er nicht weiter beachtet
@@ -504,10 +617,25 @@ public class FordFulkerson {
 		breitensuche();
 		// dann den kürzesten weg als liste geben lassen. die liste enthält alle
 		// kanten des weges
-		ArrayList<Edge> einWeg = getBTSweg();
+		ArrayList<Edge> einWeg;
+		do{
+		einWeg = getBTSweg();
 
 		// dann für jede kante (bei q beginnend) markiereKnotenAnKante()
 		// aufrufen bis nach s
+		
+		
+		
+		for (int i= einWeg.size()-1;i>=0;i--) {
+			Edge edge = einWeg.get(i);
+			
+System.out.println("Kante von: "+edge.getSourceNode().getId()+" nach "+edge.getTargetNode().getId());
+
+			markiereKnotenAnKante(edge.getNode0(), edge);
+			
+		}
+		}while(einWeg.size()>0);
+		
 
 	}
 
@@ -515,20 +643,26 @@ public class FordFulkerson {
 		Node s = graph.getNode("s");
 		Node q = graph.getNode("q");
 
-		Node vorgaenger = getBTSVorgaenger(s);
+		System.out.println("\tGetBTSWEG");
+		
+		Edge kanteZuVorgaenger;// = getBTSVorgaenger(s);
 		Node aktuell = s;
 
 		ArrayList<Edge> wegListe = new ArrayList<Edge>();
 
 		while (!aktuell.equals(q)) {
 
-			vorgaenger = getBTSVorgaenger(aktuell);
+			kanteZuVorgaenger = getBTSVorgaenger(aktuell,wegListe);
 
-			// Edge kante = g
+			Node vorgaenger = kanteZuVorgaenger.getSourceNode();
+System.out.println("vorgaenger: "+vorgaenger.getId());			
+			wegListe.add(kanteZuVorgaenger);
+			
+			aktuell=vorgaenger;
 
 		}
 
-		return null;
+		return wegListe;
 	}
 
 	/**
@@ -538,24 +672,32 @@ public class FordFulkerson {
 	 * @param s
 	 * @return
 	 */
-	private Node getBTSVorgaenger(Node s) {
-
+	private Edge getBTSVorgaenger(Node s, ArrayList weg) {
+System.out.println("\t\tgetBTSVorgaenger mit knoten "+s.getId());
 		Node vorgaenger = null;
 		Double vorgaengerGewicht = Double.POSITIVE_INFINITY;
 
 		Node minimum = null;
 		Double minimumGewicht = Double.POSITIVE_INFINITY;
+		
+		Edge minimalKante=null;
 
 		for (Edge kante : s) {
 
-			vorgaenger = kante.getOpposite(s);
+			vorgaenger = kante.getSourceNode();
 			vorgaengerGewicht = (Double) vorgaenger.getAttribute(attNodeBTSGewicht);
+			minimalKante=kante;
 
+			if(weg.contains(kante)){
+				continue;
+			}
+			//wenn die kante noch nicht voll ist UND die quelle der Kante auch der Vorgaenger ist
 			if (!kanteIsFull(kante)) {
 				if (vorgaengerGewicht < minimumGewicht) {
 
 					minimum = vorgaenger;
 					minimumGewicht = vorgaengerGewicht;
+					minimalKante = kante;
 
 				}
 
@@ -563,11 +705,12 @@ public class FordFulkerson {
 
 		}
 
-		return null;
+		return minimalKante;
 	}
 
 	private void breitensuche() {
 
+		System.out.println("initialisiere Breitensuche");
 		Node q = graph.getNode("q");
 
 		LinkedList<Node> suchSchlange = new LinkedList<Node>();
@@ -618,13 +761,17 @@ public class FordFulkerson {
 
 	private void markiere(Node vj, Object[] vorgaenger) {
 
+		messObjekt.write("markiere()", 2);
+		
 		vj.setAttribute(attrNodeVorgaenger, vorgaenger);
 		vj.setAttribute(attrNodeMarkierung, true);
+		markierteKnoten.add(vj);
 
 	}
 
 	private Double getF(Node knoten) {
-
+messObjekt.read("getF(knoten)", 1);
+		
 		Object[] object = (Object[]) knoten.getAttribute(attrNodeVorgaenger);
 
 		Double fluss = (Double) object[2];
