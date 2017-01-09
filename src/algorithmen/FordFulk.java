@@ -131,7 +131,7 @@ System.out.println("initialisierung");
 			// das ist falsch
 //			while (!inspizierterKnoten.containsAll(markierteKnoten)) {
 int i = 0;
-			while (!alleSindInspiziert() || (edmondsUndKarp && !btsQueue.isEmpty())) {
+			while (!alleSindInspiziert() && i<=2) {
 				
 
 				Node knotenI = getNextKnoten();
@@ -376,9 +376,10 @@ System.out.println("Breitensuche: momentan untersuchter Knoten: "+tempKnoten.get
 
 			for (Edge kante : tempKnoten.getEachEdge()) {
 				messObjekt.read("breitensuche()", 1);
+				
 				// wenn die kannte voll ist, oder die Quelle der Kante nicht der
 				// momentane Knoten ist
-				if (satoriert(kante) || kante.getTargetNode().equals(tempKnoten)) {
+				if ((fluss(kante)>=kapazitaet(kante)) || kante.getTargetNode().equals(tempKnoten)) {
 					continue;
 				}
 
@@ -399,7 +400,12 @@ System.out.println("Breitensuche: momentan untersuchter Knoten: "+tempKnoten.get
 					}
 					if(!btsTemp.contains(tempNachbar)){
 						btsTemp.add(tempNachbar);
+						
 					}
+//hier liegt mehr oder weniger der Fehler für die erfolgreiche Breitenscuhe..
+//					if(!btsQueue.contains(tempNachbar)){
+//						btsQueue.add(tempNachbar);
+//					}
 
 				}
 
