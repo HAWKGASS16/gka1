@@ -131,7 +131,7 @@ System.out.println("initialisierung");
 			// das ist falsch
 //			while (!inspizierterKnoten.containsAll(markierteKnoten)) {
 int i = 0;
-			while (!alleSindInspiziert() && i<=2) {
+			while (!alleSindInspiziert()) {
 				
 
 				Node knotenI = getNextKnoten();
@@ -367,6 +367,7 @@ System.out.println("breitensuche");
 		Queue<Node> btsTemp = new LinkedList<Node>();
 
 		btsTemp.add(quelle);
+//		btsQueue.add(quelle);
 
 		while (!btsTemp.isEmpty()) {
 
@@ -416,7 +417,7 @@ System.out.println("Breitensuche: momentan untersuchter Knoten: "+tempKnoten.get
 		}
 		// ab hier ist das errechnen der wenigsten hops beendet und es kann der
 		// kürzeste weg berechnet werden
-
+System.out.println("groesse der warteschlange: "+btsQueue.size());
 		Node aktuellFuerKuerzestenWeg = graph.getNode("s");
 		messObjekt.read("breitensuche()", 1);
 System.out.println("aktuellFuerKuerzestenWeg: "+aktuellFuerKuerzestenWeg.getId());
@@ -448,6 +449,7 @@ System.out.println("groesse der queue: "+weg.size());
 
 		}
 		quelle.setAttribute(attNodeBTSMarkiert, true);
+		btsQueue.clear();
 		
 	}
 
