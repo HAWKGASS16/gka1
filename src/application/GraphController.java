@@ -233,6 +233,14 @@ public class GraphController implements Initializable {
 				ff.convertGraphtoNetwork();
 
 			}
+			else if (eingabe.startsWith("generateBigNet ")) {
+
+				String[] temp = eingabe.split(" ");
+
+				BIG big = new BIG(graph, Integer.parseInt(temp[1]), Integer.parseInt(temp[2]));
+				big.setBIG(true);
+				big.generateBigNet();
+			}
 
 		}
 
