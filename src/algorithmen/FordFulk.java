@@ -38,7 +38,7 @@ public class FordFulk {
 
 	private Double doubleEpsilon = 0.05;
 
-	private Integer delta = 0;
+	private Double maxFluss = 0.0;
 	private boolean senkeMarkiert = false;
 
 	public FordFulk(Graph graph) {
@@ -165,6 +165,7 @@ System.out.println("vergroessere Weg");
 		Node quelle = graph.getNode("q");
 		Node senke = graph.getNode("s");
 		Double deltaSenke = getDelta(senke);
+		maxFluss+=deltaSenke;
 		
 		messObjekt.read(methodenname, 2);
 
@@ -175,15 +176,16 @@ System.out.println("vergroessere Weg");
 System.out.println("Delta an der Senke: "+deltaSenke);		
 		do{
 			knotenMomentanVorgaenger=getVorgaenger(knotenMomentan);
-			Edge kanteMomentan= knotenMomentanVorgaenger.getEdgeBetween(knotenMomentan);
+			Edge kanteMomentan = knotenMomentanVorgaenger.getEdgeBetween(knotenMomentan);
+//			Edge kanteMomentan = knotenMomentan.getEdgeBetween(knotenMomentanVorgaenger);
 			messObjekt.read(methodenname, 3);
 			messObjekt.write(methodenname, 1);
 			
-//System.out.println("----------------------------------------");
-//System.out.println("KnotenMomentan: "+knotenMomentan.getId());
-//System.out.println("KnotenVorgaenger: "+knotenMomentanVorgaenger.getId());
+System.out.println("----------------------------------------");
+System.out.println("KnotenMomentan: "+knotenMomentan.getId());
+System.out.println("KnotenVorgaenger: "+knotenMomentanVorgaenger.getId());
 			
-			if(kanteMomentan.getSourceNode().equals(knotenMomentanVorgaenger)){
+			if(kanteMomentan.getSourceNode()==knotenMomentanVorgaenger){
 				//kante ist eine vorwätskante
 				
 				kanteMomentan.setAttribute(attrEdgeFluss, fluss(kanteMomentan)+deltaSenke);
@@ -222,7 +224,7 @@ System.out.println("Delta an der Senke: "+deltaSenke);
 		
 		for(Node knoten : graph.getEachNode()){
 			messObjekt.read(methodenname, 1);
-			setVorgaenger(knoten, null);
+//			setVorgaenger(knoten, null);
 			setDelta(knoten, Double.POSITIVE_INFINITY);
 		}
 		senkeMarkiert=false;
@@ -278,43 +280,45 @@ System.out.println("KnotenJ = "+knotenJ.getId());
 
 			Double deltaI = getDelta(knotenI);
 			Double deltaJ = getDelta(knotenJ);
-			Double fluss = Math.min(deltaJ, (kapazitaet(kante) - fluss(kante)));
+			Double fluss = 0.0;
+			
 System.out.println("deltaI: "+deltaI);
 System.out.println("DeltaJ: "+deltaJ);
-System.out.println("neues Delta: "+fluss);
+
 
 			if (kante.getSourceNode().equals(knotenI) && (!satoriert(kante))) {
-				messObjekt.read("inspiziere()", 3);
+				messObjekt.read("inspiziere()", 1);
 				// dann ist die Kante eine ausgehende Kante
 
 //				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
 				setVorgaenger(knotenJ, knotenI);
 
-//				knotenJ.setAttribute(attrEdgeFluss, fluss);
+				fluss = Math.min(deltaJ, (kapazitaet(kante) - fluss(kante)));
 				setDelta(knotenJ, fluss);
 
 				markierteKnoten.add(knotenJ);
 				
-				if(knotenJ.equals(graph.getNode("s"))){
-					
-					senkeMarkiert=true;
-				}
+				
 				
 //TODO hier nachbessern und rückwärtskanten besser berechnen..
 			} else if (kante.getSourceNode().equals(knotenJ) && (fluss(kante) > 0)) {
 				
-				messObjekt.read("inspiziere()", 2);
+				messObjekt.read("inspiziere()", 1);
 				
 				// Kante ist eine eingehende Kante
-//				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
+
 				setVorgaenger(knotenJ, knotenI);
-//				knotenJ.setAttribute(attrEdgeFluss, fluss);
+				
+				fluss= Math.min(fluss(kante)-kapazitaet(kante), deltaJ);
 				setDelta(knotenJ, fluss);
 				markierteKnoten.add(knotenJ);
 				
-				if(knotenJ.equals(graph.getNode("s"))){
-					senkeMarkiert=true;
-				}
+				
+			}
+System.out.println("neues Delta: "+fluss);			
+			if(knotenJ.equals(graph.getNode("s"))){
+				messObjekt.read("inspiziere()", 1);
+				senkeMarkiert=true;
 			}
 
 		}
@@ -449,12 +453,17 @@ System.out.println("groesse der queue: "+weg.size());
 	}
 	//------------------------------------------------------------------------------------
 	private Node getVorgaenger(Node knoten){
+
 		messObjekt.read("getVorgaenger(Knoten)", 1);
-		return (Node)knoten.getAttribute(attrNodeVorgaenger);
+		Node tmp = (Node)knoten.getAttribute(attrNodeVorgaenger);
+System.out.println("vorgaenger von knoten: "+knoten.getId());
+System.out.println("ist: "+tmp.getId());
+		return tmp;
 		
 	}
 	private void setVorgaenger(Node knoten, Node vorgaenger){
 		messObjekt.write("setVorgaenger(Knoten, Vorgaenger)", 1);
+System.out.println("setze vorgaenger von: "+knoten.getId()+" zu: "+vorgaenger.getId());
 		
 		knoten.setAttribute(attrNodeVorgaenger, vorgaenger);
 		
@@ -470,6 +479,9 @@ System.out.println("groesse der queue: "+weg.size());
 		messObjekt.write("setDelta(Knoten, Delta)", 1);
 		Object[] temp = (Object[]) knoten.getAttribute(attrNodeFordFulk);
 		temp[2]=delta;
+	}
+	public Double getMaxflow(){
+		return maxFluss;
 	}
 	
 }
