@@ -205,13 +205,22 @@ public class GraphController implements Initializable {
 				log("system> Kosten für Dijkstra von " + temp[1] + " nach " + temp[2] + "\nbetragen: "
 						+ kostenDijkstra);
 
-			} else if (eingabe.startsWith("ford")) {
+			}
+//			else if (eingabe.startsWith("ford")) {
+//
+//				FordFulkerson ff = new FordFulkerson(graph);
+//				ff.maxflow();
+//				log("maximaler Fluss: " + ff.getMaxFlow());
+//
+//			} 
+			else if (eingabe.startsWith("ford")) {
 
-				FordFulkerson ff = new FordFulkerson(graph);
+				FordFulk ff = new FordFulk(graph,false);
 				ff.maxflow();
-				log("maximaler Fluss: " + ff.getMaxFlow());
+//				log("maximaler Fluss: " + ff.getMaxFlow());
 
-			} else if (eingabe.startsWith("edmonds")) {
+			}
+			else if (eingabe.startsWith("edmonds")) {
 
 				FordFulk ff = new FordFulk(graph,true);
 				ff.maxflow();

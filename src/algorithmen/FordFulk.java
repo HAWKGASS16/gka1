@@ -21,6 +21,7 @@ public class FordFulk {
 	private final String attrNodeVorgaenger = "FordFulkersonVorgaenger";
 	private final String attrNodeInspiziert = "FordFulkersonInspiziert";
 	private final String attrNodeDelta = "FordFulkersonFluss";
+	private final String attrNodeFordFulk = "FordFulkersonAttribut";
 
 	// BTS attribute
 	private final String attNodeBTSMarkiert = GraphController.NodeAttributVisited;
@@ -38,6 +39,7 @@ public class FordFulk {
 	private Double doubleEpsilon = 0.05;
 
 	private Integer delta = 0;
+	private boolean senkeMarkiert = false;
 
 	public FordFulk(Graph graph) {
 		this.graph = graph;
@@ -56,18 +58,27 @@ public class FordFulk {
 			messObjekt.read("initialisierung()", 1);
 			messObjekt.write("initialisierung()", 1);
 
-			kante.setAttribute(attrEdgeFluss, new Double(0));
+			kante.setAttribute(attrEdgeFluss, new Double(0.0));
 			kantenLabel(kante, 0.0);
 
 		}
+		
+		Object[] tempObjekt = {1, null,Double.POSITIVE_INFINITY};
+		
+		
 		for (Node knoten : graph.getEachNode()) {
-			knoten.setAttribute(attrNodeDelta, 0.0);
-			knoten.setAttribute(attrNodeVorgaenger, null);
+			messObjekt.read("initialisierung()", 1);
+			messObjekt.write("initialisierung()", 2);
+			
+			knoten.setAttribute(attrNodeDelta, Double.POSITIVE_INFINITY);
+//			knoten.setAttribute(attrNodeVorgaenger, null);
+			knoten.setAttribute(attrNodeFordFulk, tempObjekt);
 		}
 
 		Node quelle = graph.getNode("q");
-		messObjekt.read("initialisierung()", 1);
 		Node senke = graph.getNode("s");
+		
+		messObjekt.read("initialisierung()", 2);
 
 		if (quelle == null || senke == null) {
 			return false;
@@ -75,11 +86,18 @@ public class FordFulk {
 
 		quelle.setAttribute(attrNodeDelta, Double.POSITIVE_INFINITY);
 
-		messObjekt.write("initialisierung()", 3);
+		senkeMarkiert=false;
+		
+		messObjekt.write("initialisierung()", 1);
 
+		
+		markierteKnoten.clear();
+		inspizierterKnoten.clear();
 		markierteKnoten.add(quelle);
 
-		breitensuche();
+		if(edmondsUndKarp){
+			breitensuche();
+		}
 
 		return true;
 	}
@@ -108,19 +126,24 @@ public class FordFulk {
 		// quelle namens 'q' und Senke namens 's' gibt), dann erst kann weiter
 		// gemacht werden
 		if (initialisierung()) {
+System.out.println("initialisierung");
 
 			// das ist falsch
-			while (!markierteKnoten.containsAll(inspizierterKnoten)) {
+//			while (!inspizierterKnoten.containsAll(markierteKnoten)) {
+int i = 0;
+			while (!alleSindInspiziert()) {
+				
 
 				Node knotenI = getNextKnoten();
 
 				inspiziere(knotenI);
 
-				Node senkenVorgaenger = (Node) senke.getAttribute(attrNodeVorgaenger);
+//				Node senkenVorgaenger = (Node) senke.getAttribute(attrNodeVorgaenger);
 
 				// wenn die Senke markiert ist
-				if (senkenVorgaenger != null) {
+				if (senkeMarkiert) {
 					vergroessereWeg();
+					i++;
 
 					if (edmondsUndKarp) {
 						breitensuche();
@@ -128,51 +151,92 @@ public class FordFulk {
 				}
 
 			}
+System.out.println("am ende der schleife");
 
 		}
+		messObjekt.stopMeasure();
 
 	}
 
 	private void vergroessereWeg() {
-
+System.out.println("vergroessere Weg");
 		String methodenname = "vergroessereWeg()";
 
 		Node quelle = graph.getNode("q");
 		Node senke = graph.getNode("s");
-		Double deltaSenke = (Double) senke.getAttribute(attrNodeDelta);
+		Double deltaSenke = getDelta(senke);
+		
+		messObjekt.read(methodenname, 2);
 
-		Node knotenMomentan;
-		Node knotenMomentanNachfolger = senke;
-		do {
-			knotenMomentan = (Node) knotenMomentanNachfolger.getAttribute(attrNodeVorgaenger);
-			Edge kanteMomentan = knotenMomentanNachfolger.getEdgeBetween(knotenMomentan);
 
-			// ist eine kante die in richtung senke gerichtet ist
-			if (kanteMomentan.getSourceNode().equals(kanteMomentan)) {
-				kanteMomentan.setAttribute(attrEdgeFluss, deltaSenke);
-			} else {
-				// kannte ist in richtung quelle gerichtet
-
-				Double kantenFluss = fluss(kanteMomentan);
-
-				kanteMomentan.setAttribute(attrEdgeFluss, (kantenFluss - deltaSenke));
-
+		
+		Node knotenMomentan = senke;
+		Node knotenMomentanVorgaenger;
+System.out.println("Delta an der Senke: "+deltaSenke);		
+		do{
+			knotenMomentanVorgaenger=getVorgaenger(knotenMomentan);
+			Edge kanteMomentan= knotenMomentanVorgaenger.getEdgeBetween(knotenMomentan);
+			messObjekt.read(methodenname, 3);
+			messObjekt.write(methodenname, 1);
+			
+//System.out.println("----------------------------------------");
+//System.out.println("KnotenMomentan: "+knotenMomentan.getId());
+//System.out.println("KnotenVorgaenger: "+knotenMomentanVorgaenger.getId());
+			
+			if(kanteMomentan.getSourceNode().equals(knotenMomentanVorgaenger)){
+				//kante ist eine vorwätskante
+				
+				kanteMomentan.setAttribute(attrEdgeFluss, fluss(kanteMomentan)+deltaSenke);
+				kantenLabel(kanteMomentan, fluss(kanteMomentan));
+				
+			}else{
+				Double kantenfluss = fluss(kanteMomentan);
+				kanteMomentan.setAttribute(attrEdgeFluss, (kantenfluss-deltaSenke));
+				kantenLabel(kanteMomentan, (kantenfluss-deltaSenke));
 			}
-			knotenMomentanNachfolger = knotenMomentan;
 
-		} while (!knotenMomentan.equals(quelle));
 
-		senke.setAttribute(attrNodeVorgaenger, null);
+			knotenMomentan=knotenMomentanVorgaenger;
 
-		markierteKnoten.clear();
+		}while(knotenMomentanVorgaenger!=quelle);
+		
+
+//		senke.setAttribute(attrNodeVorgaenger, null);
+		//setzt die vorgänger und deltas zurück, sowie leert die listen für markierte
+		//und inspiierte knoten
+		reset();
+				
 		markierteKnoten.add(quelle);
-		btsQueue.clear();
-		inspizierterKnoten.clear();
+		
 
+	}
+
+	/**
+	 * Die vorgänger aller Knoten und die Deltas aller Knoten zurücksetzten damit ein neuer
+	 * Vergrößender weg gefunden werden kann
+	 */
+	private void reset() {
+		String methodenname = "reset()";
+		
+		
+		
+		for(Node knoten : graph.getEachNode()){
+			messObjekt.read(methodenname, 1);
+			setVorgaenger(knoten, null);
+			setDelta(knoten, Double.POSITIVE_INFINITY);
+		}
+		senkeMarkiert=false;
+		markierteKnoten.clear();
+		inspizierterKnoten.clear();
+		btsQueue.clear();
+		
+		
 	}
 
 	private Node getNextKnoten() {
 
+		System.out.println("get nextKnoten");
+		
 		if (edmondsUndKarp) {
 			return btsQueue.poll();
 		}
@@ -182,38 +246,75 @@ public class FordFulk {
 		temp.addAll(markierteKnoten);
 		temp.removeAll(inspizierterKnoten);
 
-		int randomNum = ThreadLocalRandom.current().nextInt(0, temp.size() + 1);
+		int randomNum = ThreadLocalRandom.current().nextInt(0, temp.size());
 
-		return temp.get(randomNum);
+		Node zufallsKnoten = temp.get(randomNum);
+		System.out.println("name des neuen Knotens: "+zufallsKnoten.getId());
+		
+		return zufallsKnoten;
 
 	}
 
 	private void inspiziere(Node knotenI) {
+		System.out.println("\tinspiziere: "+knotenI.getId());
 
 		for (Edge kante : knotenI.getEachEdge()) {
+			messObjekt.read("inspiziere()", 2);
 			Node knotenJ = kante.getOpposite(knotenI);
 			if (markierteKnoten.contains(knotenJ)) {
 				continue;
 			}
+			
+			//Damit sich nur die kanten auf dem kürzesten weg angesehen werden, bzw die kanten zwischen den Knoten auf dem
+			//kürzesten weg
+			Node naechterInDerQueue = btsQueue.peek();
+			if(edmondsUndKarp && !(knotenI.getEdgeBetween(naechterInDerQueue)==kante)){
+				messObjekt.read("inspiziere()", 1);
+				continue;
+			}
+			
+			
+System.out.println("KnotenJ = "+knotenJ.getId());
 
-			Double deltaI = (Double) knotenI.getAttribute(attrNodeDelta);
-			Double deltaJ = (Double) knotenJ.getAttribute(attrNodeDelta);
+			Double deltaI = getDelta(knotenI);
+			Double deltaJ = getDelta(knotenJ);
 			Double fluss = Math.min(deltaJ, (kapazitaet(kante) - fluss(kante)));
+System.out.println("deltaI: "+deltaI);
+System.out.println("DeltaJ: "+deltaJ);
+System.out.println("neues Delta: "+fluss);
 
 			if (kante.getSourceNode().equals(knotenI) && (!satoriert(kante))) {
+				messObjekt.read("inspiziere()", 3);
 				// dann ist die Kante eine ausgehende Kante
 
-				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
+//				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
+				setVorgaenger(knotenJ, knotenI);
 
-				knotenJ.setAttribute(attrEdgeFluss, fluss);
+//				knotenJ.setAttribute(attrEdgeFluss, fluss);
+				setDelta(knotenJ, fluss);
 
 				markierteKnoten.add(knotenJ);
-
+				
+				if(knotenJ.equals(graph.getNode("s"))){
+					
+					senkeMarkiert=true;
+				}
+				
+//TODO hier nachbessern und rückwärtskanten besser berechnen..
 			} else if (kante.getSourceNode().equals(knotenJ) && (fluss(kante) > 0)) {
+				
+				messObjekt.read("inspiziere()", 2);
+				
 				// Kante ist eine eingehende Kante
-				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
-				knotenJ.setAttribute(attrEdgeFluss, fluss);
+//				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
+				setVorgaenger(knotenJ, knotenI);
+//				knotenJ.setAttribute(attrEdgeFluss, fluss);
+				setDelta(knotenJ, fluss);
 				markierteKnoten.add(knotenJ);
+				
+				if(knotenJ.equals(graph.getNode("s"))){
+					senkeMarkiert=true;
+				}
 			}
 
 		}
@@ -222,16 +323,19 @@ public class FordFulk {
 	}
 
 	private Double fluss(Edge kante) {
+		messObjekt.read("fluss(Kante)", 1);
 
 		return (Double) kante.getAttribute(attrEdgeFluss);
 	}
 
 	private Double kapazitaet(Edge kante) {
+		messObjekt.read("kapazitaet(Kante)", 1);
 		return (Double) kante.getAttribute(attrEdgeGewicht);
 
 	}
 
 	private boolean satoriert(Edge kante) {
+		messObjekt.read("satoriert()", 2);
 
 		Double fluss = (Double) kante.getAttribute(attrEdgeFluss);
 		Double kapazitaet = (Double) kante.getAttribute(attrEdgeGewicht);
@@ -245,19 +349,14 @@ public class FordFulk {
 
 	private void breitensuche() {
 		// initialisierung
+		messObjekt.read("breitensuche()", 2);
 
+System.out.println("breitensuche");
+		initBTS();
 		Node quelle = graph.getNode("q");
 		Node senke = graph.getNode("s");
 
-		for (Node knoten : graph.getEachNode()) {
-
-			knoten.setAttribute(attNodeBTSMarkiert, false);
-			knoten.setAttribute(attNodeBTSGewicht, 0);
-			knoten.setAttribute(attNodeBTSvorgaenger, null);
-
-		}
-		quelle.setAttribute(attNodeBTSMarkiert, true);
-
+		
 		// eigentliche BTS
 		Queue<Node> btsTemp = new LinkedList<Node>();
 
@@ -266,9 +365,11 @@ public class FordFulk {
 		while (!btsTemp.isEmpty()) {
 
 			Node tempKnoten = btsTemp.poll();
+System.out.println("Breitensuche: momentan untersuchter Knoten: "+tempKnoten.getId());
 			int tempKnotenGewicht = (int) tempKnoten.getAttribute(attNodeBTSGewicht);
 
 			for (Edge kante : tempKnoten.getEachEdge()) {
+				messObjekt.read("breitensuche()", 1);
 				// wenn die kannte voll ist, oder die Quelle der Kante nicht der
 				// momentane Knoten ist
 				if (satoriert(kante) || kante.getTargetNode().equals(tempKnoten)) {
@@ -282,33 +383,93 @@ public class FordFulk {
 
 					int gewichtNachbar = (int) tempNachbar.getAttribute(attNodeBTSGewicht);
 					if ((tempKnotenGewicht + 1) < gewichtNachbar) {
+						
+						messObjekt.write("breitensuche()", 2);
+						messObjekt.read("breitensuche()", 1);
 
 						tempNachbar.setAttribute(attNodeBTSvorgaenger, tempKnoten);
 						tempNachbar.setAttribute(attNodeBTSGewicht, tempKnotenGewicht + 1);
 
 					}
-					btsTemp.add(tempNachbar);
+					if(!btsTemp.contains(tempNachbar)){
+						btsTemp.add(tempNachbar);
+					}
 
 				}
 
 			}
 			tempKnoten.setAttribute(attNodeBTSMarkiert, true);
+			messObjekt.write("breitensuche()", 1);
+			messObjekt.read("breitensuche()", 3);
 		}
 		// ab hier ist das errechnen der wenigsten hops beendet und es kann der
 		// kürzeste weg berechnet werden
 
-		Node aktuellFuerKuerzestenWeg = senke;
+		Node aktuellFuerKuerzestenWeg = graph.getNode("s");
+		messObjekt.read("breitensuche()", 1);
+System.out.println("aktuellFuerKuerzestenWeg: "+aktuellFuerKuerzestenWeg.getId());
+System.out.println("quelle: "+quelle.getId());
 		ArrayList<Node> weg = new ArrayList<Node>();
-		while (!aktuellFuerKuerzestenWeg.equals(quelle)) {
-
+		while(aktuellFuerKuerzestenWeg!=quelle) {
+System.out.println("groesse der queue: "+weg.size());
 			weg.add(aktuellFuerKuerzestenWeg);
 			aktuellFuerKuerzestenWeg = (Node) aktuellFuerKuerzestenWeg.getAttribute(attNodeBTSvorgaenger);
 		}
 
+		btsQueue.add(quelle);
 		for (int i = weg.size() - 1; i >= 0; i--) {
 			System.out.println("kuerzester weg ist: "+weg.get(i).getId());
 			btsQueue.add(weg.get(i));
 		}
+		
 
 	}
+	private void initBTS() {
+		System.out.println("breitensuche init");
+		Node quelle = graph.getNode("q");
+
+
+		for (Node knoten : graph.getEachNode()) {
+
+			knoten.setAttribute(attNodeBTSMarkiert, false);
+			knoten.setAttribute(attNodeBTSGewicht, Integer.MAX_VALUE);
+
+		}
+		quelle.setAttribute(attNodeBTSMarkiert, true);
+		
+	}
+
+	private boolean alleSindInspiziert(){
+		if(markierteKnoten.size()!=inspizierterKnoten.size()){
+			return false;
+		}else if(markierteKnoten.containsAll(inspizierterKnoten)){
+			return true;
+		}
+		return false;
+	}
+	//------------------------------------------------------------------------------------
+	private Node getVorgaenger(Node knoten){
+		messObjekt.read("getVorgaenger(Knoten)", 1);
+		return (Node)knoten.getAttribute(attrNodeVorgaenger);
+		
+	}
+	private void setVorgaenger(Node knoten, Node vorgaenger){
+		messObjekt.write("setVorgaenger(Knoten, Vorgaenger)", 1);
+		
+		knoten.setAttribute(attrNodeVorgaenger, vorgaenger);
+		
+		
+	}
+	private Double getDelta(Node knoten){
+		messObjekt.read("getDelta(Node)", 1);
+		Object[] temp = (Object[]) knoten.getAttribute(attrNodeFordFulk);
+		return (Double)temp[2];
+		
+	}
+	private void setDelta(Node knoten, Double delta){
+		messObjekt.write("setDelta(Knoten, Delta)", 1);
+		Object[] temp = (Object[]) knoten.getAttribute(attrNodeFordFulk);
+		temp[2]=delta;
+	}
+	
 }
