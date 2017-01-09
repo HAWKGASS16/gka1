@@ -2,6 +2,7 @@ package algorithmen;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
@@ -52,6 +53,7 @@ public class FordFulk {
 
 	private boolean initialisierung() {
 		// jede kannte bekommt den initialfluss von 0
+//		convertGraphtoNetwork();
 
 		for (Edge kante : graph.getEachEdge()) {
 
@@ -492,6 +494,68 @@ System.out.println("setze vorgaenger von: "+knoten.getId()+" zu: "+vorgaenger.ge
 	}
 	public Double getMaxflow(){
 		return maxFluss;
+	}
+	private void convertGraphtoNetwork(){
+		ArrayList<Edge> zuloeschen = new ArrayList<Edge>();
+		
+		for (Iterator alleKanten = graph.getEdgeIterator(); alleKanten.hasNext();) {
+
+			messObjekt.read("ConvertGraphtoNetwork()", 1);
+			
+			Edge kante = (Edge) alleKanten.next();
+
+			if (!kante.isDirected()) {
+
+				messObjekt.read("ConvertGraphtoNetwork()", 5);
+				messObjekt.write("ConvertGraphtoNetwork()", 2);
+				
+				Node node1 = kante.getNode0();
+				Node node2 = kante.getOpposite(node1);
+
+				Double gewicht = (Double) kante.getAttribute(attrEdgeGewicht);
+
+				// die nummer wird an den Kantennamen angefügt
+				int nummer = getEdgeNummer(node1.getId(), node2.getId());
+
+				graph.addEdge(node1.getId() + node2.getId() + nummer, node1, node2, true);
+				Edge neueKante1 = graph.getEdge(node1.getId() + node2.getId() + nummer);
+				neueKante1.setAttribute(attrEdgeGewicht, (gewicht / 2));
+
+				nummer = getEdgeNummer(node2.getId(), node1.getId());
+				graph.addEdge(node2.getId() + node1.getId() + nummer, node2, node1, true);
+				Edge neueKante2 = graph.getEdge(node2.getId() + node1.getId() + nummer);
+				neueKante2.setAttribute(attrEdgeGewicht, (gewicht / 2));
+
+				zuloeschen.add(kante);
+
+				// graph.removeEdge(kante);
+
+			}
+
+		}
+		for (Iterator iterator = zuloeschen.iterator(); iterator.hasNext();) {
+			Edge edge = (Edge) iterator.next();
+
+			graph.removeEdge(edge);
+			
+			messObjekt.read("ConvertGraphToNetwork", 1);
+
+		}
+		
+	}
+	private int getEdgeNummer(String node1, String node2) {
+		Edge kante = graph.getEdge(node1 + node2);
+		messObjekt.read("getEdgeNummer()", 1);
+
+		int i = 0;
+		while (kante != null) {
+			i++;
+			kante = graph.getEdge(node1 + node2 + i);
+			messObjekt.read("getEdgeNummer()", 1);
+
+		}
+
+		return i;
 	}
 	
 }
