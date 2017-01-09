@@ -495,36 +495,50 @@ System.out.println("setze vorgaenger von: "+knoten.getId()+" zu: "+vorgaenger.ge
 	public Double getMaxflow(){
 		return maxFluss;
 	}
-	private void convertGraphtoNetwork(){
+	public void convertGraphtoNetwork(){
 		ArrayList<Edge> zuloeschen = new ArrayList<Edge>();
 		
 		for (Iterator alleKanten = graph.getEdgeIterator(); alleKanten.hasNext();) {
 
-			messObjekt.read("ConvertGraphtoNetwork()", 1);
+			
 			
 			Edge kante = (Edge) alleKanten.next();
 
 			if (!kante.isDirected()) {
 
-				messObjekt.read("ConvertGraphtoNetwork()", 5);
-				messObjekt.write("ConvertGraphtoNetwork()", 2);
+				
 				
 				Node node1 = kante.getNode0();
 				Node node2 = kante.getOpposite(node1);
 
 				Double gewicht = (Double) kante.getAttribute(attrEdgeGewicht);
 
-				// die nummer wird an den Kantennamen angefügt
-				int nummer = getEdgeNummer(node1.getId(), node2.getId());
+				
+				
 
-				graph.addEdge(node1.getId() + node2.getId() + nummer, node1, node2, true);
-				Edge neueKante1 = graph.getEdge(node1.getId() + node2.getId() + nummer);
-				neueKante1.setAttribute(attrEdgeGewicht, (gewicht / 2));
+				Edge kante1 = graph.getEdge(node1.getId() + node2.getId()+1);
+				 if(kante1==null){
+					 graph.addEdge(node1.getId() + node2.getId()+1, node1, node2, true);
+					 kante1 = graph.getEdge(node1.getId()+node2.getId()+1);
+					 kante1.addAttribute(attrEdgeGewicht, (gewicht/2));
+				 }else{
+					 Double neuesGewicht = (Double) kante.getAttribute(attrEdgeGewicht);
+					 kante1.addAttribute(attrEdgeGewicht, neuesGewicht+(gewicht/2));
+				 }
+				
+				if(!(node1.getId().equals("q") || node2.getId().equals("q"))){
+				 Edge kante2 = graph.getEdge(node2.getId()+node1.getId()+1);
+				 if(kante2==null){
+					 graph.addEdge(node2.getId() + node1.getId()+1, node2, node1, true);
+					 kante2 = graph.getEdge(node2.getId()+node1.getId()+1);
+					 kante2.addAttribute(attrEdgeGewicht, (gewicht/2));
+				 }else{
+					 Double neuesGewicht = (Double) kante.getAttribute(attrEdgeGewicht);
+					 kante2.addAttribute(attrEdgeGewicht, neuesGewicht+(gewicht/2));
+				 }}
+				
+				 
 
-				nummer = getEdgeNummer(node2.getId(), node1.getId());
-				graph.addEdge(node2.getId() + node1.getId() + nummer, node2, node1, true);
-				Edge neueKante2 = graph.getEdge(node2.getId() + node1.getId() + nummer);
-				neueKante2.setAttribute(attrEdgeGewicht, (gewicht / 2));
 
 				zuloeschen.add(kante);
 
@@ -538,24 +552,11 @@ System.out.println("setze vorgaenger von: "+knoten.getId()+" zu: "+vorgaenger.ge
 
 			graph.removeEdge(edge);
 			
-			messObjekt.read("ConvertGraphToNetwork", 1);
+			
 
 		}
 		
 	}
-	private int getEdgeNummer(String node1, String node2) {
-		Edge kante = graph.getEdge(node1 + node2);
-		messObjekt.read("getEdgeNummer()", 1);
 
-		int i = 0;
-		while (kante != null) {
-			i++;
-			kante = graph.getEdge(node1 + node2 + i);
-			messObjekt.read("getEdgeNummer()", 1);
-
-		}
-
-		return i;
-	}
 	
 }

@@ -227,6 +227,12 @@ public class GraphController implements Initializable {
 				log("maximaler Fluss: " + ff.getMaxflow());
 
 			}
+			else if (eingabe.startsWith("convert")) {
+
+				FordFulk ff = new FordFulk(graph,true);
+				ff.convertGraphtoNetwork();
+
+			}
 
 		}
 
