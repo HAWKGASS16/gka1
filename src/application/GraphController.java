@@ -217,14 +217,14 @@ public class GraphController implements Initializable {
 
 				FordFulk ff = new FordFulk(graph,false);
 				ff.maxflow();
-//				log("maximaler Fluss: " + ff.getMaxFlow());
+				log("maximaler Fluss: " + ff.getMaxflow());
 
 			}
 			else if (eingabe.startsWith("edmonds")) {
 
 				FordFulk ff = new FordFulk(graph,true);
 				ff.maxflow();
-//				log("maximaler Fluss: " + ff.getMaxFlow());
+				log("maximaler Fluss: " + ff.getMaxflow());
 
 			}
 

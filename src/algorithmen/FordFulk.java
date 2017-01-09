@@ -131,7 +131,7 @@ System.out.println("initialisierung");
 			// das ist falsch
 //			while (!inspizierterKnoten.containsAll(markierteKnoten)) {
 int i = 0;
-			while (!alleSindInspiziert()) {
+			while (!alleSindInspiziert() || (edmondsUndKarp && !btsQueue.isEmpty())) {
 				
 
 				Node knotenI = getNextKnoten();
@@ -263,7 +263,9 @@ System.out.println("KnotenVorgaenger: "+knotenMomentanVorgaenger.getId());
 		for (Edge kante : knotenI.getEachEdge()) {
 			messObjekt.read("inspiziere()", 2);
 			Node knotenJ = kante.getOpposite(knotenI);
-			if (markierteKnoten.contains(knotenJ)) {
+			
+			//wenn der nachbarknoten schon markiert ist, oder die Kante voll ist, wird die schleife beendet und von vorne beginnen..
+			if (markierteKnoten.contains(knotenJ) || satoriert(kante)) {
 				continue;
 			}
 			
@@ -286,14 +288,14 @@ System.out.println("deltaI: "+deltaI);
 System.out.println("DeltaJ: "+deltaJ);
 
 
-			if (kante.getSourceNode().equals(knotenI) && (!satoriert(kante))) {
+			if (kante.getSourceNode().equals(knotenI) && (fluss(kante)<kapazitaet(kante))) {
 				messObjekt.read("inspiziere()", 1);
 				// dann ist die Kante eine ausgehende Kante
 
 //				knotenJ.setAttribute(attrNodeVorgaenger, knotenI);
 				setVorgaenger(knotenJ, knotenI);
 
-				fluss = Math.min(deltaJ, (kapazitaet(kante) - fluss(kante)));
+				fluss = Math.min(deltaI, (kapazitaet(kante) - fluss(kante)));
 				setDelta(knotenJ, fluss);
 
 				markierteKnoten.add(knotenJ);
@@ -309,7 +311,7 @@ System.out.println("DeltaJ: "+deltaJ);
 
 				setVorgaenger(knotenJ, knotenI);
 				
-				fluss= Math.min(fluss(kante)-kapazitaet(kante), deltaJ);
+				fluss= Math.min(fluss(kante), deltaI);
 				setDelta(knotenJ, fluss);
 				markierteKnoten.add(knotenJ);
 				
